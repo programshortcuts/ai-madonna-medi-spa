@@ -1,0 +1,62 @@
+/* animations/items-scroll.css */
+
+.clicked-item{
+    /* border: 10px solid red; */
+    /* padding:2% */
+}
+
+
+.items-container:active {
+    cursor: grabbing;
+}
+
+/* optional: hide scrollbar (Apple-style clean look) */
+.items-container::-webkit-scrollbar {
+    display: none;
+}
+.items-container {
+    scrollbar-width: none;
+}
+
+.items-container.sort {
+    width: 100vw;
+    flex-wrap: wrap;
+    overflow-x: scroll;
+    overflow-y: auto;
+    max-height: 500px;
+    /* adjust */
+    scroll-behavior: smooth;
+
+    /* 🔥 vertical snapping */
+    scroll-snap-type: y proximity;
+}
+
+.items-container.sort .item {
+    scroll-snap-align: start;
+    width: 180px;
+    scroll-margin-top: 20px;
+        /* 🔥 adjust this */
+}
+
+.item {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: fit-content;
+    transition: all .3s;
+    /* adjust to your design */
+    /* vertical space */
+    scroll-margin-inline: 40px;
+    /* horizontal space */
+}
+.item:focus {
+    outline: none;
+    padding: 1%;
+    /* scroll-margin: 50%; */
+    scroll-margin-block: 50px;
+    /* 👈 gives breathing room */
+    border-radius: 4px;
+    box-shadow: 0 0 1px 1px lightblue;
+    border: 1px solid blue;
+    transition: all .3s;
+}

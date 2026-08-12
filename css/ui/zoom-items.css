@@ -1,0 +1,22 @@
+/* zoom-items.css */
+.items-container {
+    
+    --item-size: 100px;
+
+}
+
+.items-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* ONLY ONE item definition here */
+.items-container .item {
+    flex: 0 0 var(--item-size);
+    min-width: 0;
+    flex-shrink: 0;
+}
+.items-container[data-view="horizontal"] {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}

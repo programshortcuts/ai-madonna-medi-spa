@@ -1,0 +1,22 @@
+/* colors-home.css */
+.home-page-container button.section-title {
+    color: var(----font-p-clr);
+}
+.home-page-header > p{
+    color: whitesmoke;
+    font-weight: 600;
+    font-size: 1.4rem;
+    text-shadow: hoff voff blur #000;
+    text-shadow: 1px 1pxblur #000;
+}
+.home-page-container  .service-title:visited, 
+.home-page-container  .service-title {
+    color: black !important;
+}
+.home-page-container .service-col-title{
+    background: none !important;
+    color: inherit;
+}
+.home-page-container [data-nav-target="more-info-link"] {
+    color: black;
+}

@@ -1,0 +1,35 @@
+/* borders-med-spa-services.css */
+.service-section {
+    border-radius: var(--radius);
+}
+
+.service-section > button.section-title {
+    border-right: none !important;
+    border-bottom: none !important;
+    border-top-left-radius: var(--radius);
+}
+.service-section .img-wrapper {
+    border-radius: 8px;
+}
+
+.less-info {
+    border-radius: 999px;
+    border: 1px solid #ccd7e2;
+}
+
+.women-men-nav a {
+    border: 1px solid #dbe4ec;
+    border-radius: 18px;
+}
+.section-preview p,
+.section-details p {
+    border-radius: 9px;
+}
+
+.service-section  .more-info-btn {
+    border-radius: 999px;
+}
+.service-section .more-info-buttons button{
+    border: none ;
+    outline: none;
+}

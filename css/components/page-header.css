@@ -1,0 +1,98 @@
+/* components/page-header.css */
+/* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+/* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+.page-header {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* height: 6vh; */
+}
+
+.page-header>.page-title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: flex;
+    padding-left: 5%;
+}
+.page-title-container h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 66%;
+    margin-left: 6%;
+    justify-content: center;
+    line-height: .8;
+}
+.page-title-container h1 .page-title{
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    letter-spacing: 25%;
+    font-family: cursive;
+    font-size: 1rem;
+    margin-left: 12%;
+    padding-top: 2%;
+}
+.page-title-container>.address-title {
+    flex-shrink: 1;
+    /* margin-left: 10%; */
+    /* border: solid blue 2px;; */
+    width: 44%;
+    margin-top: 2% !important;  ;
+    font-size: .8rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--header-clr);
+    /* flex-basis: 33%; */
+    /* width: ; */
+}
+
+#addressLinkHeader>a:visited,
+.address-title {
+    color: grey ;
+    text-decoration: none;
+}   
+
+
+.page-header .tel-num-header {
+    font-size: .5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: cursive;
+    font-size: .7rem;
+    /* margin-top: -1%; */
+    margin-left: -22%;
+}
+.page-header>img {
+    display: flex;
+    justify-content: space-between;
+}
+#versionTile,
+.page-header  img {
+    height: 10vh !important;
+    position: absolute;;
+    right: 0;
+    z-index: 99;
+}
+#versionTile{
+    display: block;
+    z-index: 100
+    
+}
+
+
+
+#addressLinkHeader > a{
+    text-decoration: none;
+    /* margin-right: 5%; */
+    /* min-width: 20vw; */
+    font-size: .7rem;
+    display: inline-block;
+    text-shadow: none !important;
+    color: black;
+    width: 100%;
+}

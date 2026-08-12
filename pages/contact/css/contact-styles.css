@@ -1,0 +1,17 @@
+/* contact-styles.css */
+.address-num-container{
+    border-right: 1px solid black;
+}
+.contact-container{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 4% 1%;
+    border: 1px solid black;
+}
+.animation-container {
+    position: absolute;
+    right: 50%;
+    border: 1px solid black;
+    width: 50%;
+    z-index: 2;
+}

@@ -1,0 +1,17 @@
+/* text.css */
+.mobile-header-nav {
+    font-family: cursive;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.mobile-header-nav li a {
+    text-decoration: none;    
+}
+.mobile-header-nav li a {
+    text-decoration: none;
+}
+.mobile-header-nav>ul>li a {
+    /* font-weight: 1000; */
+    color: var(--header-clr);
+    font-size: 1rem;
+}

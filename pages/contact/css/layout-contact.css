@@ -1,0 +1,38 @@
+/* layout-contact.css */
+.contact-
+.address-num-container {
+    border-right: 1px solid black;
+}
+.social-media-email-container{
+    width: 100%;
+    display: flex;
+    /* flex-direction: column; */
+}
+.page-container.contact-page-container .social-media-container {
+    display: flex;
+    flex-direction: row;
+}
+.social-media-container > .social-media-item {
+    flex-basis: 20%;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4% 1%;
+    border: 1px solid black;
+}
+
+.contact-container>.contact-item {
+    /* flex-basis: 50%; */
+}
+
+#contactForm{
+    display: flex;
+    flex-direction: column;
+    
+}
+#contactForm > .form-group{
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,14 @@
+/* position-contact.css */
+
+.contact-page-container {
+    position: relative;
+}
+.contact-page-container .animation-container {
+    position: absolute;
+    /* left: 80%; */
+    right: 0;
+    bottom: 10%;
+    /* top: 40%; */
+    /* width: 50%; */
+    z-index: 1
+}

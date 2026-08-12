@@ -1,0 +1,12 @@
+/* spacing-products.css */
+.cat-title,
+.products-title {
+    border: none;    
+}
+.products-content {
+    border-right: none;
+}
+.item {
+    box-shadow: 0 0 1px 1px grey;
+    border-radius: 8px;
+}

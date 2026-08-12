@@ -1,0 +1,16 @@
+/* bookings.css */
+
+
+select {
+    pointer-events: none;
+    
+}
+select {
+    position: relative;
+    z-index: 999;
+}
+.form-bookings-container{
+    padding: 5%;
+    font-size: 2rem;
+    border: 2px solid black;
+}

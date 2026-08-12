@@ -1,0 +1,107 @@
+/* spacing-home.css */
+
+.page-container.home-page-container {
+    padding-bottom: 25%;
+}
+.reviews-container>p {
+    /* padding-top: 5% ; */
+    /* margin-bottom: -5%; */
+}
+.home-page-header>p {
+    padding-bottom: 5%;
+    padding-left: 2%;
+    width: 100%;
+}
+.home-page-header>.contact-content>.img-wrapper>img {
+    margin-left: 5%;
+}
+.home-page-container>.main-content {
+    /* padding: 0 5% !important; */
+}
+.page-container.home-page-container .address-num-container .address-box {
+    padding: 2%
+}
+.page-container.home-page-container .address-num-container {
+    padding-bottom: 20%;
+}
+.page-container.home-page-container .main-item {
+    /* padding-bottom: 2%; */
+    /* padding-right: 4%; */
+}
+.page-container.home-page-container .main-item>.content>p {
+    line-height: 1.55;
+}
+.page-container.home-page-container section {
+    padding-left: 2%;
+}
+.page-container.home-page-container .main-item>h4 {
+    /* padding-left: 2%; */
+}
+.section-title#ourServices {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    text-align: start;
+}
+.section-title#ourServices>span.title-text {
+    display: inline-block;
+    width: 100%;
+    letter-spacing: 10% !important;
+    padding-left: 2%;
+}
+#drMadonnaBio>.content>p {
+    padding-top: 2%;
+    margin-left: 2%;
+}
+#drMadonnaBio>.content>p:last-child {
+    margin-bottom: 5%;
+}
+.staff-container>.member>.info {
+    padding-left: 2.5%;
+}
+.staff-wrapper {
+    gap: 2%;
+}
+
+[data-nav-target="more-info-link"] {
+    margin-left: 5%;
+}
+#aboutUsHomePage {
+    /* margin-top: 10%; */
+}
+
+#longevityMedHomePage {
+    /* margin-top: -5%; */
+    z-index: 10;
+}
+#longevityMedHomePage>.content>p {
+    line-height: 2;
+}
+section#longevityMedHomePage {
+    /* margin-top: -11%; */
+}
+#longevityMedHomePage .title-text {
+    margin-left: 18%;
+}
+
+.service-column {
+    margin: 0 1%;
+    /* border: 1px solid blue; */
+}
+
+.service-column>.service-col-title {
+    padding-top: 5%;
+    flex-grow: 1;
+    padding: 1%
+}
+
+.service-column>.service-col-title {
+    text-decoration: none;
+    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    font-size: 1rem;
+    max-width: fit-content;
+    margin-top: 2%;
+    margin-right: 5%;
+}

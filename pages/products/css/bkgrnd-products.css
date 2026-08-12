@@ -1,0 +1,7 @@
+/* bkgrnd-products.css */
+.cat-title{
+    background: none;
+}
+.products-header > .products-title{
+    background: none !important;
+}

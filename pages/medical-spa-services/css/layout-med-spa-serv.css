@@ -1,0 +1,66 @@
+/* layout-med-spa-services.css */
+/*==============================================================
+  SERVICE SECTION
+==============================================================*/
+.service-section {
+    overflow: hidden;
+}
+.service-section .section-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+/*==============================================================
+  FLOATING MEDIA
+==============================================================*/
+.service-section .img-wrapper {
+    overflow: hidden;
+}
+.img-wrapper img,
+.img-wrapper video,
+.service-video {
+
+    display: block;
+}
+/*==============================================================
+LINKS
+==============================================================*/
+.service-section .more-info-link,
+.service-section .more-info-links a {
+    display: inline-flex;
+    align-items: center;
+}
+.women-men-nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+.women-men-nav a {
+    display: inline-flex;
+    /* flex-direction: column; */
+}
+
+.more-info-buttons {
+    display: inline ;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.service-section .content p {
+    display: inline;
+}
+.women-men-content {
+    display: flex;
+}
+
+.women-men-content .col{
+    display: flex;
+    /* border: 1px solid blue; */
+    flex-direction: column;
+    justify-content: space-between;
+    flex-shrink: 1;
+    max-width: 50%;
+    flex-basis: 50%;
+}
+.women-men-content .col ul {
+    /* justify-self: center; */
+}

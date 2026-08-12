@@ -1,0 +1,45 @@
+/* position-med-spa-serv.css */
+/*================= SERVICE SECTION
+==============================================================*/
+.service-section {
+    position: relative;
+}
+/*==============================================================
+  OPTIONAL ALTERNATING MEDIA
+  (Works only if HTML already contains float-left/right classes)
+==============================================================*/
+
+#botoxAndFillers .img-wrapper {
+    float: right;
+}
+
+#glp1 .img-wrapper {
+    /* float: right; */
+}
+
+
+.section-preview p:not(:first-of-type)::before,
+.section-details p:not(:first-of-type)::before {
+    /* content: "";  */
+    /* display: block; */
+}
+
+/* clearfix */
+.service-section::after,
+.section-preview::after,
+.section-details::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.more-info-buttons {
+    clear: both;
+    
+
+}
+.float-right{
+    float: right !important;
+}
+.float-left{
+    float: left !important;
+}

@@ -1,0 +1,24 @@
+/* layout.css */
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+/* ONLY SCROLL CONTAINER IN THE ENTIRE APP */
+.page-wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+/* NEVER let other containers scroll vertically */
+.main-landing-page {
+    overflow: visible !important;
+}

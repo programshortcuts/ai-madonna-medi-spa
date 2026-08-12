@@ -1,0 +1,28 @@
+/* sizing-contact.css */
+
+.contact-page-container .animation-container {   
+    width: 50%;
+    height: 60%;
+    
+}
+.social-media-container {
+    width: 100%;
+}
+
+/* make anchor fill full box */
+.social-media-item-lg a {
+    width: 100%;
+    height: 200px;
+    min-height: 200px;
+    /* control icon box size here */
+    /* aspect-ratio: 1 / 1; */
+}
+
+/* SVG fills anchor */
+.social-media-item-lg svg {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    max-width:  400px;
+    max-height: 400px;
+}

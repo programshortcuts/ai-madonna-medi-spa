@@ -1,0 +1,32 @@
+/* txt-products.css */
+.cat-title,
+.products-title{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: cursive;
+    
+    font-size: 2rem;
+    text-align: center;
+    
+}
+.alpha-list li {
+    list-style: none;
+}
+.alpha-list > ul > li{
+    
+    list-style-type: none;
+}
+.alpha-list>li >a{
+    text-decoration: none;
+ }
+ .alpha-list,
+ .alpha-list>li {
+     list-style-type: none ;
+ }
+ .item {
+     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+ .item > .title-item{
+     font-style: oblique;
+
+    font-style: normal !important;
+ }

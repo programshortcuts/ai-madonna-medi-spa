@@ -1,0 +1,43 @@
+/* effects-med-spa-serv.css */
+.service-section .section-title {
+    cursor: pointer;
+}
+.service.title-text {
+    text-transform: uppercase;
+}
+/*==============================================================
+  BUTTON AREA
+==============================================================*/
+.less-info {
+    cursor: pointer;
+}
+/*==============================================================
+  LINKS
+==============================================================*/
+.women-men-nav a {
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+.women-men-nav a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, .08);
+}
+.section-title:active~.img-wrapper>img {
+    filter: grayscale(0) !important;
+}
+
+.section-title:active~.img-wrapper>img {
+    filter: grayscale(0) !important;
+}
+.service-section>button.section-title:active,
+.service-section>button.section-title:focus {
+    box-shadow: 0 2px 2px 3px silver;
+    text-transform: capitalize;
+}
+.more-info-buttons button:active,
+.more-info-buttons button:focus{
+    border: 2px solid black;
+
+
+}

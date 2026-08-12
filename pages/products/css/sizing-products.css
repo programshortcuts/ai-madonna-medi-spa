@@ -1,0 +1,22 @@
+/* sizing-products.css */
+.page-container.products-page-container {
+    height: 100vh;
+}
+/* container width only */
+.products-content {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* image styling only */
+.item-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* header visuals only */
+.products-header  img {
+    height: 50px;
+    max-height: 80px;
+}

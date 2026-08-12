@@ -1,0 +1,55 @@
+/* service-swiper-background.css */
+
+.service{ 
+    min-height: 50vh;
+}
+#longFuncServiceHome{
+    /* background: url('../../imgs/service-swiper-slide-bkgrn/longevity-slide-bkgnd.png'); */
+    background-image: url('../../pages/home/service-slides/longevity-med.PNG');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /* background-size: cover; */
+    background-position-x:40% !important;
+    /* background-position-y: -10% !important; */
+    filter: grayscale(60%);
+}
+#bioIdenticalServiceHome{
+    background: url('../../pages/medical-spa-services/media/bio-horm-replace.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 40% !important;
+    background-position-y: -20% !important;
+}
+#botoxFillerServiceHome{
+    /* background: url('../../pages/home/service-slides/botox-new.png'); */
+    background-repeat:  no-repeat !important;
+    background-size: 80%;
+    background-position-x: 60%;
+    background-position-y: 60%;
+    filter: grayscale(30%);
+}
+#glp-1ServiceHome{
+    background: url('../../pages/imgs/glp-service-slide.png');
+    background-repeat:    no-repeat !important;
+    /* background-size: 200px 200px; */
+    background-position-x: -50% !important;
+    background-position-y: 10% !important;
+    background-size: 98% !important;
+}
+#peptidesServiceHome{
+    background: url('../../imgs/ai-imgs/peptide-header-wide.png') 
+    center/cover no-repeat !important;
+    background-position-y: 20% !important;
+    
+}
+#infraRedServiceHome{
+    background: url('../../imgs/ai-imgs/infrared-therapy.png') center/cover no-repeat !important;
+    background-position-x: 90% !important;
+}
+#ivInfusionsServiceHome{
+    background: url('../../imgs/ai-imgs/ivInfusion-header-wide.png') center/cover no-repeat !important;
+    background-position-x: 56% !important;
+}
+.service>.content {
+    background: transparent !important;
+}

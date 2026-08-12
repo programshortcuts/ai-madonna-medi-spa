@@ -1,0 +1,43 @@
+/* layout.css */
+#navBarBtn:active,#navBarBtn:focus{
+    border: 3px solid gold !important;
+}
+.service-section > button.section-title:active,
+.service-section>button.section-title:focus{
+    box-shadow: 0 2px 2px 3px silver;
+    /* box-shadow: 1px -1px 1px 4px lawngreen; */
+    /* box-shadow: 1px -1px 1px 4px lightcyan; */
+    border: 1px solid grey;
+    border-top: 1px solid whitesmoke;
+    outline: none;
+    text-shadow: 0 1px 1px lightcyan;
+    text-transform: capitalize;
+    padding-left: 2%;
+    padding-top: 1%;
+}
+
+/* med-spa-serv.html */
+.section-title:active~.img-wrapper>img {
+    filter: grayscale(0) !important;
+}
+.section-title:active~.img-wrapper>img {
+    filter: grayscale(0) !important;
+}
+
+
+.service-col-title{
+    background-color: none;
+    /* temp highlight */
+    border: none;
+    transition: background-color 0.2s ease;
+}
+.service-col-title.is-focused {
+    background-color: rgba(0, 123, 255, 0.2) !important;
+    /* temp highlight */
+    transition: background-color 0.2s ease;
+}
+.service-section:active,.service-section:focus{
+    /* padding: 2% 0; */
+    /* padding-left: 5%; */
+
+}

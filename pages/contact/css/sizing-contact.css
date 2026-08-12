@@ -1,0 +1,12 @@
+/* sizing-contact.css */
+.page-container.contact-page-container {
+    /* width: 90vcw !important; */
+}
+
+.page-container.contact-page-container .social-media-container {
+    width: 100%;
+}
+
+.social-media-container>.social-media-item {
+    width: 50%;
+}

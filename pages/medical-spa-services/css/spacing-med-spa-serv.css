@@ -1,0 +1,88 @@
+/* spacing-med-spa-services.css */
+.med-spa-serv-container {
+    padding: 0 .5rem;
+    margin-bottom: 20rem;
+}
+/*==============================================================
+  SERVICE SECTION
+==============================================================*/
+.sections-containers {
+    max-width: var(--service-max-width);
+}
+.service-section {
+    margin-bottom: 5%;
+}
+.service-section .content {
+    padding-bottom: 2%;
+    padding: 0 1%
+}
+.service-section .section-title {
+    /* padding-bottom: 1%; */
+    padding-left: 2%;
+}
+.service.title-text {
+    letter-spacing: .02em;
+}
+.section-preview p,
+.section-details p {
+    line-height: 1.95;
+    
+}
+.section-details ul {
+    margin: 0 0 2rem 1.25rem;
+    padding: 0;
+}
+.section-details li {
+    margin-bottom: .55rem;
+}
+.section-details li {
+    line-height: 1.8;
+}
+/*==============================================================
+  FLOATING MEDIA
+==============================================================*/
+
+.float-right {
+    /* margin-left: 2.4rem; */
+}
+.float-left {
+    margin-right: 1.4rem;
+}
+
+/*==============================================================
+  LINKS
+==============================================================*/
+.service-section .more-info-link,
+.service-section .more-info-links a {
+    margin-top: 1.5rem;
+    gap: .5rem;
+}
+.women-men-nav {
+    gap: 1.5rem;
+    margin: 2rem 0;
+    margin-top: -8%;
+}
+.women-men-nav a {
+    gap: 1rem;
+    padding: 1rem 1.35rem;
+}
+
+.more-info-buttons button{
+    padding: 1% 2%
+}
+.women-men-content{
+    margin-top: -18%;
+}
+.women-men-content .col:first-of-type {
+    padding-right: 2%;
+}
+.more-info-link:visited,
+.more-info-link {
+    padding: 1% 0;
+    padding-right: 4%;
+    padding-left: 2%;
+}
+.section-preview ul{
+    padding: 0 25%;
+
+}

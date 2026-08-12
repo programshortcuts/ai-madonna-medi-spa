@@ -1,0 +1,27 @@
+/* animations/items-scroll.css */
+/* items-scroll.css */
+
+/* cursor + drag feel */
+.items-container:active {
+    cursor: grabbing;
+}
+
+/* focus styling only */
+.item:focus {
+    outline: none;
+    border-radius: 4px;
+    box-shadow: 0 0 1px 1px lightblue;
+    border: 1px solid blue;
+
+    transition: all .3s;
+}
+
+/* clicked state */
+.clicked-item {
+    /* optional visual feedback */
+}
+
+/* scroll snapping ONLY (safe global rule) */
+.item {
+    scroll-snap-align: start;
+}

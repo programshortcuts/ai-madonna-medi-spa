@@ -1,0 +1,59 @@
+/* layout-home.css*/
+.page-container.home-page-container {
+    display: flex;
+    flex-direction: column;
+}
+.home-page-header {
+    display: flex;
+    align-items: flex-end;
+}
+.home-page-header .img-wrapper {flex-basis: 10%;}
+
+.home-page-header .contact-content {
+    padding-top: 5%;
+    flex-basis: 30%;
+}
+.address-num-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.home-page-header section {
+    position: relative;
+}
+.home-page-header section::after { 
+    content: "";
+    display: block;
+    clear: both;
+}
+/* Removed conflicting width: 250px and float: right for .swiper */
+.mission-state .img-wrapper img    {height: 20vh;}
+.img-wrapper          {float: right;}
+.content .img-wrapper {float: left;}
+#drMadonnaPhoto       {display: block;}
+.address-contact-home {display: flex;}
+.staff-wrapper {
+    overflow: hidden;
+    scroll-behavior: none;
+    overflow-x: scroll;
+    /* overflow-x: ; */
+    touch-action: pan-x;
+    display: flex;
+}
+.staff-wrapper > .staff {
+    display: flex;
+    flex-basis:50%;
+}
+.staff-wrapper > .staff > .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.service-column {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+}
+.service-column > .service-col-title{
+    display: block;
+}

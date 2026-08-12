@@ -1,0 +1,12 @@
+/* responsive-contact.css */
+@media screen and (min-width: 642px){
+    .page-container.contact-page-container {
+            padding-top:5% !important;
+            margin-top:-5% !important;
+    }
+}
+@media screen and (max-width: 741px){
+    .form-contact-container {
+        /* max-width: 400px; */
+    }
+}

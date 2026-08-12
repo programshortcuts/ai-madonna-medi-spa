@@ -1,0 +1,7 @@
+.t {color:tomato !important;}
+.r {color:red !important;}
+
+h1 a:visited,
+h1 a{
+    color: var(--color-primary);
+}

@@ -1,0 +1,7 @@
+/* sort-items */
+.items-container[data-view="grid"] {
+    flex-wrap: wrap;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 500px;
+}

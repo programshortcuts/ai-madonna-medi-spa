@@ -1,0 +1,66 @@
+/* layout-products.css */
+.page-container.products-page-container {
+    overflow-y: auto;
+    overscroll-behavior: auto;
+    /* important */
+}
+.alpha-list {display: flex;}
+.alpha-list>li {flex-basis: 4%;}
+.items-container {
+    display: flex;
+    overflow-x: auto;
+    /* allow horizontal scroll */
+    overflow-y: hidden;
+    /* NOT vmax */
+    gap: 1rem;
+    /* optional smooth scroll */
+    scroll-behavior: smooth;
+}
+
+.item {
+    /* flex: 0 0 20%; */
+    /* 👈 THIS is what you want */
+    display: flex;
+    flex-direction: column;
+}
+.item > .title-item{
+    font-size: .9rem;
+}
+.products-container-header {
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+.products-content{
+    width: 100%;
+    padding: 0.5rem 1rem;
+}
+
+ 
+.cat-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.products-header > img {
+    z-index: 10;
+    /* position: absolute; */
+    max-height: 100px;
+    left: 50%;
+    bottom: 50%;
+}
+
+.items-container {
+    display: flex;
+    flex-wrap: nowrap;
+    
+    gap: 1rem;
+    
+    overscroll-behavior: contain;
+    /* overflow-x: auto; */
+    /* overflow-y: scroll; */
+    
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}

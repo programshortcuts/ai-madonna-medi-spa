@@ -1,0 +1,63 @@
+/* txt-home.css*/
+.home-page-header>p {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.home-page-container {}
+
+.address-num-container>p {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 1.35rem;
+}
+[data-nav-target="more-info-link"],
+.home-page-container button.section-title {
+    /* font-size: 1rem !important; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: inherit;
+    letter-spacing: 20%;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.page-container.home-page-container .main-item>p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* font-family: 'Courier New', Courier, monospace; */
+    /* font-size: 1rem; */
+    /* font-weight: 400; */
+    line-height: 1.8;
+}
+
+.page-container.home-page-container .main-item p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* font-size: .9rem; */
+}
+
+#ourServiceHomePage .title-text,
+#longevityMedHomePage  {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 500 !important;
+    /* color: blue; */
+}
+#longevityMedHomePage  .title-text{
+    font-size: 1rem;
+}
+#ourServiceHomePage .title-text{
+    font-size: 1.2rem;
+    font-weight: 600 !important;
+}
+    
+.and-font {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.reviews-container > p > .more-info-link:visited,
+.reviews-container > p > .more-info-link{
+    color: black;
+    text-decoration: none;
+}
+#addressLink:visited,
+#addressLink{
+    color: black;
+    text-decoration: none;
+}
