@@ -1,10 +1,7 @@
 /* background-colors.css */
 :root {
-    /* --bg-clr: rgb(183, 181, 167); */
-    /* --bg-clr: #ddd; */
     --bg-clr: #ddd;
     --bg-header: #ddd;
-    /* --bg-header: #878a8b; */
 }
 .main-landing-page {
     background-color: var(--bg-clr);
@@ -18,5 +15,4 @@
 }
 .page-header {
     background-color: var(--bg-clr);
-    /* background-color: blue; */
 }

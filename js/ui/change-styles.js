@@ -26,33 +26,14 @@ export function initChangeStyles(){
         logo.style.cursor = "pointer";
 
         logo.addEventListener("click", () => {
-            currentThemeIndex = (currentThemeIndex + 1) % themes.length;
-
-            const newTheme = themes[currentThemeIndex];
-            themeLink.href = `css/themes/${newTheme}/main-${newTheme}.css`;
-            localStorage.setItem("theme", newTheme);
-            
-            console.log("Switched to theme:", newTheme);
-            versionTextEl.innerText = newTheme
+            window.open(e.target.getAttribute('data-href'))
         });
         logo.addEventListener("keydown", (e) => {
             const key = e.key.toLowerCase()
             if(key === 'enter'){
-                currentThemeIndex = (currentThemeIndex + 1) % themes.length;
-                
-                const newTheme = themes[currentThemeIndex];
-                
-                themeLink.href = `css/themes/${newTheme}/main-${newTheme}.css`;
-                localStorage.setItem("theme", newTheme);
-                
-                console.log("Switched to theme:", newTheme);
-                if(newTheme == 'default'){
+                console.log()
 
-                    versionTextEl.innerText = ``
-                }else{
-
-                    versionTextEl.innerText = newTheme
-                }
+                window.open(e.target.getAttribute('data-href'))
             }
         });
     }

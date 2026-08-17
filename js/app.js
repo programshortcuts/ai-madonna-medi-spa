@@ -37,6 +37,6 @@ function setupGlobalListeners(){
     initDropDown()
     // initDropDownMedServ()
     // initFilterSortItems()
-    // initChangeStyles()
+    initChangeStyles()
 }
 setupGlobalListeners()

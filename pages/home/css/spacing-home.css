@@ -1,4 +1,4 @@
-/* spacing-home.css */
+k/* spacing-home.css */
 
 .page-container.home-page-container {
     padding-bottom: 25%;
@@ -7,14 +7,8 @@
     /* padding-top: 5% ; */
     /* margin-bottom: -5%; */
 }
-.home-page-header>p {
-    padding-bottom: 5%;
-    padding-left: 2%;
-    width: 100%;
-}
-.home-page-header>.contact-content>.img-wrapper>img {
-    margin-left: 5%;
-}
+
+
 .home-page-container>.main-content {
     /* padding: 0 5% !important; */
 }
@@ -84,24 +78,7 @@ section#longevityMedHomePage {
     margin-left: 18%;
 }
 
-.service-column {
-    margin: 0 1%;
-    /* border: 1px solid blue; */
-}
-
-.service-column>.service-col-title {
-    padding-top: 5%;
-    flex-grow: 1;
-    padding: 1%
-}
-
-.service-column>.service-col-title {
-    text-decoration: none;
-    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 600;
-    font-size: 1rem;
-    max-width: fit-content;
-    margin-top: 2%;
-    margin-right: 5%;
+p.intro-text {
+    padding-top: 1%;
+    line-height: 1.2;
 }

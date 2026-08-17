@@ -17,10 +17,8 @@ import { initProductsController } from "../ui/products-controller.js";
 import { initBgSlider } from "../visuals/change-background.js";
 import { initDropDown } from "../ui/drop-down.js";
 import {initDropDownMedServ} from "../ui/drop-down-med-serv.js";
-
 export const mainLandingPage = document.querySelector('.main-landing-page');
 export const pageWrapper = document.querySelector('.page-wrapper');
-
 if (!mainLandingPage) {
     throw new Error("Missing .main-landing-page in index.html");
 }
@@ -28,48 +26,37 @@ const pageCache = new Map();
 let lastClickedLink = null;
 function centerElementInScrollContainer(element) {
     if (!element || !pageWrapper) return;
-
     const scrollContainer = pageWrapper;
     const containerHeight = scrollContainer.clientHeight || window.innerHeight;
     const elementRect = element.getBoundingClientRect();
     const containerRect = scrollContainer.getBoundingClientRect();
     const offsetTop = elementRect.top - containerRect.top + scrollContainer.scrollTop;
     const targetScrollTop = Math.max(0, offsetTop - (containerHeight / 2) + (elementRect.height / 2));
-
     scrollContainer.scrollTo({
         top: targetScrollTop,
         behavior: 'smooth'
     });
 }
-/* -----------------------------
-   GLOBAL FORM SAFETY
------------------------------ */
+/* ----------------------------- GLOBAL FORM SAFETY----------------------------- */
 document.addEventListener("submit", (e) => {
     if (e.target.id === "contact-form") {
         e.preventDefault();
         mainLandingPage.textContent = "Form submission blocked";
     }
 });
-/* -----------------------------
-   INIT ENTRY POINT
------------------------------ */
+/* ----------------------------- INIT ENTRY POINT----------------------------- */
 export function initInjectContentListeners() {
     // ✅ FIX: ensure DOM is ready before first injection
     requestAnimationFrame(() => {
         if (!history.state) {
-
             history.replaceState(
                 { href: DEFAULT_PAGE },
                 "",
                 `#${DEFAULT_PAGE}`
             );
-        
             injectPage(DEFAULT_PAGE);
-        
         }
-
         injectPage(DEFAULT_PAGE);
-
     });
     document.addEventListener('click', (e) => {
         const link = e.target.closest('a[data-link]');
@@ -105,24 +92,16 @@ export function initInjectContentListeners() {
             return;
         }
         lastClickedLink = link;
-        
     });
     window.addEventListener("popstate", (e) => {
-
         if (e.state?.href) {
-
             injectPage(e.state.href);
-
         } else {
-
             injectPage(DEFAULT_PAGE);
-
         }
-
     });
 }
-/* ----------------------------- PAGE INJECTION CORE
------------------------------ */
+/* ----------------------------- PAGE INJECTION CORE ----------------------------- */
 export async function injectPage(href) {
     if (!href) return;
     if (!isSafePath(href)) {
@@ -135,24 +114,19 @@ export async function injectPage(href) {
             html = pageCache.get(href);
         } else {
             const res = await fetch(href);
-
             if (!res.ok) {
                 throw new Error(`Failed to fetch ${href} (${res.status})`);
             }
-
             html = await res.text();
             pageCache.set(href, html);
         }
-
     } catch (err) {
         console.error(err);
         mainLandingPage.textContent = `Failed to load page: ${href}`;
         return;
     }
-
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, 'text/html');
-
     // 🔥 Remove broken attributes
     doc.querySelectorAll("[src], [href], [action]").forEach(el => {
         ["src", "href", "action"].forEach(attr => {
@@ -162,21 +136,15 @@ export async function injectPage(href) {
             }
         });
     });
-
     // 🔥 Remove external scripts + styles from injected page
     doc.querySelectorAll('link, script').forEach(el => el.remove());
-
     const newContent = doc.querySelector(".page-container");
-
     if (!newContent) {
         console.error("Missing .page-container in:", href);
         mainLandingPage.textContent = `Invalid page structure: ${href}`;
         return;
     }
-
-    // -----------------------------
-    // INJECT
-    // -----------------------------
+    // -----------------------------// INJECT// -----------------------------
     mainLandingPage.innerHTML = DOMPurify.sanitize(newContent.outerHTML, {
         ALLOWED_TAGS: [
             'video',
@@ -200,6 +168,7 @@ export async function injectPage(href) {
             'max',
             'step',
 
+            'data-href',
             'data-auto-focus',
             'data-nav-target',
             'data-link',
@@ -209,8 +178,7 @@ export async function injectPage(href) {
     });
     
     requestAnimationFrame(() => {
-        const firstSection = mainLandingPage.querySelector(".sections-containers");
-        
+        const firstSection = mainLandingPage.querySelector(".sections-containers"); 
         if (firstSection) {
             firstSection.scrollIntoView({
                 block: "start",
@@ -219,12 +187,8 @@ export async function injectPage(href) {
         }
         initAllVideos(mainLandingPage)
     });
-
-    // -----------------------------
-    // AUTO FOCUS
-    // -----------------------------
+    // ----------------------------- // AUTO FOCUS// -----------------------------
     const autoFocusEl = mainLandingPage.querySelector('[data-auto-focus]');
-
     if (autoFocusEl) {
         requestAnimationFrame(() => {
             window.setTimeout(() => {
@@ -237,10 +201,9 @@ export async function injectPage(href) {
             pageWrapper.scrollTop = 0;
         });
     }
+    // Keyboard-nav is in onPageReady in page-lifecycle.js
     onPageReady();
-    // -----------------------------
-    // INIT UI MODULES
-    // -----------------------------
+    // ----------------------------- // INIT UI MODULES// -----------------------------
     initProductsController();
     initItemsScroll();
     initZoomItems();

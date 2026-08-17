@@ -1,29 +1,7 @@
 /* responsivce-home.css */
-@media screen and (min-width:723px) {
-    .service-column {
-        margin: 0 1%;
-        padding-top: 0%;
-    }
-    .service-column>.service-col-title {
-        margin-top: 1%;
-        padding: .5% 0;   
-    }
-}
-@media screen and (max-width: 722px) {
-    .service-column {
-        /* margin: 0 1%; */
-        padding-top: 0%;
-    }
-    .service-column>.service-col-title {
-        margin-top: 1%;
-        padding: .5% 0;
-    }
-}
+
 @media screen and (min-width:533px) {
-    .home-page-header {
-        float: left;
-        width: 45%;
-    }
+    
     .address-contact-home{
         margin-top: 5%;
     }
@@ -38,10 +16,10 @@
         line-height: 1.2 !important;
     }
     .swiper.reviews-swiper {
-            height: 15vh;        
-        }
+        height: 15vh;        
+    }
     .home-page-header {
-        padding-top:25% !important;
+        /* padding-top:25% !important; */
     }
     #officeInPhotoA{
         display: inline-flex
@@ -52,17 +30,17 @@
         margin-left: 5%;
     }
 }
-
 @media screen and (max-width:431px) {
-    .reviews-swiper .swiper-slide{
-        font-size: .9rem;
-    }
-    .service-column>.service-col-title>.title-text {
-        font-size: 95% !important;
-    }
     #longevityMedHomePage>.title-text {
         margin-top: 2% !important;
     }
-    
+    .reviews-swiper .swiper-slide{
+        font-size: .9rem;
+    }
+    .intro-text {
+        font-size: 90%;
+        padding-top: 1%;
+        line-height: 1.2 !important;
+    }
     
 }

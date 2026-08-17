@@ -1,10 +1,7 @@
 /* txt-home.css*/
-.home-page-header>p {
+.slogan  {
     font-family: 'Courier New', Courier, monospace;
 }
-
-.home-page-container {}
-
 .address-num-container>p {
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
     color: white;
@@ -12,8 +9,6 @@
 }
 [data-nav-target="more-info-link"],
 .home-page-container button.section-title {
-    /* font-size: 1rem !important; */
-    font-family: Arial, Helvetica, sans-serif;
     font-family: 'Times New Roman', Times, serif;
     background-color: inherit;
     letter-spacing: 20%;
@@ -21,18 +16,6 @@
     text-decoration: none;
 }
 
-.page-container.home-page-container .main-item>p {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    /* font-family: 'Courier New', Courier, monospace; */
-    /* font-size: 1rem; */
-    /* font-weight: 400; */
-    line-height: 1.8;
-}
-
-.page-container.home-page-container .main-item p {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    /* font-size: .9rem; */
-}
 
 #ourServiceHomePage .title-text,
 #longevityMedHomePage  {
@@ -60,4 +43,13 @@
 #addressLink{
     color: black;
     text-decoration: none;
+}
+
+
+.home-main-content section p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+p.intro-text {
+     /* font-size: .2rem; */
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }

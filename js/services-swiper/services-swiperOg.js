@@ -1,32 +1,6 @@
-// js/visuals/swiper.js
-let reviewsSwiper = null;
-let clickedServiceSlide = null;
-export let servicesSwiper = null;
+// services-swipers/services-swipers.js
 import { initDropDown } from "../ui/drop-down.js";
-    
-export function initReviewsSwiper() {
-    const el = document.querySelector('.reviews-swiper');
-    if (!el || typeof Swiper === 'undefined') return;
-    
-    if (reviewsSwiper) reviewsSwiper.destroy(true, true);
-
-    reviewsSwiper = new Swiper(el, {
-        slidesPerView: 1,
-        loop: true,
-        speed: 700,
-
-        grabCursor: true,
-        allowTouchMove: true,
-
-        threshold: 10,
-
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false
-        }
-    });
-
-}
+export let servicesSwiper = null;
 
 export function initServicesSwiper() {
     initDropDown()
@@ -712,9 +686,6 @@ serviceSpin.stepDurations =
     
     return servicesSwiper; // ✅ CRITICAL ADDITION
 }
-
-// FILE: js/visuals/swiper.js
-
 export function initServiceNavController(swiperInstance) {
     const buttons = document.querySelectorAll('.service-col-title');
     if (!buttons.length) return;

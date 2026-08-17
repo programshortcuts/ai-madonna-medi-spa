@@ -4,30 +4,9 @@
 }
 
 .home-page-container article.mission-state::after{
-        display: flow-root;
-}
-/* .home-page-container .animation-container::after, */
-.home-page-header::after{
-    content: "";
-    display: block;
-    clear: both;
+    display: flow-root;
 }
 
-.home-page-item .content > .img-wrapper{
-    /* float:right */
-}
-#shilouetteIcon {
-    float: right;
-    /* margin-left: 1rem; */
-    /* margin-bottom: 0. 5rem; */
-    width: 50%;
-    position: relative;
-    right: -20%;
-}
-
-.home-page-header p {
-    z-index: 2;
-}
 #aboutUsHomePage{
     position: relative;
 }

@@ -49,11 +49,3 @@
     flex-direction: column;
     justify-content: flex-end;
 }
-.service-column {
-    display: flex;
-    flex-wrap: wrap;
-    /* flex-direction: column; */
-}
-.service-column > .service-col-title{
-    display: block;
-}

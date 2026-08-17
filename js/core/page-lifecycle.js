@@ -1,5 +1,6 @@
 // page-lifecycle.js
-import { initServiceNavController, initServicesSwiper, initReviewsSwiper } from "../visuals/swiper.js";
+import { initReviewsSwiper } from "../reviews-swiper/reviews-swiper.js";
+import { initServicesSwiper, initServiceNavController } from "../services-swiper/services-swiper.js";
 import { initDropDown } from "../ui/drop-down.js";
 import { initBgSlider } from "../visuals/change-background.js";
 

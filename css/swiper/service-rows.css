@@ -1,0 +1,25 @@
+    /* service-swiper.css */
+.service-rows {
+    display: flex;
+    flex-direction: column;
+}
+.service-rows .service-row{
+    width: 90%;
+    margin-left: 2.5%;
+    min-height: 30vh;
+    display: flex;
+}
+.service-rows button .title-text{
+    display: inline-block;
+    height: max-content;
+    /* border: 1px solid black */
+
+}
+/* service-swiper-background.css */
+
+.service {
+    min-height: 50vh;
+}
+
+
+
