@@ -58,6 +58,15 @@
         padding: 0 .5rem;
         padding-top: 5rem;
     }
+    .service-section .section-title {
+        min-height: 44px;
+        padding-top: .55rem;
+        padding-bottom: .55rem;
+    }
+    .service-section .img-wrapper,
+    .service-section .service-video {
+        max-width: 100% !important;
+    }
 }
 
 @media screen and (max-width:701px){

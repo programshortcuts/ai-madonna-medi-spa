@@ -1,6 +1,7 @@
 /* effects-med-spa-serv.css */
 .service-section .section-title {
     cursor: pointer;
+    transition: background-color .18s ease, box-shadow .18s ease, color .18s ease;
 }
 .service.title-text {
     text-transform: uppercase;
@@ -30,14 +31,18 @@
 .section-title:active~.img-wrapper>img {
     filter: grayscale(0) !important;
 }
-.service-section>button.section-title:active,
-.service-section>button.section-title:focus {
-    box-shadow: 0 2px 2px 3px silver;
-    text-transform: capitalize;
+.service-section>button.section-title:hover {
+    background-color: rgba(23, 50, 77, .05);
+}
+.service-section>button.section-title:focus-visible {
+    outline: 3px solid rgba(45, 127, 184, .45);
+    outline-offset: 3px;
+    box-shadow: none;
+}
+.service-section>button.section-title[aria-expanded="true"] {
+    background-color: rgba(23, 50, 77, .04);
 }
 .more-info-buttons button:active,
-.more-info-buttons button:focus{
-    border: 2px solid black;
-
-
+.more-info-buttons button:focus-visible{
+    border: 2px solid currentColor;
 }
