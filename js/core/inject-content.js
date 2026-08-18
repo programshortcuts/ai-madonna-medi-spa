@@ -1,15 +1,15 @@
 // inject-content.js
 import { initAllVideos } from "../video/video-controls.js";
 // 🔥 Ensure correct default page
-// export const DEFAULT_PAGE = "pages/home/home.html";
-export const DEFAULT_PAGE  = "pages/medical-spa-services/medical-spa-services.html";
+export const DEFAULT_PAGE = "pages/home/home.html";
+// export const DEFAULT_PAGE  = "pages/medical-spa-services/medical-spa-services.html";
 // export const DEFAULT_PAGE  = "pages/medical-spa-services/services/bio-hormone-replace/women-bio-hormones/women-bio-hormones.html";
 // export const DEFAULT_PAGE = "pages/contact/contact.html";
 // export const DEFAULT_PAGE = "pages/medical-spa-services/services/glp-1/glp-1.html";
 // export const DEFAULT_PAGE = "pages/products/products.html";
 // export const DEFAULT_PAGE = "pages/bookings/bookings.html";
 // inject-content.js
-import * as zoomItems from "../ui/zoom-items.js";
+import { initZoomItems } from "../ui/zoom-items.js";
 import { onPageReady } from "./page-lifecycle.js";
 import { isSafePath } from "./security-utils.js";
 import { initItemsScroll } from "../ui/items-scroll.js";
@@ -206,7 +206,7 @@ export async function injectPage(href) {
     // ----------------------------- // INIT UI MODULES// -----------------------------
     initProductsController();
     initItemsScroll();
-    zoomItems.initZoomItems();
+    initZoomItems();
     // initDropDownMedServ()
     initDropDown()
     // OPTIONAL PAGE-SPECIFIC INIT

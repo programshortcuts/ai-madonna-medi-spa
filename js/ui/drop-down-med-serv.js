@@ -19,7 +19,6 @@ export function initDropDownMedServ() {
     const moreInfoBtns = medSpaContainer.querySelectorAll('.more-info-btn')
     const sectionPreviews = document.querySelectorAll('.section-preview')
     hideAllDropSnips(sectionPreviews)
-    // hideAllParagraphs(contentParagraphs)
     moreInfoBtns.forEach(el => {
         el.addEventListener('keydown', e => {
             const key = e.key.toLowerCase()

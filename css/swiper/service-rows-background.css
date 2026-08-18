@@ -14,9 +14,9 @@
 #bioIdenticalServiceRow{
     background: url('../../pages/medical-spa-services/media/bio-horm-replace.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
     background-position-x: 40% !important;
-    background-position-y: -20% !important;
+    background-position-y: -80% !important;
 }
 
 #botoxFillerServiceRow{

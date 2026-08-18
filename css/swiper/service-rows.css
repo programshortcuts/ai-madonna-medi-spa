@@ -1,16 +1,18 @@
     /* service-swiper.css */
 .service-rows {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
 }
 .service-rows .service-row{
-    width: 90%;
+    /* width: 40%; */
+    flex-basis: 40%;
     margin-left: 2.5%;
     min-height: 30vh;
     display: flex;
 }
 .service-rows button .title-text{
-    display: inline-block;
+    display: none;
     height: max-content;
     /* border: 1px solid black */
 

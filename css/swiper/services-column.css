@@ -23,7 +23,7 @@
 }
 
 .service-column>.service-col-title {
-    max-width: fit-content;
+    /* max-width: fit-content; */
     margin-top: 2%;
     margin-right: 5%;
 }

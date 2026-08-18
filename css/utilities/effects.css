@@ -41,3 +41,11 @@
     /* padding-left: 5%; */
 
 }
+.service-row:active,.service-row:hover,
+.service-row:focus{
+    padding: 5%;
+    transform: scale(1.2);
+    padding-left : 5%;
+    margin-left: 5%;
+    margin-bottom: 5;
+}

@@ -1,0 +1,68 @@
+/* Homepage visual system: intentionally scoped so injected service pages retain their layouts. */
+:root { --ink: #1d302f; --pine: #183a37; --sage: #819a8c; --mist: #edf1ec; --sand: #d9cbb9; --cream: #faf8f4; --line: rgba(24, 58, 55, .16); }
+.premium-home { color: var(--ink); background: var(--cream); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; padding: 0 0 6rem !important; }
+.premium-home h2, .premium-home h3, .premium-home .footer-mark { font-family: Georgia, "Times New Roman", serif; font-weight: 400; letter-spacing: -.04em; }
+.premium-home a { color: inherit; }
+.premium-hero { min-height: min(760px, 78vh); width: 100% !important; position: relative; overflow: hidden; display: grid; align-items: end; isolation: isolate; filter: none !important; }
+.premium-hero .hero-image { position: absolute; inset: 0; z-index: -2; background: url('../../../imgs/ai-longevity-madonna-spa.png') center 42% / cover no-repeat; transform: scale(1.01); }
+.premium-hero .hero-scrim { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(15, 43, 39, .88) 0%, rgba(15, 43, 39, .58) 44%, rgba(15, 43, 39, .10) 76%); }
+.hero-content { width: min(1140px, calc(100% - 3rem)); margin: 0 auto; padding: 7.5rem 0 6.5rem; color: #fff; }
+.eyebrow { margin: 0 0 1rem; color: var(--sage); font-size: .68rem; font-weight: 700; letter-spacing: .18em; line-height: 1.3; text-transform: uppercase; }
+.hero-content .eyebrow, .consultation-section .eyebrow { color: #d7e3d9; }
+.hero-content h2 { max-width: 700px; margin: 0; font-size: clamp(3rem, 6vw, 5.7rem); line-height: .96; color: white; }
+.hero-content h2 em { font-weight: inherit; color: #dae4d8; }
+.hero-copy { max-width: 530px; margin: 1.8rem 0 2.2rem; font-size: clamp(1rem, 1.4vw, 1.2rem); line-height: 1.65; color: rgba(255,255,255,.88); }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.7rem; }
+.button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .85rem 1.2rem; border: 1px solid transparent; font-size: .75rem; font-weight: 750; letter-spacing: .1em; text-decoration: none; text-transform: uppercase; transition: transform .2s ease, background-color .2s ease, color .2s ease; }
+.button:hover { transform: translateY(-2px); }
+.button-primary { background: #dce9dd; color: #183a37 !important; }
+.button-primary:hover { background: #fff; }
+.button-quiet { padding-left: 0; color: #fff !important; border-bottom-color: rgba(255,255,255,.6); }
+.hero-note { margin: 4rem 0 0; color: rgba(255,255,255,.72); font-size: .68rem; letter-spacing: .09em; text-transform: uppercase; }
+.home-main-content { max-width: none; }
+.home-introduction, .services-section, .physician-section, .consultation-section { width: min(1140px, calc(100% - 3rem)); margin-left: auto; margin-right: auto; }
+.home-introduction { display: grid; grid-template-columns: .92fr 1.08fr; gap: clamp(2.5rem, 9vw, 9rem); padding: clamp(5rem, 10vw, 9rem) 0; }
+.premium-home h2 { margin: 0; font-size: clamp(2.3rem, 4.2vw, 4.15rem); line-height: 1.02; }
+.introduction-copy { max-width: 620px; font-size: 1.05rem; line-height: 1.75; }
+.introduction-copy p + p { margin-top: 1.1rem; }
+.text-link { display: inline-flex; gap: .6rem; margin-top: 1.6rem; padding-bottom: .35rem; border-bottom: 1px solid var(--ink); font-size: .72rem; font-weight: 750; letter-spacing: .11em; text-decoration: none; text-transform: uppercase; }
+.text-link:hover { color: #4a695f; }
+.services-section { padding: clamp(4.5rem, 8vw, 7.5rem) 0; border-top: 1px solid var(--line); }
+.section-heading { display: flex; justify-content: space-between; align-items: end; gap: 2rem; margin-bottom: 2.5rem; }
+.desktop-link { margin: 0 0 .4rem; white-space: nowrap; }
+.premium-service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.premium-service-card { position: relative; min-height: 300px; padding: 1.45rem; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; color: #fff !important; background: #193936 center / cover no-repeat; text-decoration: none; isolation: isolate; }
+.premium-service-card::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(10,31,28,.08), rgba(10,31,28,.82)); transition: background .3s ease; }
+.premium-service-card:hover::before { background: linear-gradient(180deg, rgba(10,31,28,.12), rgba(10,31,28,.92)); }
+.premium-service-card:hover .card-arrow { transform: translate(3px, -3px); background: #e1ebe0; color: var(--pine); }
+.premium-service-card h3 { margin: 0; font-size: clamp(1.55rem, 2.4vw, 2.25rem); line-height: 1.02; }
+.card-number { position: absolute; top: 1.25rem; left: 1.35rem; font-size: .65rem; font-weight: 700; letter-spacing: .15em; }
+.card-arrow { position: absolute; top: 1rem; right: 1rem; width: 2.2rem; height: 2.2rem; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.55); border-radius: 50%; transition: .25s ease; }
+.card-longevity { background-image: url('../../../pages/home/service-slides/longevity-med.PNG'); }
+.card-hormones { background-image: url('../../../imgs/ai-imgs/bio-hormone-header-wide.png'); }
+.card-peptides { background-image: url('../../../imgs/ai-imgs/peptide-header-wide.png'); }
+.card-glp { background-image: url('../../../imgs/ai-imgs/glp-1-serv-header-wide.png'); }
+.card-aesthetics { background-image: url('../../../pages/home/service-slides/botox-new.png'); background-position: 50% 35%; }
+.card-infusion { background-image: url('../../../imgs/ai-imgs/ivInfusion-header-wide.png'); }
+.physician-section { display: grid; grid-template-columns: minmax(270px, .85fr) 1.15fr; align-items: center; gap: clamp(2.5rem, 8vw, 8rem); padding: clamp(5rem, 10vw, 9rem) 0; }
+.physician-photo { aspect-ratio: 4 / 5; max-width: 415px; background: #d8e0d7; }
+.physician-photo img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center top; filter: saturate(.78); }
+.physician-content { max-width: 560px; font-size: 1.02rem; line-height: 1.75; }
+.physician-content h2 { margin-bottom: 1.65rem; }
+.physician-content p + p { margin-top: 1rem; }
+.consultation-section { display: flex; align-items: end; justify-content: space-between; gap: 2rem; padding: clamp(3rem, 6vw, 5rem); background: var(--pine); color: white; }
+.consultation-section h2 { max-width: 610px; color: #fff; }
+.consultation-section div > p:last-child { margin: 1.25rem 0 0; color: rgba(255,255,255,.78); }
+.consultation-section .button { flex: 0 0 auto; }
+.home-footer { width: min(1140px, calc(100% - 3rem)); margin: 4.5rem auto 0; padding-top: 2rem; border-top: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; gap: 2rem; color: #486158; }
+.home-footer > div { display: flex; align-items: center; gap: .9rem; }.footer-mark { font-size: 2.6rem; line-height: 1; }.home-footer p, .home-footer address { font-size: .78rem; line-height: 1.6; font-style: normal; }.home-footer p span { color: #7b9187; }.home-footer address { text-align: right; }.home-footer address a { text-decoration: none; }.home-footer address a:hover { text-decoration: underline; }
+.premium-home a:focus-visible, .premium-home button:focus-visible { outline: 3px solid #a7c8b2; outline-offset: 4px; }
+@media (max-width: 780px) { .hero-content { width: min(100% - 2.25rem, 1140px); padding: 8rem 0 4rem; }.premium-hero { min-height: 690px; }.premium-hero .hero-scrim { background: linear-gradient(90deg, rgba(15,43,39,.88), rgba(15,43,39,.37)); }.home-introduction, .services-section, .physician-section, .consultation-section, .home-footer { width: min(100% - 2.25rem, 1140px); }.home-introduction, .physician-section { grid-template-columns: 1fr; gap: 2rem; }.premium-service-grid { grid-template-columns: repeat(2, 1fr); }.premium-service-card { min-height: 250px; }.physician-photo { max-width: 360px; }.consultation-section { align-items: start; flex-direction: column; }.home-footer { align-items: start; flex-direction: column; }.home-footer address { text-align: left; } }
+@media (max-width: 480px) { .premium-hero { min-height: 640px; }.hero-actions { align-items: stretch; flex-direction: column; }.button { width: 100%; }.button-quiet { width: fit-content; }.hero-note { margin-top: 3rem; font-size: .58rem; line-height: 1.6; }.section-heading { align-items: start; flex-direction: column; }.desktop-link { margin-top: 0; }.premium-service-grid { grid-template-columns: 1fr; }.premium-service-card { min-height: 220px; }.premium-home h2 { font-size: 2.35rem; }.home-introduction { padding: 4.5rem 0; } }
+@media (prefers-reduced-motion: reduce) { .premium-home *, .premium-home *::before { transition: none !important; scroll-behavior: auto !important; } }
+
+/* Shared shell refinement: the existing injected-page navigation remains unchanged structurally. */
+.page-header { min-height: 74px; max-height: none; padding: .65rem 2rem; background: rgba(250, 248, 244, .96); border-bottom: 1px solid rgba(24,58,55,.1); box-shadow: 0 3px 18px rgba(26,44,38,.05); backdrop-filter: blur(10px); }
+.page-header > .page-title-container { display: block; padding-left: 0; }.page-title-container h1 { display: block; width: auto; margin: 0; line-height: 1; }.page-title-container h1 .page-title { width: auto; margin: 0; color: var(--pine); font-family: Georgia, "Times New Roman", serif; font-size: 1.45rem; font-weight: 400; letter-spacing: -.04em; }.page-header .tel-num-header { display: inline; margin: 0 0 0 .6rem; color: #527064; font-family: Inter, ui-sans-serif, sans-serif; font-size: .7rem; letter-spacing: .05em; }.page-title-container > .address-title { display: none; }.page-header img { display: none; }
+.mobile-header-nav { height: 70px; padding: 0 1rem; background: rgba(250,248,244,.98); border-top: 1px solid rgba(24,58,55,.14); border-radius: 0; box-shadow: 0 -4px 16px rgba(25,47,39,.08); }.mobile-header-nav > ul { height: 100%; align-items: center; justify-content: space-around; }.mobile-header-nav > ul > li { flex: 0 1 auto; }.mobile-header-nav > ul > li > a { padding: .55rem .4rem; color: var(--pine); font-family: Inter, ui-sans-serif, sans-serif; font-size: .65rem; font-weight: 750; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }.mobile-header-nav .social-media-container-nav { display: none; }
+@media (min-width: 900px) { .page-header { padding: .85rem 3.4rem; }.page-title-container h1 .page-title { font-size: 1.7rem; }.mobile-header-nav, .page-wrapper.expand > .mobile-header-nav { top: 0; right: 2.5rem; bottom: auto; left: auto; width: auto; height: 74px !important; margin: 0; padding: 0 !important; background: transparent; border: 0; box-shadow: none; transform: none; opacity: 1; }.mobile-header-nav > ul, .page-wrapper.expand .mobile-header-nav > ul { gap: .35rem; flex-wrap: nowrap; }.mobile-header-nav > ul > li > a { padding: .7rem .85rem; font-size: .66rem; }.mobile-header-nav > ul > li:last-child > a { padding-right: 0; }.mobile-header-nav > ul > li > ul, .page-wrapper.expand .mobile-header-nav > ul > li > ul { display: none; }.premium-hero { margin-top: 0; }.premium-home { padding-bottom: 2rem !important; } }

@@ -48,3 +48,7 @@
     
     max-width: 200px !important;
 }
+
+.service-row span{
+    display: none;
+}
