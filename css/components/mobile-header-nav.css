@@ -32,7 +32,6 @@
 .mobile-header-nav>ul {
     /* padding-top: 2%; */
     display: flex;
-    border: 1px solid red;
 }
 
 .mobile-header-nav>ul>li {
@@ -40,16 +39,17 @@
     flex-shrink: 1;
     display: flex;
     flex-direction: column;
+    /* border: 1px solid red; */
 }
 
 .mobile-header-nav>ul>li>a {
-    /* min-width: fit-content; */
-    /* display: inline-block; */
-    /* padding: 5% 0; */
-    /* padding-bottom: 4%; */
-    /* text-align: center; */
-    /* align-items: center; */
-    /* justify-content: center; */
+    min-width: fit-content;
+    display: inline-flex;
+    padding: 5% 0;
+    padding-bottom: 4%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .mobile-header-nav>ul>li>ul>li {
@@ -59,9 +59,13 @@
     margin-bottom: 5%;
 }
 
+li#medSpaServUL {
+    transform: translateY(43%);
+}
 li#medSpaServUL>ul {
     /* margin-left: 15%; */
     /* min-width: 110%; */
+
 }
 
 li#productsNavLi>ul {
