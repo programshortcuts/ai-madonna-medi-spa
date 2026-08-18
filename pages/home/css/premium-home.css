@@ -8,7 +8,11 @@
     --cream: #fcf9f8;
     --line: rgba(74, 65, 65, .16);
 }
-
+.premium-home a:focus-visible,
+.premium-home button:focus-visible {
+    outline: 3px solid #a7c8b2;
+    outline-offset: 4px;
+}
 .premium-home {
     color: var(--ink);
     background: var(--cream);
@@ -444,11 +448,7 @@
     text-decoration: underline;
 }
 
-.premium-home a:focus-visible,
-.premium-home button:focus-visible {
-    outline: 3px solid #a7c8b2;
-    outline-offset: 4px;
-}
+
 
 @media (max-width: 780px) {
     .hero-content {
@@ -513,7 +513,7 @@
     }
 }
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
     .premium-hero {
         min-height: 640px;
     }
@@ -561,20 +561,20 @@
     .home-introduction {
         padding: 4.5rem 0;
     }
-}
+} */
 
-@media (prefers-reduced-motion: reduce) {
+/* @media (prefers-reduced-motion: reduce) {
 
     .premium-home *,
     .premium-home *::before {
         transition: none !important;
         scroll-behavior: auto !important;
     }
-}
+} */
 
 /* Shared shell refinement: the existing injected-page navigation remains unchanged structurally. */
 
-@media (min-width: 900px) {
+/* @media (min-width: 900px) {
     .page-header {
         padding: .85rem 3.4rem;
     }
@@ -627,4 +627,4 @@
     .premium-home {
         padding-bottom: 2rem !important;
     }
-}
+} */
