@@ -8,6 +8,11 @@
     
     
 }
+@media screen and (max-width:910px) {
+    li#medSpaServUL {
+            transform: translateY(43%);
+        }
+}
 @media screen and (max-width:532px) {
     .home-page-container .main-item 
     .home-page-container .main-item >p {
@@ -42,5 +47,6 @@
         padding-top: 1%;
         line-height: 1.2 !important;
     }
+        
     
 }

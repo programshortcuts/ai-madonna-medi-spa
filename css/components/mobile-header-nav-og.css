@@ -1,11 +1,11 @@
 /* mobile-header-nav.css */
-:root {
-    --social-max-height: 3vh;
-}
 .mobile-header-nav .start-hidden {
     display: none;
 }
 
+:root {
+    --social-max-height: 3vh;
+}
 
 
 .social-media-container-nav {
@@ -84,39 +84,4 @@ li#contactNavLink {
 
 #researchAndLitLI>ul {
     margin-left: 10%;
-}
-
-/* //////// Codex */
-.mobile-header-nav {
-    height: 70px;
-    padding: 0 1rem;
-    background: rgba(250, 248, 244, .98);
-    border-top: 1px solid rgba(24, 58, 55, .14);
-    border-radius: 0;
-    box-shadow: 0 -4px 16px rgba(25, 47, 39, .08);
-}
-
-.mobile-header-nav>ul {
-    height: 100%;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.mobile-header-nav>ul>li {
-    flex: 0 1 auto;
-}
-
-.mobile-header-nav>ul>li>a {
-    padding: .55rem .4rem;
-    color: var(--pine);
-    font-family: Inter, ui-sans-serif, sans-serif;
-    font-size: .65rem;
-    font-weight: 750;
-    letter-spacing: .08em;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-.mobile-header-nav .social-media-container-nav {
-    display: none;
 }
