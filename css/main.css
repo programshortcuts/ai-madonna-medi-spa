@@ -1,5 +1,18 @@
 /* main.css */
-@import url('./responsive.css');
+@import url('../pages/home/css/premium-home.css');
+/* home */
+@import url('../pages/home/css/home-page-header.css');
+
+/* @import url('../pages/home/css/bkgrnd-home.css'); */
+/* @import url('../pages/home/css/borders-home.css'); */
+/* @import url('../pages/home/css/colors-home.css'); */
+/* @import url('../pages/home/css/layout-home.css'); */
+/* @import url('../pages/home/css/position-home.css'); */
+/* @import url('../pages/home/css/sizing-home.css'); */
+/* @import url('../pages/home/css/spacing-home.css'); */
+/* @import url('../pages/home/css/txt-home.css'); */
+/* @import url('../pages/home/css/responsive-home.css'); */
+/* @import url('./responsive.css'); */
 
 /* visuals */
 @import url('./swiper/service-rows.css');
@@ -11,19 +24,6 @@
 /* @import url('./swiper/service-swiper.css'); */
 /* @import url('./swiper/service-swiper-background.css'); */
 
-
-/* home */
-@import url('../pages/home/css/home-page-header.css');
-
-@import url('../pages/home/css/bkgrnd-home.css');
-@import url('../pages/home/css/borders-home.css');
-@import url('../pages/home/css/colors-home.css');
-@import url('../pages/home/css/layout-home.css');
-@import url('../pages/home/css/position-home.css');
-@import url('../pages/home/css/sizing-home.css');
-@import url('../pages/home/css/spacing-home.css');
-@import url('../pages/home/css/txt-home.css');
-@import url('../pages/home/css/responsive-home.css');
 
 /* medical-spa-services */
 @import url('../pages/medical-spa-services/css/bkgrnd-med-spa-serv.css'); 
@@ -92,7 +92,7 @@
 /* @import url('../pages/products/css/sizing-products.css'); */
 /* @import url('../pages/products/css/spacing-products.css'); */
 /* @import url('../pages/products/css/txt-products.css'); */
-@import url('../pages/home/css/premium-home.css');
+
 
 * {
     margin: 0;

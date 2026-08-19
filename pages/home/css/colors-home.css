@@ -20,3 +20,7 @@
 .home-page-container [data-nav-target="more-info-link"] {
     color: black;
 }
+
+.home-footer p span {
+    color: #7b9187;
+}

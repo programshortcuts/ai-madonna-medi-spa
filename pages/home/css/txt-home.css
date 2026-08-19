@@ -53,3 +53,19 @@ p.intro-text {
      /* font-size: .2rem; */
      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+.home-footer p,
+.home-footer address {
+    font-size: .78rem;
+    font-style: normal;
+}
+.home-footer address a {
+    text-decoration: none;
+}
+
+.home-footer address a:hover {
+    text-decoration: underline;
+}
+
+.footer-mark {
+    font-size: 2.6rem;
+}

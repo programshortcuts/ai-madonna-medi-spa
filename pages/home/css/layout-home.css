@@ -49,3 +49,11 @@
     flex-direction: column;
     justify-content: flex-end;
 }
+.home-footer address {
+    text-align: right;
+}
+.home-footer>div {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+}

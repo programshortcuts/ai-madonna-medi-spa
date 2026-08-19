@@ -1,0 +1,62 @@
+/* default/change-background.css */
+.home-page-header {
+    /* width: 100vw !important; */
+    /* height: 40vh; */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    /* background-position-x: 150%; */
+    /* background-position-y: 149% !important; */
+    /* filter: grayscale(50%); */
+}
+.home-page-header>p {
+    padding-left: 2%;
+    width: 100%;
+}
+
+.home-page-header>.contact-content>.img-wrapper>img {
+    margin-left: 5%;
+}
+
+#bg1{
+    background-position-x: 80%;
+}
+#bg3{
+    background-position-x: 80%;
+}
+.bg-slide {
+    /* position: absolute; */
+    inset: 0;
+    position: absolute;
+    background-position: cover;
+    background-size: cover;
+    
+    opacity: 0;
+    transition: opacity 1.2s ease;
+
+    inset: 0;
+    z-index: 0;
+}
+.contact-container>*:not(.bg-slide) {
+    position: relative;
+    z-index: 2;
+}
+
+/* visible slide */
+.bg-slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+/* optional safety reset */
+.bg-slide.hidden {
+    opacity: 0;
+    z-index: 0;
+}
+
+.move-right {
+    background-position-x: -20% !important;
+    
+}
+.slogan {
+    z-index: 2;
+}
