@@ -41,7 +41,7 @@
         display: block;
     }
 
-    .med-spa-serv-container #botoxAndFillers .section-preview::before {
+    .med-spa-serv-container .service-section .section-preview::before {
         float: right;
         width: clamp(118px, 36vw, 210px);
         max-width: 42%;
@@ -50,11 +50,7 @@
         margin: .2rem 0 .85rem 1rem;
     }
 
-    .med-spa-serv-container .women-men-nav,
-    .med-spa-serv-container .women-men-content {
-        flex-direction: column;
-    }
+    
 
-    .med-spa-serv-container .women-men-content { gap: 1rem; }
-    .med-spa-serv-container .women-men-nav a { justify-content: space-between; }
+    
 }
