@@ -1,8 +1,9 @@
 /*  */
 
 .premium-hero {
-    /* min-height: min(760px, 78vh); */
+    min-height: min(760px, 78vh);
     width: 100% !important;
+    
     position: relative;
     overflow: hidden;
     display: grid;
@@ -58,13 +59,13 @@
 /* TEXT */
 .hero-content {
     width: min(1140px, calc(100% - 3rem));
-    margin: 0 auto;
+    /* margin: 0 auto; */
     padding: 7.5rem 0 6.5rem;
     color: #fff;
 }
 
 .eyebrow {
-    margin: 0 0 1rem;
+    /* margin: 0 0 1rem; */
     color: var(--sage);
     font-size: .68rem;
     font-weight: 700;
@@ -80,7 +81,7 @@
 
 .hero-content h2 {
     max-width: 700px;
-    margin: 0;
+    /* margin: 0; */
     font-size: clamp(3rem, 6vw, 5.7rem);
     line-height: .96;
     color: white;
@@ -93,7 +94,7 @@
 
 .hero-copy {
     max-width: 530px;
-    margin: 1.8rem 0 2.2rem;
+    /* margin: 1.8rem 0 2.2rem; */
     font-size: clamp(1rem, 1.4vw, 1.2rem);
     line-height: 1.65;
     color: rgba(255, 255, 255, .88);
@@ -141,7 +142,7 @@
 }
 
 .hero-note {
-    margin: 4rem 0 0;
+    /* margin: 4rem 0 0; */
     color: rgba(255, 255, 255, .72);
     font-size: .68rem;
     letter-spacing: .09em;
