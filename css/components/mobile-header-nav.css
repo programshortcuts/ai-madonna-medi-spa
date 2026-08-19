@@ -8,9 +8,7 @@
 }
 
 
-/* =========================================================
-   MAIN NAVIGATION
-   ========================================================= */
+/* ======================================================== =MAIN NAVIGATION ========================================================= */
 
 .mobile-header-nav {
     position: fixed;
@@ -66,14 +64,11 @@
 .mobile-header-nav>ul>li {
     position: relative;
 
-    flex: 1 1 0;
+    /* flex: 1 1 0; */
+    flex-grow: 1;
     min-width: 0;
 
     height: 100%;
-
-    margin: 0;
-    padding: 0;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,17 +82,20 @@
    ========================================================= */
 
 .mobile-header-nav>ul>li>a {
-    min-width: 0;
+    /* min-width: 0; */
 
     height: 100%;
 
     padding: .55rem .4rem;
 
-    display: inline-flex;
+    display: inline-flex;   
     align-items: center;
     justify-content: center;
 
     color: var(--pine);
+    width: 100%;
+    /* height: fit-content; */
+    height: 50%;
 
     font-family: Inter, ui-sans-serif, system-ui, sans-serif;
     font-size: .65rem;
@@ -132,7 +130,6 @@
 li#medSpaServUL {
     position: relative;
 }
-
 
 /* =========================================================
    MEDICAL SPA SERVICES SUBMENU
