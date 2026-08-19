@@ -321,6 +321,44 @@ li#productsNavLi>ul {
    SMALL SCREENS
    ========================================================= */
 
+@media (min-width: 900px) {
+.mobile-header-nav,
+    .page-wrapper.expand>.mobile-header-nav {
+        top: 0;
+        right: 2.5rem;
+        bottom: auto;
+        left: auto;
+        width: auto;
+        height: 74px !important;
+        margin: 0;
+        padding: 0 !important;
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+        transform: none;
+        opacity: 1;
+    }
+
+    .mobile-header-nav>ul,
+    .page-wrapper.expand .mobile-header-nav>ul {
+        gap: .35rem;
+        flex-wrap: nowrap;
+    }
+
+    .mobile-header-nav>ul>li>a {
+        padding: .7rem .85rem;
+        font-size: .66rem;
+    }
+
+    .mobile-header-nav>ul>li:last-child>a {
+        padding-right: 0;
+    }
+
+    .mobile-header-nav>ul>li>ul,
+    .page-wrapper.expand .mobile-header-nav>ul>li>ul {
+        display: none;
+    }
+}
 @media (max-width: 480px) {
 
     .mobile-header-nav {
@@ -368,4 +406,5 @@ li#productsNavLi>ul {
         animation: none !important;
     }
 }
+
 

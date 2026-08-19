@@ -40,8 +40,8 @@
 }
 
 .home-introduction {
-    display: grid;
-    grid-template-columns: .92fr 1.08fr;
+    /* display: grid; */
+    /* grid-template-columns: .92fr 1.08fr; */
     /* gap: clamp(2.5rem, 9vw, 9rem); */
     /* padding: clamp(5rem, 10vw, 9rem) 0; */
 }
@@ -325,7 +325,7 @@
 
 /* Shared shell refinement: the existing injected-page navigation remains unchanged structurally. */
 
-/* @media (min-width: 900px) {
+@media (min-width: 900px) {
     .page-header {
         padding: .85rem 3.4rem;
     }
@@ -334,42 +334,7 @@
         font-size: 1.7rem;
     }
 
-    .mobile-header-nav,
-    .page-wrapper.expand>.mobile-header-nav {
-        top: 0;
-        right: 2.5rem;
-        bottom: auto;
-        left: auto;
-        width: auto;
-        height: 74px !important;
-        margin: 0;
-        padding: 0 !important;
-        background: transparent;
-        border: 0;
-        box-shadow: none;
-        transform: none;
-        opacity: 1;
-    }
-
-    .mobile-header-nav>ul,
-    .page-wrapper.expand .mobile-header-nav>ul {
-        gap: .35rem;
-        flex-wrap: nowrap;
-    }
-
-    .mobile-header-nav>ul>li>a {
-        padding: .7rem .85rem;
-        font-size: .66rem;
-    }
-
-    .mobile-header-nav>ul>li:last-child>a {
-        padding-right: 0;
-    }
-
-    .mobile-header-nav>ul>li>ul,
-    .page-wrapper.expand .mobile-header-nav>ul>li>ul {
-        display: none;
-    }
+    
 
     .premium-hero {
         margin-top: 0;
@@ -378,4 +343,4 @@
     .premium-home {
         padding-bottom: 2rem !important;
     }
-} */
+}

@@ -1,20 +1,5 @@
 /* responsivce-home.css */
-@media (max-width: 530px) {
-    .hero-content {
-        padding-bottom: 4% !important;
-    }
-    .modo {
-        font-size: 1.5rem !important;
-    }
-    .hero-copy{
-        margin-top: 5.5% !important;
-    }
-    .hero-actions{
-        margin-top: 2%;
-        margin-bottom: 2%;
-    }
 
-}
 @media (max-width: 780px) {
     
     .hero-content {
@@ -77,4 +62,39 @@
     .home-footer address {
         text-align: left;
     }
+}
+@media (min-width: 531px) {
+    .hero-actions {
+            margin-top: 2%;
+            margin-bottom: 3%;
+    }
+    .hero-copy{
+        margin-top: 2% !important;
+    }
+    .eyebrow{
+        margin-bottom: 1%;
+    }
+}
+@media (max-width: 530px) {
+    .introduction-copy {
+        border: 1px solid blue;
+        margin-top: 0 !important;
+    }
+    .hero-content {
+        padding-bottom: 4% !important;
+    }
+
+    .modo {
+        font-size: 1.5rem !important;
+    }
+
+    .hero-copy {
+        margin-top: 5.5% !important;
+    }
+
+    .hero-actions {
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
 }
