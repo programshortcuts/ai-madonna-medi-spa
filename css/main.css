@@ -12,7 +12,7 @@
 /* @import url('../pages/home/css/spacing-home.css'); */
 /* @import url('../pages/home/css/txt-home.css'); */
 /* @import url('../pages/home/css/responsive-home.css'); */
-/* @import url('./responsive.css'); */
+@import url('./responsive.css');
 
 /* visuals */
 @import url('./swiper/service-rows.css');
