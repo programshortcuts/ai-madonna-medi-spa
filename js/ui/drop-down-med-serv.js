@@ -2,26 +2,31 @@
 //
 // Controls the expandable sections on medical-spa-services.html.
 //
-// Behavior:
+// CONTENT
+// ------------------------------------------------------------
+// .content.show = visible
+// .content.hide = hidden
 //
-// 1. .section-title
-//    - Toggles .content open/closed.
+// .section-title
+// - Click / Enter / Space toggles its own .content.
+// - Opening one section closes every other .content.
 //
-// 2. .service-section
-//    - If .content is closed, clicking/pressing Enter on the section opens it.
-//    - If .content is already open, nothing happens.
+// .service-section
+// - Clicking the section opens its .content if it is closed.
+// - Enter / Space on the section does the same.
 //
-// 3. .section-preview
-//    - Only clicking/activating the actual .section-preview element toggles
-//      .section-details.
-//    - Clicking children inside .section-preview does NOT trigger the toggle.
+// DETAILS
+// ------------------------------------------------------------
+// .section-preview
+// - Only the actual .section-preview element toggles details.
+// - Clicking children inside .section-preview does NOT toggle details.
 //
-// 4. .more-info-btn
-//    - Toggles .section-details exactly like .section-preview.
+// .more-info-btn
+// - Toggles .section-details.
 //
-// 5. .section-details / .more-info-buttons
-//    - When .section-details is visible, .more-info-buttons is hidden.
-//    - When .section-details is hidden, .more-info-buttons is visible.
+// .section-details
+// - Visible  -> .more-info-buttons hidden
+// - Hidden   -> .more-info-buttons visible
 //
 
 export function initDropDownMedServ() {
@@ -31,45 +36,49 @@ export function initDropDownMedServ() {
 
     if (!container) return;
 
-    container.querySelectorAll('.service-section').forEach((section) => {
+    // ------------------------------------------------------------
+    // Get all service sections once.
+    // ------------------------------------------------------------
+
+    const sections = container.querySelectorAll('.service-section');
+
+    sections.forEach((section) => {
+
         // Prevent duplicate initialization.
         if (section.dataset.sectionToggleReady === 'true') {
             return;
         }
 
-        const title = section.querySelector('.section-title');
+        const title = section.querySelector(':scope > .section-title');
         const content = section.querySelector(':scope > .content');
 
         if (!title || !content) {
             return;
         }
 
-        const preview = content.querySelector(':scope > .section-preview');
-        const details = content.querySelector(':scope > .section-details');
-        const moreInfoButtons = content.querySelector(
-            ':scope > .more-info-buttons'
+        const preview = content.querySelector(
+            ':scope > .section-preview'
         );
 
-        // ------------------------------------------------------------
-        // Helpers
-        // ------------------------------------------------------------
+        const details = content.querySelector(
+            ':scope > .section-details'
+        );
 
-        const isContentHidden = () => {
-            return content.classList.contains('hide');
+        const moreInfoButtons = content.querySelector(
+            ':scope .more-info-buttons'
+        );
+
+        // --------------------------------------------------------
+        // CONTENT
+        // --------------------------------------------------------
+
+        const isContentVisible = () => {
+            return content.classList.contains('show');
         };
-
-        const isDetailsHidden = () => {
-            // If there is no details element, consider details hidden.
-            if (!details) return true;
-
-            return details.classList.contains('hide');
-        };
-
-        // ------------------------------------------------------------
-        // CONTENT STATE
-        // ------------------------------------------------------------
 
         const setContentVisible = (visible) => {
+
+            content.classList.toggle('show', visible);
             content.classList.toggle('hide', !visible);
 
             title.setAttribute(
@@ -78,24 +87,107 @@ export function initDropDownMedServ() {
             );
         };
 
-        const toggleContent = () => {
-            setContentVisible(isContentHidden());
+        // --------------------------------------------------------
+        // Close every OTHER section.
+        // --------------------------------------------------------
+
+        const closeOtherSections = () => {
+
+            sections.forEach((otherSection) => {
+
+                if (otherSection === section) {
+                    return;
+                }
+
+                const otherContent = otherSection.querySelector(
+                    ':scope > .content'
+                );
+
+                const otherTitle = otherSection.querySelector(
+                    ':scope > .section-title'
+                );
+
+                if (!otherContent) {
+                    return;
+                }
+
+                otherContent.classList.remove('show');
+                otherContent.classList.add('hide');
+
+                if (otherTitle) {
+                    otherTitle.setAttribute(
+                        'aria-expanded',
+                        'false'
+                    );
+                }
+            });
         };
 
-        // ------------------------------------------------------------
-        // DETAILS STATE
-        // ------------------------------------------------------------
+        // --------------------------------------------------------
+        // Open this section.
+        //
+        // This ALWAYS closes all other sections first.
+        // --------------------------------------------------------
+
+        const openSection = () => {
+
+            closeOtherSections();
+
+            setContentVisible(true);
+        };
+
+        // --------------------------------------------------------
+        // Toggle this section.
+        // --------------------------------------------------------
+
+        const toggleContent = () => {
+
+            if (isContentVisible()) {
+
+                // Already open -> close it.
+                setContentVisible(false);
+
+            } else {
+
+                // Closed -> close all others and open this one.
+                openSection();
+            }
+        };
+
+        // --------------------------------------------------------
+        // DETAILS
+        // --------------------------------------------------------
+
+        const isDetailsVisible = () => {
+
+            if (!details) {
+                return false;
+            }
+
+            return !details.classList.contains('hide');
+        };
 
         const setDetailsVisible = (visible) => {
-            if (!details) return;
 
-            details.classList.toggle('hide', !visible);
+            if (!details) {
+                return;
+            }
+
+            details.classList.toggle(
+                'hide',
+                !visible
+            );
 
             if (moreInfoButtons) {
-                moreInfoButtons.classList.toggle('hide', visible);
+
+                moreInfoButtons.classList.toggle(
+                    'hide',
+                    visible
+                );
             }
 
             if (preview) {
+
                 preview.setAttribute(
                     'aria-expanded',
                     String(visible)
@@ -104,129 +196,193 @@ export function initDropDownMedServ() {
         };
 
         const toggleDetails = () => {
-            setDetailsVisible(isDetailsHidden());
+
+            setDetailsVisible(
+                !isDetailsVisible()
+            );
         };
 
-        // ------------------------------------------------------------
-        // INITIAL STATE
-        // ------------------------------------------------------------
+        // --------------------------------------------------------
+        // INITIAL CONTENT STATE
+        //
+        // IMPORTANT:
+        //
+        // We DO NOT force content closed here.
+        //
+        // If HTML says:
+        //
+        //     <div class="content show">
+        //
+        // it stays open.
+        // --------------------------------------------------------
 
-        // Content starts closed.
-        setContentVisible(false);
+        const initiallyVisible =
+            content.classList.contains('show');
 
-        // Details start closed.
-        // Therefore .more-info-buttons are visible.
-        setDetailsVisible(false);
+        setContentVisible(initiallyVisible);
 
-        // ------------------------------------------------------------
+        // --------------------------------------------------------
+        // INITIAL DETAILS STATE
+        //
+        // Details are closed unless they do not have .hide.
+        //
+        // We make the normal initial state:
+        //
+        // .section-details.hide
+        // .more-info-buttons visible
+        // --------------------------------------------------------
+
+        if (details) {
+
+            const detailsInitiallyVisible =
+                !details.classList.contains('hide');
+
+            setDetailsVisible(
+                detailsInitiallyVisible
+            );
+        }
+
+        // --------------------------------------------------------
         // .section-title
-        // ------------------------------------------------------------
+        // --------------------------------------------------------
 
         title.addEventListener('click', (event) => {
+
             event.stopPropagation();
+
             toggleContent();
         });
 
         title.addEventListener('keydown', (event) => {
-            if (event.key === 'Enter' || event.key === ' ') {
-                event.preventDefault();
-                event.stopPropagation();
-                toggleContent();
+
+            if (
+                event.key !== 'Enter' &&
+                event.key !== ' '
+            ) {
+                return;
             }
+
+            event.preventDefault();
+            event.stopPropagation();
+
+            toggleContent();
         });
 
-        // ------------------------------------------------------------
+        // --------------------------------------------------------
         // .service-section
         //
-        // Clicking the section opens .content if it is closed.
+        // Clicking the section itself opens it if closed.
         //
-        // We intentionally do NOT use this as a general toggle.
-        // Clicking the section while content is already open does nothing.
-        // ------------------------------------------------------------
+        // We don't want this handler to interfere with:
+        // - .section-title
+        // - .section-preview
+        // - .more-info-btn
+        // --------------------------------------------------------
 
         section.addEventListener('click', (event) => {
-            // If the click originated from the title, the title handler
-            // already handled it.
-            if (event.target.closest('.section-title')) {
+
+            // Title handles itself.
+            if (
+                event.target.closest('.section-title')
+            ) {
                 return;
             }
 
-            // If the click originated from .section-preview or one of
-            // its children, let the preview logic handle it.
-            if (preview && event.target.closest('.section-preview')) {
+            // Preview handles itself.
+            if (
+                preview &&
+                event.target.closest('.section-preview')
+            ) {
                 return;
             }
 
-            // If the click originated from a more-info button, let its
-            // own handler handle it.
-            if (event.target.closest('.more-info-btn')) {
+            // More-info button handles itself.
+            if (
+                event.target.closest('.more-info-btn')
+            ) {
                 return;
             }
 
-            // Open content if it is currently closed.
-            if (isContentHidden()) {
-                setContentVisible(true);
+            // Only open if currently closed.
+            if (!isContentVisible()) {
+
+                openSection();
             }
         });
 
-        // ------------------------------------------------------------
+        // --------------------------------------------------------
         // .service-section keyboard activation
         //
-        // Allows Enter/Space on the section itself to open .content.
-        //
-        // We only do this when the actual section receives the key event,
-        // not one of its children.
-        // ------------------------------------------------------------
+        // Only fires when the actual section element itself
+        // has focus.
+        // --------------------------------------------------------
 
         section.addEventListener('keydown', (event) => {
+
             if (event.target !== section) {
                 return;
             }
 
-            if (event.key !== 'Enter' && event.key !== ' ') {
+            if (
+                event.key !== 'Enter' &&
+                event.key !== ' '
+            ) {
                 return;
             }
 
             event.preventDefault();
 
-            if (isContentHidden()) {
-                setContentVisible(true);
+            if (!isContentVisible()) {
+
+                openSection();
             }
         });
 
-        // ------------------------------------------------------------
+        // --------------------------------------------------------
         // .section-preview
         //
         // IMPORTANT:
         //
-        // We only respond when the actual .section-preview DIV itself
-        // receives the click.
+        // event.target MUST equal preview.
         //
-        // Clicking:
-        //   <p>
-        //   <img>
-        //   <span>
-        //   etc.
+        // Therefore:
         //
-        // inside the preview does NOT toggle details.
-        // ------------------------------------------------------------
+        // Clicking the actual .section-preview:
+        //     toggles details
+        //
+        // Clicking a paragraph:
+        //     does nothing
+        //
+        // Clicking an image:
+        //     does nothing
+        //
+        // Clicking a video:
+        //     does nothing
+        // --------------------------------------------------------
 
         if (preview) {
+
             preview.addEventListener('click', (event) => {
+
                 if (event.target !== preview) {
                     return;
                 }
 
                 event.stopPropagation();
+
                 toggleDetails();
             });
 
             preview.addEventListener('keydown', (event) => {
+
                 if (event.target !== preview) {
                     return;
                 }
 
-                if (event.key !== 'Enter' && event.key !== ' ') {
+                if (
+                    event.key !== 'Enter' &&
+                    event.key !== ' '
+                ) {
                     return;
                 }
 
@@ -237,33 +393,49 @@ export function initDropDownMedServ() {
             });
         }
 
-        // ------------------------------------------------------------
+        // --------------------------------------------------------
         // .more-info-btn
-        // ------------------------------------------------------------
+        // --------------------------------------------------------
 
         if (details) {
-            content.querySelectorAll('.more-info-btn').forEach((button) => {
-                button.addEventListener('click', (event) => {
-                    event.stopPropagation();
-                    toggleDetails();
+
+            content
+                .querySelectorAll('.more-info-btn')
+                .forEach((button) => {
+
+                    button.addEventListener(
+                        'click',
+                        (event) => {
+
+                            event.stopPropagation();
+
+                            toggleDetails();
+                        }
+                    );
+
+                    button.addEventListener(
+                        'keydown',
+                        (event) => {
+
+                            if (
+                                event.key !== 'Enter' &&
+                                event.key !== ' '
+                            ) {
+                                return;
+                            }
+
+                            event.preventDefault();
+                            event.stopPropagation();
+
+                            toggleDetails();
+                        }
+                    );
                 });
-
-                button.addEventListener('keydown', (event) => {
-                    if (event.key !== 'Enter' && event.key !== ' ') {
-                        return;
-                    }
-
-                    event.preventDefault();
-                    event.stopPropagation();
-
-                    toggleDetails();
-                });
-            });
         }
 
-        // ------------------------------------------------------------
-        // Mark this section as initialized.
-        // ------------------------------------------------------------
+        // --------------------------------------------------------
+        // Mark section as initialized.
+        // --------------------------------------------------------
 
         section.dataset.sectionToggleReady = 'true';
     });
