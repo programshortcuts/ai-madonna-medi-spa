@@ -1,6 +1,9 @@
 /* premium-home.css */
 /* Homepage visual system: intentionally scoped so injected service pages retain their layouts. */
-
+.section-heading .eyebrow{
+    font-size: 1rem;
+    margin-top: 2%;
+}
 .premium-home a:focus-visible,
 .premium-home button:focus-visible {
     outline: 3px solid #a7c8b2;
@@ -89,7 +92,7 @@
     justify-content: space-between;
     align-items: end;
     gap: 2rem;
-    margin-bottom: 2.5rem;
+    /* margin-bottom: 2.5rem; */
 }
 
 .desktop-link {
@@ -194,7 +197,8 @@
     grid-template-columns: minmax(270px, .85fr) 1.15fr;
     align-items: center;
     gap: clamp(2.5rem, 8vw, 8rem);
-    padding: clamp(5rem, 10vw, 9rem) 0;
+    padding-top: 5%;
+    /* padding: clamp(5rem, 10vw, 9rem) 0; */
 }
 
 .physician-photo {
