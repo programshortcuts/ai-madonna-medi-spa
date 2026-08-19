@@ -1,41 +1,4 @@
-/* txt-med-spa-services.css */
-/*==============================================================
-  SERVICE SECTION
-==============================================================*/
-.service-section .section-title .title-text {
-    font-size: clamp(1.55rem, 2vw, 2.2rem);
-    font-weight: 700;
-    /* text-transform: uppercase; */
-    font-family: 'Courier New', Courier, monospace;
-}
-/*==============================================================
-  CONTENT
-==============================================================*/
-.service-section p {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-.section-preview p,
-.section-details p {
-    font-size: 1.08rem;
-}
-.more-info-btn {
-    font-size: .96rem;
-    font-weight: 600;
-    /* text-transform: uppercase; */
-}
-.service-section .more-info-links a {
-    text-decoration: none;
-    font-weight: 600;
-}
-.section-details h2 {
-    font-size: 1.15rem;
-}
-.women-men-nav a {
-    text-decoration: none;
-}
-#LongevityMedicineBold,
-#FunctionalMedicineBold {
-    font-weight: 900;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 101%;
-}
+.med-spa-serv-container .service-section .section-title .title-text { font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.6rem, 2.7vw, 2.35rem); font-weight: 400; letter-spacing: -.035em; line-height: 1.05; }
+.med-spa-serv-container .service-section p, .med-spa-serv-container .service-section li { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+.med-spa-serv-container .more-info-btn, .med-spa-serv-container .service-section .more-info-link, .med-spa-serv-container .service-section .more-info-links a { font-size: .7rem; font-weight: 750; letter-spacing: .12em; line-height: 1; text-decoration: none; text-transform: uppercase; }
+.med-spa-serv-container .women-men-nav a { font-size: .76rem; font-weight: 700; text-decoration: none; }.med-spa-serv-container #LongevityMedicineBold, .med-spa-serv-container #FunctionalMedicineBold { font-weight: 700; }

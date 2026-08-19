@@ -1,48 +1,7 @@
-/* effects-med-spa-serv.css */
-.service-section .section-title {
-    cursor: pointer;
-    transition: background-color .18s ease, box-shadow .18s ease, color .18s ease;
-}
-.service.title-text {
-    text-transform: uppercase;
-}
-/*==============================================================
-  BUTTON AREA
-==============================================================*/
-.less-info {
-    cursor: pointer;
-}
-/*==============================================================
-  LINKS
-==============================================================*/
-.women-men-nav a {
-    transition:
-        transform var(--transition),
-        box-shadow var(--transition);
-}
-.women-men-nav a:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, .08);
-}
-.section-title:active~.img-wrapper>img {
-    filter: grayscale(0) !important;
-}
-
-.section-title:active~.img-wrapper>img {
-    filter: grayscale(0) !important;
-}
-.service-section>button.section-title:hover {
-    background-color: rgba(23, 50, 77, .05);
-}
-.service-section>button.section-title:focus-visible {
-    outline: 3px solid rgba(45, 127, 184, .45);
-    outline-offset: 3px;
-    box-shadow: none;
-}
-.service-section>button.section-title[aria-expanded="true"] {
-    background-color: rgba(23, 50, 77, .04);
-}
-.more-info-buttons button:active,
-.more-info-buttons button:focus-visible{
-    border: 2px solid currentColor;
-}
+.med-spa-serv-container .service-section { transition: border-color var(--service-transition), box-shadow var(--service-transition); }.med-spa-serv-container .service-section:hover { border-color: rgba(74, 65, 65, .3); box-shadow: var(--service-shadow); }
+.med-spa-serv-container .service-section .section-title { cursor: pointer; transition: background-color var(--service-transition), color var(--service-transition); }.med-spa-serv-container .service-section .section-title:hover, .med-spa-serv-container .service-section .section-title[aria-expanded="true"] { background: rgba(217, 200, 195, .22); }
+.med-spa-serv-container .service-section .section-title:focus-visible, .med-spa-serv-container .service-section .more-info-btn:focus-visible, .med-spa-serv-container .service-section a:focus-visible { outline: 3px solid #a7c8b2 !important; outline-offset: 3px; box-shadow: none !important; }
+.med-spa-serv-container .service-section .img-wrapper img, .med-spa-serv-container .service-section .img-wrapper video { transition: transform .5s ease; }.med-spa-serv-container .service-section:hover .img-wrapper img, .med-spa-serv-container .service-section:hover .img-wrapper video { transform: scale(1.025); }
+.med-spa-serv-container .service-section .more-info-btn { cursor: pointer; background: var(--service-pine); color: #fff; transition: background-color var(--service-transition), transform var(--service-transition); }.med-spa-serv-container .service-section .more-info-btn:hover { background: #6a5857; transform: translateY(-1px); }
+.med-spa-serv-container .service-section .more-info-link, .med-spa-serv-container .service-section .more-info-links a { border-bottom: 1px solid currentColor; }.med-spa-serv-container .women-men-nav a { transition: background-color var(--service-transition), transform var(--service-transition); }.med-spa-serv-container .women-men-nav a:hover { background: rgba(217, 200, 195, .28); transform: translateY(-1px); }
+@media (prefers-reduced-motion: reduce) { .med-spa-serv-container *, .med-spa-serv-container *::before, .med-spa-serv-container *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; } }
