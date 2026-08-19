@@ -2,6 +2,7 @@
 @import url('../pages/home/css/premium-home.css');
 /* home */
 @import url('../pages/home/css/home-page-header.css');
+@import url('../pages/home/css/responsive-home.css');
 
 /* @import url('../pages/home/css/bkgrnd-home.css'); */
 /* @import url('../pages/home/css/borders-home.css'); */
@@ -11,7 +12,6 @@
 /* @import url('../pages/home/css/sizing-home.css'); */
 /* @import url('../pages/home/css/spacing-home.css'); */
 /* @import url('../pages/home/css/txt-home.css'); */
-/* @import url('../pages/home/css/responsive-home.css'); */
 @import url('./responsive.css');
 
 /* visuals */
@@ -26,7 +26,7 @@
 
 
 /* medical-spa-services */
-@import url('../pages/medical-spa-services/css/bkgrnd-med-spa-serv.css'); 
+/* @import url('../pages/medical-spa-services/css/bkgrnd-med-spa-serv.css');  */
 @import url('../pages/medical-spa-services/css/borders-med-spa-serv.css'); 
 
 @import url('../pages/medical-spa-services/css/clrs-med-spa-serv.css'); 

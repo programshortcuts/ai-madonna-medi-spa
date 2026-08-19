@@ -1,14 +1,6 @@
 /* premium-home.css */
 /* Homepage visual system: intentionally scoped so injected service pages retain their layouts. */
-:root {
-    --ink: #312d2d;
-    --pine: #4a4141;
-    --sage: #a08080;
-    --mist: #f2eeee;
-    --sand: #d9c8c3;
-    --cream: #fcf9f8;
-    --line: rgba(74, 65, 65, .16);
-}
+
 .premium-home a:focus-visible,
 .premium-home button:focus-visible {
     outline: 3px solid #a7c8b2;
@@ -271,73 +263,6 @@
 }
 
 
-
-
-
-
-
-@media (max-width: 780px) {
-    .hero-content {
-        width: min(100% - 2.25rem, 1140px);
-        padding: 8rem 0 4rem;
-    }
-
-    .premium-hero {
-        /* min-height: 690px; */
-    }
-
-    .premium-hero .hero-scrim {
-        background: linear-gradient(90deg, rgba(48, 37, 39, .67), rgba(62, 44, 45, .24));
-    }
-
-    .premium-hero #bg1 {
-        background-position: 54% center;
-    }
-
-    .premium-hero #bg3 {
-        background-position: 62% center;
-    }
-
-    .home-introduction,
-    .services-section,
-    .physician-section,
-    .consultation-section,
-    .home-footer {
-        width: min(100% - 2.25rem, 1140px);
-    }
-
-    .home-introduction,
-    .physician-section {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .premium-service-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .premium-service-card {
-        min-height: 250px;
-    }
-
-    .physician-photo {
-        max-width: 360px;
-    }
-
-    .consultation-section {
-        align-items: start;
-        flex-direction: column;
-    }
-
-    .home-footer {
-        align-items: start;
-        flex-direction: column;
-    }
-
-    .home-footer address {
-        text-align: left;
-    }
-}
 
 /* @media (max-width: 480px) {
     .premium-hero {

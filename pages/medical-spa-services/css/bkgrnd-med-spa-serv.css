@@ -1,3 +1,13 @@
 /* A quiet, warm background that belongs with the home-page palette. */
-.med-spa-serv-container { background: radial-gradient(circle at 8% 4%, rgba(217, 200, 195, .32), transparent 27rem), linear-gradient(180deg, #fcf9f8 0%, #f6f0ee 100%); }
-.med-spa-serv-container #botoxAndFillers .section-preview::before { content: ""; float: right; width: min(38%, 320px); min-height: 220px; margin: .2rem 0 1rem 2rem; background: url('../../../imgs/botox-filler.webp') 58% center / cover no-repeat; }
+.med-spa-serv-container {
+    /* background: radial-gradient(circle at 8% 4%, rgba(217, 200, 195, .32), transparent 27rem), linear-gradient(180deg, #fcf9f8 0%, #f6f0ee 100%); */
+}
+
+.med-spa-serv-container #botoxAndFillers .section-preview::before {
+    content: "";
+    float: right;
+    width: min(38%, 320px);
+    min-height: 220px;
+    margin: .2rem 0 1rem 2rem;
+    /* background: url('../../../imgs/botox-filler.webp') 58% center / cover no-repeat; */
+}

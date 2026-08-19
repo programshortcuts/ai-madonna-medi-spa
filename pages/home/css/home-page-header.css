@@ -3,7 +3,7 @@
 .premium-hero {
     min-height: min(760px, 78vh);
     width: 100% !important;
-    
+
     position: relative;
     overflow: hidden;
     display: grid;
@@ -55,11 +55,10 @@
     z-index: 2;
 }
 
-
 /* TEXT */
 .hero-content {
     width: min(1140px, calc(100% - 3rem));
-    /* margin: 0 auto; */
+    margin: 0 auto;
     padding: 7.5rem 0 6.5rem;
     color: #fff;
 }
@@ -111,7 +110,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 48px;
+    /* min-height: 48px; */
     padding: .85rem 1.2rem;
     border: 1px solid transparent;
     font-size: .75rem;
@@ -135,7 +134,7 @@
     background: #fff;
 }
 
-.button-quiet {
+/* .button-quiet { */
     padding-left: 0;
     color: #fff !important;
     border-bottom-color: rgba(255, 255, 255, .6);

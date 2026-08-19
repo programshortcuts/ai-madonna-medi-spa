@@ -1,5 +1,28 @@
-.med-spa-serv-container .section-title, .med-spa-serv-container .section-title .title-text { color: var(--service-ink); background: transparent; }
-.med-spa-serv-container .section-preview p, .med-spa-serv-container .section-details p, .med-spa-serv-container .section-details li { color: #514b4a; background: transparent !important; }
-.med-spa-serv-container .section-preview h2, .med-spa-serv-container .section-details h2, .med-spa-serv-container .women-men-nav a { color: var(--service-pine); }
-.med-spa-serv-container .more-info-buttons { background: transparent; }
-.med-spa-serv-container .service-section .more-info-link, .med-spa-serv-container .service-section .more-info-link:visited, .med-spa-serv-container .service-section .more-info-links a { color: var(--service-pine) !important; }
+.med-spa-serv-container .section-title,
+.med-spa-serv-container .section-title .title-text {
+    color: var(--service-ink);
+    background: transparent;
+}
+
+.med-spa-serv-container .section-preview p,
+.med-spa-serv-container .section-details p,
+.med-spa-serv-container .section-details li {
+    color: #514b4a;
+    background: transparent !important;
+}
+
+.med-spa-serv-container .section-preview h2,
+.med-spa-serv-container .section-details h2,
+.med-spa-serv-container .women-men-nav a {
+    color: var(--service-pine);
+}
+
+.med-spa-serv-container .more-info-buttons {
+    background: transparent;
+}
+
+.med-spa-serv-container .service-section .more-info-link,
+.med-spa-serv-container .service-section .more-info-link:visited,
+.med-spa-serv-container .service-section .more-info-links a {
+    color: var(--service-pine) !important;
+}

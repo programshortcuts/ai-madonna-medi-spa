@@ -1,52 +1,76 @@
 /* responsivce-home.css */
+@media (max-width: 530px) {
+    .hero-content {
+        padding-bottom: 4% !important;
+    }
+    .modo {
+        font-size: 1.5rem !important;
+    }
+    .hero-copy{
+        margin-top: 5.5% !important;
+    }
 
-@media screen and (min-width:533px) {
-    
-    .address-contact-home{
-        margin-top: 5%;
-    }
-    
-    
 }
-@media screen and (max-width:910px) {
-    li#medSpaServUL {
-            transform: translateY(43%);
-        }
-}
-@media screen and (max-width:532px) {
-    .home-page-container .main-item 
-    .home-page-container .main-item >p {
-        display: inline;
-        font-size: 110%;
-        line-height: 1.2 !important;
-    }
-    .swiper.reviews-swiper {
-        height: 15vh;        
-    }
-    .home-page-header {
-        /* padding-top:25% !important; */
-    }
-    #officeInPhotoA{
-        display: inline-flex
-    }
-    #officeInPhoto {
-        max-width: 300px !important;
-        max-height: 400px;   
-        margin-left: 5%;
-    }
-}
-@media screen and (max-width:431px) {
-    #longevityMedHomePage>.title-text {
-        margin-top: 2% !important;
-    }
-    .reviews-swiper .swiper-slide{
-        font-size: .9rem;
-    }
-    .intro-text {
-        font-size: 90%;
-        padding-top: 1%;
-        line-height: 1.2 !important;
-    }
-        
+@media (max-width: 780px) {
     
+    .hero-content {
+        width: min(100% - 2.25rem, 1140px);
+        padding: 8rem 0 4rem;
+    }
+
+    .premium-hero {
+        /* min-height: 690px; */
+    }
+
+    .premium-hero .hero-scrim {
+        background: linear-gradient(90deg, rgba(48, 37, 39, .67), rgba(62, 44, 45, .24));
+    }
+
+    .premium-hero #bg1 {
+        background-position: 54% center;
+    }
+
+    .premium-hero #bg3 {
+        background-position: 62% center;
+    }
+
+    .home-introduction,
+    .services-section,
+    .physician-section,
+    .consultation-section,
+    .home-footer {
+        width: min(100% - 2.25rem, 1140px);
+    }
+
+    .home-introduction,
+    .physician-section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .premium-service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .premium-service-card {
+        min-height: 250px;
+    }
+
+    .physician-photo {
+        max-width: 360px;
+    }
+
+    .consultation-section {
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .home-footer {
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .home-footer address {
+        text-align: left;
+    }
 }
