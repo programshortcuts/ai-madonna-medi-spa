@@ -1,7 +1,7 @@
 /* premium-home.css */
 /* Homepage visual system: intentionally scoped so injected service pages retain their layouts. */
 .section-heading .eyebrow{
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-top: 2%;
 }
 .premium-home a:focus-visible,
