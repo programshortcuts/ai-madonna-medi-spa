@@ -1,7 +1,41 @@
 /* responsivce-home.css */
 
 @media (max-width: 780px) {
+    .section-heading {
+            display: block;
+            width: 100%;
+        }
     
+        .section-heading>div {
+            width: 100%;
+            min-width: 0;
+        }
+    
+        .section-heading h2 {
+            width: 100%;
+            max-width: 100%;
+            min-width: 0;
+            overflow-wrap: normal;
+            word-break: normal;
+        }
+    
+        .section-heading .eyebrow {
+            width: 100%;
+        }
+    .premium-service-card {
+        min-width: 0;
+        width: 100%;
+        padding: 1.1rem;
+    }
+    
+    .premium-service-card h3 {
+        min-width: 0;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        word-break: normal;
+        font-size: clamp(1.15rem, 5vw, 1.55rem);
+        line-height: 1.05;
+    }
     .hero-content {
         width: min(100% - 2.25rem, 1140px);
         padding: 8rem 0 4rem;
