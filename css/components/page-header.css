@@ -445,14 +445,7 @@
 
         max-width: 105px;
     }
-        #madonnaShilouetteLogo {
-            position: absolute;
-            height: 74px;
-            max-width: 20px;
-            min-height: 90px;
-            transform: translateY(-18px);
-            
-        }
+        
 }
 
 
