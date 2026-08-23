@@ -6,9 +6,9 @@ export function initBgSlider() {
     if (!slides.length) return;
 
     const images = [
-        'imgs/ai-imgs/nature-bg.png',
-        'imgs/ai-imgs/woman-man.png',
-        'imgs/ai-imgs/lady-med-spa.png',
+        'imgs/home-page-header/nature-bg.png',
+        'imgs/home-page-header/woman-man.png',
+        'imgs/home-page-header/lady-med-spa.png',
     ];
 
     slides.forEach((slide, index) => {
