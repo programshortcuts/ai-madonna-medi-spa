@@ -1,17 +1,35 @@
 /* mobile-header-nav.css */
 /* =========================================================
-Madonna Medical Spa
-   CLOSED STATE:
-   Controls the normal bottom mobile navigation.
-   EXPANDED STATE:
-   Controlled separately by toggle-nav.css.
+   mobile-header-nav.css
+   Madonna Medical Spa
+
+   MOBILE PORTRAIT:
+   Bottom navigation.
+
+   MOBILE LANDSCAPE:
+   No bottom navigation.
+
+   LARGE SCREENS:
+   Original navigation position inside the page header.
+
+   EXPANDED:
+   Controlled by toggle-nav.css.
    ========================================================= */
+
+
+/* =========================================================
+   ROOT
+   ========================================================= */
+
 :root {
     --social-max-height: 3vh;
 }
+
+
 /* =========================================================
-   CLOSED BOTTOM NAVIGATION
+   MOBILE / DEFAULT NAVIGATION
    ========================================================= */
+
 .mobile-header-nav {
     position: fixed;
 
@@ -76,7 +94,6 @@ Madonna Medical Spa
     position: relative;
 
     flex-grow: 1;
-
     min-width: 0;
     height: 100%;
 
@@ -138,13 +155,13 @@ Madonna Medical Spa
    MEDICAL SPA SERVICES
    ========================================================= */
 
-.mobile-header-nav li#medSpaServUL {
+li#medSpaServUL {
     position: relative;
 }
 
 
 /* =========================================================
-   CLOSED-STATE SERVICES SUBMENU
+   CLOSED-STATE SUBMENU
    ========================================================= */
 
 .mobile-header-nav>ul>li#medSpaServUL>ul {
@@ -179,7 +196,7 @@ Madonna Medical Spa
 
 
 /* =========================================================
-   CLOSED-STATE SUBMENU ITEMS
+   SUBMENU ITEMS
    ========================================================= */
 
 .mobile-header-nav>ul>li#medSpaServUL>ul>li {
@@ -195,7 +212,7 @@ Madonna Medical Spa
 
 
 /* =========================================================
-   CLOSED-STATE SUBMENU LINKS
+   SUBMENU LINKS
    ========================================================= */
 
 .mobile-header-nav>ul>li#medSpaServUL>ul>li>a {
@@ -231,7 +248,7 @@ Madonna Medical Spa
 
 
 /* =========================================================
-   HIDDEN NAVIGATION ITEMS
+   HIDDEN ITEMS
    ========================================================= */
 
 .mobile-header-nav .start-hidden {
@@ -241,9 +258,6 @@ Madonna Medical Spa
 
 /* =========================================================
    SOCIAL MEDIA
-   ---------------------------------------------------------
-   Social icons are hidden in the normal bottom navigation.
-   toggle-nav.css restores them when expanded.
    ========================================================= */
 
 .mobile-header-nav .social-media-container-nav {
@@ -252,12 +266,91 @@ Madonna Medical Spa
 
 
 /* =========================================================
-   FOCUS ACCESSIBILITY
+   FOCUS
    ========================================================= */
 
 .mobile-header-nav a:focus-visible {
     outline: 2px solid #a7c8b2;
     outline-offset: -3px;
+}
+
+
+/* =========================================================
+   LARGE SCREENS
+   ---------------------------------------------------------
+   RESTORES THE ORIGINAL LARGE-SCREEN NAVIGATION.
+
+   Home / Medical Spa Services / Contact sit across the
+   page header instead of becoming a bottom navigation.
+   ========================================================= */
+
+@media screen and (min-width: 900px) {
+
+    .mobile-header-nav,
+    .page-wrapper.expand>.mobile-header-nav {
+        position: absolute;
+
+        top: 0;
+        right: 2.5rem;
+        bottom: auto;
+        left: auto;
+
+        width: auto;
+        height: 74px !important;
+
+        margin: 0;
+        padding: 0 !important;
+
+        background: transparent;
+
+        border: 0;
+        border-radius: 0;
+
+        box-shadow: none;
+
+        transform: none;
+        opacity: 1;
+
+        pointer-events: auto;
+
+        display: block;
+    }
+
+
+    .mobile-header-nav>ul,
+    .page-wrapper.expand .mobile-header-nav>ul {
+        width: auto;
+        height: 100%;
+
+        gap: .35rem;
+
+        flex-wrap: nowrap;
+
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+
+    .mobile-header-nav>ul>li {
+        height: 100%;
+
+        flex-grow: 0;
+    }
+
+
+    .mobile-header-nav>ul>li>a {
+        width: auto;
+        height: auto;
+
+        padding: .7rem .85rem;
+
+        font-size: .66rem;
+    }
+
+
+    .mobile-header-nav>ul>li:last-child>a {
+        padding-right: 0;
+    }
 }
 
 
@@ -272,6 +365,7 @@ Madonna Medical Spa
         padding: 0 .35rem;
     }
 
+
     .mobile-header-nav>ul>li>a {
         padding: .45rem .25rem;
 
@@ -279,12 +373,14 @@ Madonna Medical Spa
         letter-spacing: .06em;
     }
 
+
     .mobile-header-nav>ul>li#medSpaServUL>ul {
         bottom: 64px;
 
         min-width: 210px;
         max-width: calc(100vw - 1rem);
     }
+
 
     .mobile-header-nav>ul>li#medSpaServUL>ul>li>a {
         min-height: 40px;
@@ -299,10 +395,10 @@ Madonna Medical Spa
 /* =========================================================
    MOBILE LANDSCAPE
    ---------------------------------------------------------
-   Hide the normal bottom navigation in mobile landscape.
+   ONLY hide the normal bottom navigation.
 
-   When .expand is active, toggle-nav.css takes over and
-   controls the expanded navigation.
+   Do NOT alter the large-screen/header navigation.
+   Do NOT change .expand behavior.
    ========================================================= */
 
 @media screen and (max-width: 899px) and (orientation: landscape) {
