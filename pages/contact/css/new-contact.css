@@ -1,20 +1,8 @@
+/* new-contact.css */
 /* ============================================================
    MADONNA MEDICAL SPA
    CONTACT PAGE — NEW CONTACT STYLES
    ============================================================
-
-   IMPORTANT:
-   - Contact page only
-   - JavaScript is untouched
-   - Existing HTML structure is preserved
-   - Facebook/Instagram SVGs are untouched
-   - Existing links are untouched
-   - Styles are scoped to .contact-page-container
-   - Existing Contact CSS files can remain disabled temporarily
-
-   ============================================================ */
-
-
 /* ============================================================
    1. CONTACT PAGE — MAIN LAYOUT
    ============================================================ */
@@ -31,7 +19,7 @@
 
     padding-top: 5%;
     padding-right: 0;
-    padding-bottom: 4%;
+    padding-bottom: 24%;
     padding-left: 0;
 
     margin: 0 auto;
@@ -111,9 +99,7 @@
 }
 
 
-/* ============================================================
-   5. CONTACT FORM
-   ============================================================ */
+/* ============================================================ 5. CONTACT FORM ============================================================ */
 
 .page-container.contact-page-container #contactForm {
     width: 100%;
@@ -125,11 +111,7 @@
 
     margin: 0;
 }
-
-
-/* ============================================================
-   6. FORM GROUPS
-   ============================================================ */
+/* ============================================================ 6. FORM GROUPS============================================================ */
 
 .page-container.contact-page-container #contactForm>.form-group {
     width: 100%;
@@ -141,11 +123,9 @@
     padding: 0;
 }
 
-
 /* ============================================================
    7. FORM LABELS
    ============================================================ */
-
 .page-container.contact-page-container #contactForm .form-group label {
     display: block;
 
@@ -171,12 +151,11 @@
 
 .page-container.contact-page-container #contactForm .form-group textarea {
     width: 100%;
-
     padding: 14px 5px;
-
+    padding-left: 2%;
     border: none;
     border-bottom: 1px solid #ccc;
-
+    border: 1px solid #ccc;
     border-radius: 0;
 
     background: rgba(255, 255, 255, 0.12);
@@ -291,9 +270,14 @@
     flex-direction: column;
 
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
 
     text-align: center;
+
+    align-self: stretch;
+
+    padding-top: 120px;
+    padding-bottom: 5px;
 }
 
 
@@ -304,9 +288,9 @@
 .page-container.contact-page-container .email-contact {
     width: 100%;
 
-    margin: 0 0 25px;
-
     text-align: center;
+
+    margin-bottom: 10px;
 }
 
 .page-container.contact-page-container .email-contact p {
@@ -318,12 +302,6 @@
 
 /* ============================================================
    16. SOCIAL MEDIA CONTAINER
-   ============================================================
-
-   IMPORTANT:
-   The existing Facebook and Instagram SVGs are NOT modified.
-
-   This section only controls their surrounding layout.
    ============================================================ */
 
 .page-container.contact-page-container .social-media-container {
@@ -332,8 +310,8 @@
     display: flex;
     flex-direction: row;
 
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
+    justify-content: flex-end;
 
     margin: 0;
     padding: 0;
@@ -351,7 +329,7 @@
 
     display: flex;
 
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
 
     margin: 0;
@@ -363,19 +341,22 @@
    18. EXISTING SOCIAL LINKS
    ============================================================
 
-   These rules only establish positioning.
-
-   Existing SVG graphics, colors, dimensions and links remain
-   untouched in the HTML.
+   IMPORTANT:
+   DO NOT MODIFY THE SVG GRAPHICS.
+   DO NOT MODIFY THEIR COLORS.
+   DO NOT MODIFY THEIR LINKS.
    ============================================================ */
 
 .page-container.contact-page-container .social-media-container>.social-media-item a {
     display: flex;
 
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
 
     text-decoration: none;
+
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -388,19 +369,18 @@
 
     display: flex;
 
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
 
-    gap: 55px;
+    gap: 60px;
 
-    margin-top: auto;
-    margin-right: auto;
-    margin-bottom: 0;
-    margin-left: auto;
-
-    padding-top: 40px;
+    margin: 45px auto 0;
+    padding: 25px 20px 0;
 
     text-align: center;
+
+    position: relative;
+    z-index: 2;
 }
 
 
@@ -409,13 +389,21 @@
    ============================================================ */
 
 .page-container.contact-page-container .contact-address-num-container .address-box {
+    display: block;
+
     margin: 0;
 
     line-height: 1.6;
+
+    color: inherit;
 }
 
 .page-container.contact-page-container .contact-address-num-container .address-box h2 {
+    display: block;
+
     margin: 0 0 8px;
+
+    font-size: 1.15rem;
 }
 
 
@@ -424,31 +412,35 @@
    ============================================================ */
 
 .page-container.contact-page-container .contact-address-num-container .tel-num-box {
+    display: block;
+
     margin: 0;
 
     line-height: 1.6;
+
+    color: inherit;
 
     white-space: nowrap;
 }
 
 
 /* ============================================================
-   22. EXISTING ADDRESS-HOME SECTION
+   22. EMPTY LEGACY ADDRESS SECTION
    ============================================================
 
-   This section is preserved rather than removed because the
-   existing HTML/navigation system may depend on it.
-
-   Keep it visually unobtrusive while the final Contact layout
-   uses .contact-address-num-container for the bottom contact
-   information.
+   The existing HTML/navigation structure is preserved, but
+   this section contains no visible contact information we
+   need for the new layout.
    ============================================================ */
 
 .page-container.contact-page-container .address-contact-home {
     width: 100%;
+
+    min-height: 0;
+
+    margin: 0;
+    padding: 0;
 }
-
-
 /* ============================================================
    23. TABLET
    ============================================================ */
@@ -480,6 +472,15 @@
         flex: 1 1 100%;
 
         max-width: 400px;
+
+        align-self: center;
+
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .page-container.contact-page-container .social-media-container {
+        justify-content: center;
     }
 }
 
@@ -530,18 +531,19 @@
         max-width: 400px;
     }
 
-    .page-container.contact-page-container .contact-address-num-container {
-        width: 94%;
+   .page-container.contact-page-container .contact-address-num-container {
+       width: 94%;
 
-        flex-direction: column;
+       flex-direction: column;
 
-        align-items: center;
-        justify-content: center;
+       align-items: center;
+       justify-content: center;
 
-        gap: 15px;
+       gap: 15px;
 
-        padding-top: 30px;
-    }
+       margin-top: 30px;
+       padding: 25px 10px 0;
+   }
 
     .page-container.contact-page-container .contact-address-num-container .tel-num-box {
         white-space: normal;
@@ -599,3 +601,5 @@
 /* ============================================================
    END CONTACT PAGE
    ============================================================ */
+
+   
