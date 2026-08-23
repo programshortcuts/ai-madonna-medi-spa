@@ -447,23 +447,9 @@
     }
         #madonnaShilouetteLogo {
             position: absolute;
-    
-            /*
-         * Keep the silhouette anchored to the top-right,
-         * but allow the bottom of the image to extend
-         * below the page header like the original site.
-         */
-            top: 0;
-            right: 0;
-    
-    
-    
-            width: auto;
-    
             height: 74px;
             max-width: 20px;
-            /* max-height: 74px; */
-            min-height: 100px;
+            min-height: 90px;
             transform: translateY(-18px);
             
         }
