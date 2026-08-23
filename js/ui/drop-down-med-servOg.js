@@ -22,7 +22,9 @@ export function initDropDownMedServ() {
         // Prevent duplicate initialization
         // --------------------------------------------------------
 
-        if (section.dataset.sectionToggleReady === 'true') {
+        if (
+            section.dataset.sectionToggleReady === 'true'
+        ) {
             return;
         }
 
@@ -42,6 +44,10 @@ export function initDropDownMedServ() {
             return;
         }
 
+        const preview = content.querySelector(
+            ':scope > .section-preview'
+        );
+
         const details = content.querySelector(
             ':scope > .section-details'
         );
@@ -50,10 +56,7 @@ export function initDropDownMedServ() {
             '.more-info-btn'
         );
 
-        // --------------------------------------------------------
-        // Keep activated title below fixed header
-        // --------------------------------------------------------
-
+        // Keep an activated title visible below the fixed site header.
         const scrollTitleIntoHeaderClearance = () => {
 
             const scrollContainer = document.querySelector(
@@ -70,13 +73,9 @@ export function initDropDownMedServ() {
 
             requestAnimationFrame(() => {
 
-                title.focus({
-                    preventScroll: true
-                });
+                title.focus({ preventScroll: true });
 
-                const titleRect =
-                    title.getBoundingClientRect();
-
+                const titleRect = title.getBoundingClientRect();
                 const containerRect =
                     scrollContainer.getBoundingClientRect();
 
@@ -93,9 +92,7 @@ export function initDropDownMedServ() {
                     top: targetTop,
                     behavior: window.matchMedia(
                         '(prefers-reduced-motion: reduce)'
-                    ).matches
-                        ? 'auto'
-                        : 'smooth'
+                    ).matches ? 'auto' : 'smooth'
                 });
             });
         };
@@ -163,6 +160,13 @@ export function initDropDownMedServ() {
 
         // --------------------------------------------------------
         // CLOSE OTHER SECTIONS
+        //
+        // When another section is opened:
+        //
+        // - its content closes
+        // - its details close
+        // - its more-info button becomes visible
+        //
         // --------------------------------------------------------
 
         const closeOtherSections = () => {
@@ -205,7 +209,7 @@ export function initDropDownMedServ() {
                     );
                 }
 
-                // Update title
+                // Update title aria
                 if (otherTitle) {
 
                     otherTitle.setAttribute(
@@ -229,28 +233,55 @@ export function initDropDownMedServ() {
                         button.classList.remove(
                             'hide'
                         );
+
                     }
                 );
             });
         };
 
         // --------------------------------------------------------
-        // TOGGLE WHOLE SECTION
+        // TOGGLE CONTENT ONLY
         //
-        // .section-title now does EVERYTHING that the old
-        // .service-section did.
+        // Used by .section-title.
         //
-        // Closed:
-        //     content  -> show
-        //     details  -> show
-        //
-        // Open:
-        //     content  -> hide
-        //     details  -> hide
+        // IMPORTANT:
+        // Details are ALWAYS hidden here.
         //
         // --------------------------------------------------------
 
-        const toggleSection = () => {
+        const toggleContentFromTitle = () => {
+
+            const currentlyVisible =
+                isContentVisible();
+
+            if (currentlyVisible) {
+
+                // Closing content
+                setContentVisible(false);
+
+            } else {
+
+                // Opening content
+                closeOtherSections();
+                setContentVisible(true);
+            }
+
+            // IMPORTANT:
+            // Section title NEVER opens details.
+            setDetailsVisible(false);
+        };
+
+        // --------------------------------------------------------
+        // TOGGLE SECTION
+        //
+        // Used when the actual .service-section is clicked
+        // or activated with Enter / Space.
+        //
+        // Content and details move together.
+        //
+        // --------------------------------------------------------
+
+        const toggleWholeSection = () => {
 
             const currentlyVisible =
                 isContentVisible();
@@ -258,7 +289,9 @@ export function initDropDownMedServ() {
             if (currentlyVisible) {
 
                 // ----------------------------------------------
-                // CLOSE
+                // SECTION IS OPEN
+                //
+                // Close BOTH content and details.
                 // ----------------------------------------------
 
                 setContentVisible(false);
@@ -267,7 +300,9 @@ export function initDropDownMedServ() {
             } else {
 
                 // ----------------------------------------------
-                // OPEN
+                // SECTION IS CLOSED
+                //
+                // Open content AND show details.
                 // ----------------------------------------------
 
                 closeOtherSections();
@@ -280,14 +315,13 @@ export function initDropDownMedServ() {
         // --------------------------------------------------------
         // MORE INFO
         //
-        // This ONLY controls .section-details.
+        // This ONLY changes .section-details.
+        //
+        // It does NOT change .content.
+        //
         // --------------------------------------------------------
 
         const toggleDetails = () => {
-
-            if (!details) {
-                return;
-            }
 
             const currentlyVisible =
                 isDetailsVisible();
@@ -301,6 +335,7 @@ export function initDropDownMedServ() {
         // INITIAL STATE
         // ========================================================
 
+        // Preserve whatever content state the HTML provides.
         const initialContentVisible =
             content.classList.contains('show');
 
@@ -308,13 +343,12 @@ export function initDropDownMedServ() {
             initialContentVisible
         );
 
-        // Details start hidden.
+        // IMPORTANT:
+        // Details are ALWAYS hidden when the page first loads.
         setDetailsVisible(false);
 
         // ========================================================
         // .section-title
-        //
-        // THIS IS NOW THE ONLY SECTION TOGGLE.
         // ========================================================
 
         title.addEventListener(
@@ -324,8 +358,7 @@ export function initDropDownMedServ() {
                 event.preventDefault();
                 event.stopPropagation();
 
-                toggleSection();
-
+                toggleContentFromTitle();
                 scrollTitleIntoHeaderClearance();
             }
         );
@@ -344,9 +377,64 @@ export function initDropDownMedServ() {
                 event.preventDefault();
                 event.stopPropagation();
 
-                toggleSection();
-
+                toggleContentFromTitle();
                 scrollTitleIntoHeaderClearance();
+            }
+        );
+
+        // ========================================================
+        // .service-section CLICK
+        // ========================================================
+        //
+        // IMPORTANT:
+        //
+        // We only want this to happen when the SECTION itself
+        // is clicked.
+        //
+        // Clicking children should NOT cause this handler to run.
+        //
+        // ========================================================
+
+        section.addEventListener(
+            'click',
+            (event) => {
+
+                // If the actual section itself was clicked:
+                if (event.target !== section) {
+                    return;
+                }
+
+                event.preventDefault();
+                event.stopPropagation();
+
+                toggleWholeSection();
+            }
+        );
+
+        // ========================================================
+        // .service-section KEYBOARD
+        // ========================================================
+
+        section.addEventListener(
+            'keydown',
+            (event) => {
+
+                // Only respond when the section itself has focus.
+                if (event.target !== section) {
+                    return;
+                }
+
+                if (
+                    event.key !== 'Enter' &&
+                    event.key !== ' '
+                ) {
+                    return;
+                }
+
+                event.preventDefault();
+                event.stopPropagation();
+
+                toggleWholeSection();
             }
         );
 
@@ -388,6 +476,23 @@ export function initDropDownMedServ() {
 
             }
         );
+
+        // ========================================================
+        // .section-preview
+        //
+        // IMPORTANT:
+        //
+        // We are NOT using .section-preview to toggle details
+        // anymore.
+        //
+        // Details are controlled by:
+        //
+        // 1. .service-section
+        // 2. .more-info-btn
+        //
+        // ========================================================
+
+        // No preview click handler.
 
         // --------------------------------------------------------
         // Mark initialized

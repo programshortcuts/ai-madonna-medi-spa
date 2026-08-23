@@ -26,9 +26,10 @@
 
 
 /* medical-spa-services */
-/* @import url('../pages/medical-spa-services/css/bkgrnd-med-spa-serv.css');  */
-@import url('../pages/medical-spa-services/css/borders-med-spa-serv.css'); 
+/* @import url('../pages/medical-spa-services/css/new-med-spa-serv.css');  */
 
+@import url('../pages/medical-spa-services/css/bkgrnd-med-spa-serv.css'); 
+@import url('../pages/medical-spa-services/css/borders-med-spa-serv.css'); 
 @import url('../pages/medical-spa-services/css/clrs-med-spa-serv.css'); 
 @import url('../pages/medical-spa-services/css/layout-med-spa-serv.css');
 @import url('../pages/medical-spa-services/css/effects-med-spa-serv.css');
@@ -70,18 +71,6 @@
 /* contact.css */
 
 @import url('../pages/contact/css/new-contact.css');
-/* @import url('../pages/contact/css/forms.css'); */
-/* @import url('../pages/contact/css/responsive-contact.css'); */
-/* @import url('../pages/contact/css/sizing-contact.css'); */
-/* @import url('../pages/contact/css/social-media-container-contact.css'); */
-/* @import url('../pages/contact/css/bkgrnd-contact.css'); */
-/* @import url('../pages/contact/css/layout-contact.css'); */
-/* @import url('../pages/contact/css/spacing-contact.css'); */
-
-
-
-
-
 
 /* products */
 /* @import url('../pages/products/css/borders-products.css'); */

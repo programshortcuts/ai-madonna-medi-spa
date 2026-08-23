@@ -1,3 +1,4 @@
+/* effects-med-spa-serv.css */
 .med-spa-serv-container .service-section { transition: border-color var(--service-transition), box-shadow var(--service-transition); }.med-spa-serv-container .service-section:hover { border-color: rgba(74, 65, 65, .3); box-shadow: var(--service-shadow); }
 .med-spa-serv-container .service-section .section-title { cursor: pointer; transition: background-color var(--service-transition), color var(--service-transition); }.med-spa-serv-container .service-section .section-title:hover, .med-spa-serv-container .service-section .section-title[aria-expanded="true"] { background: rgba(217, 200, 195, .22); }
 .med-spa-serv-container .service-section .section-title:focus-visible, .med-spa-serv-container .service-section .more-info-btn:focus-visible, .med-spa-serv-container .service-section a:focus-visible { outline: 3px solid #a7c8b2 !important; outline-offset: 3px; box-shadow: none !important; }

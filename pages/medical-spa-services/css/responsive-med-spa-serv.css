@@ -1,4 +1,10 @@
+/* responsive-med-spa-serv.css */
 /* Keep the existing floated-media treatment useful on compact screens. */
+@media (min-width: 731px) {
+.page-container.med-spa-serv-container {
+    margin: 0 5% !important;
+}
+}
 @media (max-width: 730px) {
     .med-spa-serv-container {
         padding: calc(74px + 1.25rem) 0 4rem;

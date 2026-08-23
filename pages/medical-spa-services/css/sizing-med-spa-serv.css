@@ -1,1 +1,22 @@
-.med-spa-serv-container { width: 100%; }.med-spa-serv-container .section-preview p, .med-spa-serv-container .section-details p { font-size: clamp(1rem, 1.1vw, 1.08rem); }.med-spa-serv-container .section-details h2 { font-size: 1.12rem; }.med-spa-serv-container .women-men-nav img { width: 52px; height: auto; }
+/* sizing-med-spa-serv.css */
+.med-spa-serv-container {
+    width: 100%;
+}
+
+.med-spa-serv-container .section-preview p,
+.med-spa-serv-container .section-details p {
+    font-size: clamp(1rem, 1.1vw, 1.08rem);
+}
+
+.med-spa-serv-container .section-details h2 {
+    font-size: 1.12rem;
+}
+
+.med-spa-serv-container .women-men-nav img {
+    width: 52px;
+    height: auto;
+}
+.section-details .img-wrapper {
+    max-width: 250px;
+    max-height: 250px;
+}
