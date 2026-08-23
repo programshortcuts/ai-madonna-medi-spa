@@ -1,4 +1,5 @@
 // inject-content.js
+import { initContactForm } from "./contact-form.js";
 import { initAllVideos } from "../video/video-controls.js";
 // 🔥 Ensure correct default page
 export const DEFAULT_PAGE = "pages/home/home.html";
@@ -109,13 +110,86 @@ function centerElementInScrollContainer(element) {
 }
 
 // ============================================================
-// GLOBAL FORM SAFETY
+// Contact SUBMIT FORM
 // ============================================================
+document.addEventListener("submit", async (e) => {
 
-document.addEventListener("submit", (e) => {
-    if (e.target.id === "contact-form") {
-        e.preventDefault();
-        mainLandingPage.textContent = "Form submission blocked";
+    if (e.target.id !== "contactForm") {
+        return;
+    }
+
+    e.preventDefault();
+
+    const form = e.target;
+    const submitBtn = form.querySelector("#submitBtn");
+
+    const firstName = form.querySelector("#first-name").value.trim();
+    const lastName = form.querySelector("#last-name").value.trim();
+    const email = form.querySelector("#email").value.trim();
+    const phone = form.querySelector("#phone").value.trim();
+    const message = form.querySelector("#message").value.trim();
+
+    // Let the browser handle required-field validation
+    if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+    }
+
+    // Prevent double submissions
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
+
+    try {
+
+        const response = await fetch(
+            "https://madonna-contact-form.programshortcuts.workers.dev/",
+            {
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                body: JSON.stringify({
+                    firstName,
+                    lastName,
+                    email,
+                    phone,
+                    message
+                })
+            }
+        );
+
+        const result = await response.json();
+
+        if (!response.ok || !result.success) {
+            throw new Error(
+                result.error || "Unable to send message."
+            );
+        }
+
+        form.reset();
+
+        submitBtn.textContent = "Message Sent!";
+
+        setTimeout(() => {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Submit";
+        }, 3000);
+
+    } catch (error) {
+
+        console.error(
+            "Contact form submission error:",
+            error
+        );
+
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Submit";
+
+        alert(
+            "Sorry, your message could not be sent. Please try again or email us directly."
+        );
     }
 });
 
@@ -734,7 +808,7 @@ export async function injectPage(
     // initDropDownMedServ();
 
     initDropDown();
-
+    initContactForm();
     // --------------------------------------------------------
     // OPTIONAL PAGE-SPECIFIC INIT
     // --------------------------------------------------------
