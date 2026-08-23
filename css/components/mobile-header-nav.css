@@ -1,6 +1,13 @@
 /* mobile-header-nav.css */
 /* =========================================================
-   Main bottom navigation for the Madonna Medical Spa site
+   mobile-header-nav.css
+   Madonna Medical Spa
+
+   CLOSED:
+   New/current bottom navigation.
+
+   EXPANDED:
+   Old top-dropping navigation is handled by toggle-nav.css.
    ========================================================= */
 
 :root {
@@ -8,32 +15,51 @@
 }
 
 
-/* ======================================================== =MAIN NAVIGATION ========================================================= */
+/* =========================================================
+   CLOSED STATE — NEW BOTTOM NAVIGATION
+   ========================================================= */
 
 .mobile-header-nav {
     position: fixed;
+
     z-index: 9999;
 
     left: 0;
     right: 0;
     bottom: 0;
 
+    top: auto;
+
     width: 100%;
     height: 70px;
 
+    margin: 0;
     padding: 0 1rem;
 
     background: rgba(250, 248, 244, .98);
 
     border-top: 1px solid rgba(24, 58, 55, .14);
+
+    border-bottom: 0;
     border-radius: 0;
 
     box-shadow: 0 -4px 16px rgba(25, 47, 39, .08);
 
-    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    transform: none;
 
-    /* Prevent the navigation itself from becoming the
-       positioning context for accidental vertical movement. */
+    opacity: 1;
+
+    pointer-events: auto;
+
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
     display: block;
 }
 
@@ -50,6 +76,7 @@
     padding: 0;
 
     display: flex;
+
     align-items: center;
     justify-content: space-around;
 
@@ -64,16 +91,24 @@
 .mobile-header-nav>ul>li {
     position: relative;
 
-    /* flex: 1 1 0; */
     flex-grow: 1;
+
     min-width: 0;
 
     height: 100%;
+
+    margin: 0;
+    padding: 0;
+
     display: flex;
+
     align-items: center;
     justify-content: center;
 
     list-style: none;
+
+    opacity: 1;
+    transform: none;
 }
 
 
@@ -82,28 +117,39 @@
    ========================================================= */
 
 .mobile-header-nav>ul>li>a {
-    /* min-width: 0; */
 
-    height: 100%;
+    min-width: 0;
+
+    width: 100%;
+    height: 50%;
 
     padding: .55rem .4rem;
 
-    display: inline-flex;   
+    display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
     color: var(--pine);
-    width: 100%;
-    /* height: fit-content; */
-    height: 50%;
 
-    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        sans-serif;
+
     font-size: .65rem;
+
     font-weight: 750;
+
     letter-spacing: .08em;
+
     line-height: 1.2;
+
     text-align: center;
+
     text-decoration: none;
+
     text-transform: uppercase;
 
     white-space: nowrap;
@@ -116,45 +162,31 @@
    MEDICAL SPA SERVICES
    ========================================================= */
 
-/*
-   This is important.
-
-   The submenu belongs to the Medical Spa Services <li>.
-   We keep that <li> in the bottom navigation row while
-   positioning the submenu independently ABOVE the nav.
-
-   This prevents the submenu from pushing the main
-   navigation item upward.
-*/
-
 li#medSpaServUL {
     position: relative;
 }
 
+
 /* =========================================================
-   MEDICAL SPA SERVICES SUBMENU
+   CLOSED-STATE SUBMENU
    ========================================================= */
 
-/*
-   The submenu is removed from normal document flow.
-
-   Therefore it cannot change the position of:
-       Home
-       Medical Spa Services
-       Contact
-*/
-
 .mobile-header-nav>ul>li#medSpaServUL>ul {
+
     position: absolute;
 
     left: 50%;
+
     bottom: 70px;
 
     width: max-content;
+
     min-width: 220px;
+
     max-width: min(90vw, 360px);
 
     margin: 0;
+
     padding: .5rem 0;
 
     transform: translateX(-50%);
@@ -164,6 +196,7 @@ li#medSpaServUL {
     background: rgba(250, 248, 244, .98);
 
     border: 1px solid rgba(24, 58, 55, .14);
+
     border-radius: 8px;
 
     box-shadow: 0 -6px 24px rgba(25, 47, 39, .12);
@@ -174,24 +207,12 @@ li#medSpaServUL {
 }
 
 
-/*
-   When the navigation/Medical Spa Services is expanded,
-   the submenu becomes visible.
-
-   This supports the existing .expand system if your
-   JavaScript adds that class to .page-wrapper.
-*/
-
-.page-wrapper.expand .mobile-header-nav>ul>li#medSpaServUL>ul {
-    display: block;
-}
-
-
 /* =========================================================
-   SUBMENU ITEMS
+   CLOSED-STATE SUBMENU ITEMS
    ========================================================= */
 
 .mobile-header-nav>ul>li#medSpaServUL>ul>li {
+
     width: 100%;
 
     margin: 0;
@@ -200,6 +221,7 @@ li#medSpaServUL {
     display: block;
 
     opacity: 1;
+
     transform: none;
 
     list-style: none;
@@ -207,10 +229,11 @@ li#medSpaServUL {
 
 
 /* =========================================================
-   SUBMENU LINKS
+   CLOSED-STATE SUBMENU LINKS
    ========================================================= */
 
 .mobile-header-nav>ul>li#medSpaServUL>ul>li>a {
+
     width: 100%;
 
     min-height: 42px;
@@ -218,66 +241,35 @@ li#medSpaServUL {
     padding: .7rem 1rem;
 
     display: flex;
+
     align-items: center;
+
     justify-content: flex-start;
 
     color: var(--pine);
 
-    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        sans-serif;
+
     font-size: .65rem;
+
     font-weight: 650;
+
     letter-spacing: .04em;
+
     line-height: 1.3;
 
     text-decoration: none;
 
     white-space: normal;
-
-    transition:
-        background-color .2s ease,
-        color .2s ease;
-}
-
-
-.mobile-header-nav>ul>li#medSpaServUL>ul>li>a:hover,
-.mobile-header-nav>ul>li#medSpaServUL>ul>li>a:focus-visible {
-    background: rgba(74, 65, 65, .08);
-    color: var(--pine);
 }
 
 
 /* =========================================================
-   CONTACT NAV ITEM
-   ========================================================= */
-
-li#contactNavLink {
-    flex: 1 1 0;
-    min-width: 0;
-}
-
-
-/* =========================================================
-   SOCIAL MEDIA
-   ========================================================= */
-
-.social-media-container-nav {
-    display: flex;
-    flex-direction: column;
-}
-
-
-/*
-   The bottom navigation currently does not display
-   the social icons inside the Contact item.
-*/
-
-.mobile-header-nav .social-media-container-nav {
-    display: none;
-}
-
-
-/* =========================================================
-   HIDDEN NAV ITEMS
+   HIDDEN ITEMS
    ========================================================= */
 
 .mobile-header-nav .start-hidden {
@@ -286,7 +278,29 @@ li#contactNavLink {
 
 
 /* =========================================================
-   RESEARCH & LITERATURE
+   SOCIAL MEDIA
+   CLOSED STATE — KEEP HIDDEN
+   ========================================================= */
+
+.mobile-header-nav .social-media-container-nav {
+    display: none;
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.mobile-header-nav a:focus-visible {
+
+    outline: 2px solid #a7c8b2;
+
+    outline-offset: -3px;
+}
+
+
+/* =========================================================
+   RESEARCH
    ========================================================= */
 
 #researchAndLitLI {
@@ -299,7 +313,7 @@ li#contactNavLink {
 
 
 /* =========================================================
-   PRODUCTS SUBMENU
+   PRODUCTS
    ========================================================= */
 
 li#productsNavLi>ul {
@@ -308,84 +322,40 @@ li#productsNavLi>ul {
 
 
 /* =========================================================
-   FOCUS ACCESSIBILITY
-   ========================================================= */
-
-.mobile-header-nav a:focus-visible {
-    outline: 2px solid #a7c8b2;
-    outline-offset: -3px;
-}
-
-
-/* =========================================================
    SMALL SCREENS
    ========================================================= */
 
-@media (min-width: 900px) {
-.mobile-header-nav,
-    .page-wrapper.expand>.mobile-header-nav {
-        top: 0;
-        right: 2.5rem;
-        bottom: auto;
-        left: auto;
-        width: auto;
-        height: 74px !important;
-        margin: 0;
-        padding: 0 !important;
-        background: transparent;
-        border: 0;
-        box-shadow: none;
-        transform: none;
-        opacity: 1;
-    }
-
-    .mobile-header-nav>ul,
-    .page-wrapper.expand .mobile-header-nav>ul {
-        gap: .35rem;
-        flex-wrap: nowrap;
-    }
-
-    .mobile-header-nav>ul>li>a {
-        padding: .7rem .85rem;
-        font-size: .66rem;
-    }
-
-    .mobile-header-nav>ul>li:last-child>a {
-        padding-right: 0;
-    }
-
-    .mobile-header-nav>ul>li>ul,
-    .page-wrapper.expand .mobile-header-nav>ul>li>ul {
-        display: none;
-    }
-}
 @media (max-width: 480px) {
 
     .mobile-header-nav {
+
         height: 64px;
+
         padding: 0 .35rem;
     }
 
     .mobile-header-nav>ul>li>a {
+
         padding: .45rem .25rem;
 
         font-size: .58rem;
+
         letter-spacing: .06em;
     }
 
-    /*
-       Keep the submenu above the actual nav height.
-    */
-
     .mobile-header-nav>ul>li#medSpaServUL>ul {
+
         bottom: 64px;
 
         min-width: 210px;
+
         max-width: calc(100vw - 1rem);
     }
 
     .mobile-header-nav>ul>li#medSpaServUL>ul>li>a {
+
         min-height: 40px;
+
         padding: .65rem .8rem;
 
         font-size: .58rem;
@@ -402,9 +372,9 @@ li#productsNavLi>ul {
     .mobile-header-nav *,
     .mobile-header-nav *::before,
     .mobile-header-nav *::after {
+
         transition: none !important;
+
         animation: none !important;
     }
 }
-
-

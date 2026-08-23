@@ -1,0 +1,729 @@
+/* =========================================================
+   mobile-header-nav.css
+   Madonna Medical Spa
+   Restored top-expanding navigation
+   ========================================================= */
+
+:root {
+    --social-max-height: 3vh;
+}
+
+
+/* =========================================================
+   BASE MOBILE NAVIGATION
+   ========================================================= */
+
+.mobile-header-nav {
+    position: fixed;
+
+    z-index: 11;
+
+    top: 4%;
+    right: 0;
+    left: 0;
+
+    width: 75%;
+    height: 30vh;
+
+    margin-right: 25%;
+
+    padding-top: 5%;
+
+    background: rgba(250, 248, 244, .98);
+
+    border-top: 0;
+    border-bottom: 1px solid whitesmoke;
+
+    box-shadow: 0 2px 0 2px grey;
+
+    transform: translateY(-120%) scaleX(.98);
+    transform-origin: top center;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+        transform 400ms ease,
+        opacity 300ms ease,
+        height 300ms ease;
+
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+}
+
+
+/* =========================================================
+   EXPANDED NAVIGATION
+   ========================================================= */
+
+.page-wrapper.expand > .mobile-header-nav {
+    top: 4%;
+
+    bottom: auto;
+
+    height: 30vh;
+
+    padding-top: 5%;
+
+    margin-right: 25%;
+
+    border-top: 0;
+    border-bottom: 1px solid whitesmoke;
+
+    box-shadow: 0 2px 0 2px grey;
+
+    transform: translateY(0) scaleX(1);
+
+    opacity: 1;
+
+    pointer-events: auto;
+}
+
+
+/* =========================================================
+   MAIN NAVIGATION LIST
+   ========================================================= */
+
+.mobile-header-nav > ul {
+    width: 100%;
+
+    margin: 0;
+    padding: 0 1rem;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    list-style: none;
+}
+
+
+/* =========================================================
+   TOP LEVEL ITEMS
+   ========================================================= */
+
+.mobile-header-nav > ul > li {
+    position: relative;
+
+    flex: 0 0 auto;
+
+    min-width: 0;
+
+    margin: 0;
+
+    padding: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    list-style: none;
+
+    opacity: 0;
+
+    transform: translateX(-20px);
+}
+
+
+/* =========================================================
+   ANIMATE TOP LEVEL ITEMS
+   ========================================================= */
+
+.page-wrapper.expand .mobile-header-nav > ul > li {
+    animation: slideInX 100ms forwards;
+}
+
+
+/* =========================================================
+   MAIN NAVIGATION LINKS
+   ========================================================= */
+
+.mobile-header-nav > ul > li > a {
+    min-width: 0;
+
+    height: auto;
+
+    padding: .55rem .8rem;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: var(--pine);
+
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        sans-serif;
+
+    font-size: .7rem;
+
+    font-weight: 750;
+
+    letter-spacing: .08em;
+
+    line-height: 1.2;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   HIDDEN ITEMS
+   ========================================================= */
+
+.mobile-header-nav .start-hidden {
+    display: none !important;
+}
+
+.page-wrapper.expand .mobile-header-nav .start-hidden {
+    display: flex !important;
+}
+
+
+/* =========================================================
+   MEDICAL SPA SERVICES
+   ========================================================= */
+
+li#medSpaServUL {
+    position: relative;
+}
+
+
+/* =========================================================
+   MEDICAL SPA SERVICES SUBMENU
+   ========================================================= */
+
+.mobile-header-nav > ul > li#medSpaServUL > ul {
+    position: relative;
+
+    left: auto;
+    bottom: auto;
+
+    width: 100%;
+
+    min-width: 220px;
+    max-width: 360px;
+
+    margin: 0;
+    padding: .25rem 0 0 0;
+
+    display: block;
+
+    background: transparent;
+
+    border: 0;
+    border-radius: 0;
+
+    box-shadow: none;
+
+    list-style: none;
+
+    overflow: visible;
+}
+
+
+/*
+   Submenu links are hidden until the navigation expands.
+*/
+
+.page-wrapper > .mobile-header-nav > ul > li > ul > li > a {
+    display: none;
+}
+
+
+/*
+   Show submenu links when expanded.
+*/
+
+.page-wrapper.expand > .mobile-header-nav > ul > li > ul > li > a {
+    display: flex !important;
+}
+
+
+/* =========================================================
+   SUBMENU ITEMS
+   ========================================================= */
+
+.mobile-header-nav > ul > li#medSpaServUL > ul > li {
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    display: block;
+
+    opacity: 0;
+
+    transform: translateY(-10px);
+
+    list-style: none;
+}
+
+
+/* =========================================================
+   SUBMENU ANIMATION
+   ========================================================= */
+
+.page-wrapper.expand
+.mobile-header-nav
+ul
+li
+ul
+li {
+    animation: dropIn 150ms forwards;
+}
+
+
+.page-wrapper.expand
+.mobile-header-nav
+ul
+li
+ul
+li:nth-child(1) {
+    animation-delay: 120ms;
+}
+
+
+.page-wrapper.expand
+.mobile-header-nav
+ul
+li
+ul
+li:nth-child(2) {
+    animation-delay: 180ms;
+}
+
+
+.page-wrapper.expand
+.mobile-header-nav
+ul
+li
+ul
+li:nth-child(3) {
+    animation-delay: 240ms;
+}
+
+
+.page-wrapper.expand
+.mobile-header-nav
+ul
+li
+ul
+li:nth-child(4) {
+    animation-delay: 300ms;
+}
+
+
+.page-wrapper.expand
+.mobile-header-nav
+ul
+li
+ul
+li:nth-child(5) {
+    animation-delay: 360ms;
+}
+
+
+.page-wrapper.expand
+.mobile-header-nav
+ul
+li
+ul
+li:nth-child(6) {
+    animation-delay: 420ms;
+}
+
+
+/* =========================================================
+   SUBMENU LINKS
+   ========================================================= */
+
+.mobile-header-nav > ul > li#medSpaServUL > ul > li > a {
+    width: 100%;
+
+    min-height: 38px;
+
+    padding: .55rem .8rem;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    color: var(--pine);
+
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        sans-serif;
+
+    font-size: .65rem;
+
+    font-weight: 650;
+
+    letter-spacing: .04em;
+
+    line-height: 1.3;
+
+    text-decoration: none;
+
+    white-space: normal;
+
+    transition:
+        background-color .2s ease,
+        color .2s ease;
+}
+
+
+.mobile-header-nav
+> ul
+> li#medSpaServUL
+> ul
+> li
+> a:hover,
+
+.mobile-header-nav
+> ul
+> li#medSpaServUL
+> ul
+> li
+> a:focus-visible {
+    background: rgba(74, 65, 65, .08);
+
+    color: var(--pine);
+}
+
+
+/* =========================================================
+   SOCIAL MEDIA CONTAINER
+   ========================================================= */
+
+.social-media-container-nav {
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: .5rem;
+
+    margin-top: .25rem;
+
+    padding: 0 .8rem;
+}
+
+
+/* =========================================================
+   SOCIAL MEDIA LINK CONTAINERS
+   ========================================================= */
+
+.social-media-link-container-nav {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================================================
+   SOCIAL MEDIA LINKS
+   ========================================================= */
+
+.social-media-container-nav a {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   SOCIAL MEDIA SVG
+   ========================================================= */
+
+.social-media-container-nav svg {
+    width: 24px;
+    height: 24px;
+
+    display: block;
+
+    overflow: visible;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+li#contactNavLink {
+    min-width: 0;
+}
+
+
+/*
+   Your HTML currently does not have id="contactNavLink",
+   so this also catches the final top-level navigation item.
+*/
+
+.mobile-header-nav > ul > li:last-child {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   RESEARCH & LITERATURE
+   ========================================================= */
+
+#researchAndLitLI {
+    margin-left: 0;
+}
+
+#researchAndLitLI > ul {
+    margin-left: 0;
+}
+
+
+/* =========================================================
+   PRODUCTS SUBMENU
+   ========================================================= */
+
+li#productsNavLi > ul {
+    margin-left: 0;
+}
+
+
+/* =========================================================
+   FOCUS ACCESSIBILITY
+   ========================================================= */
+
+.mobile-header-nav a:focus-visible {
+    outline: 2px solid #a7c8b2;
+
+    outline-offset: -3px;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes slideInX {
+    to {
+        opacity: 1;
+
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes dropIn {
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   MEDIUM / LARGE SCREENS
+   ========================================================= */
+
+@media screen and (min-width: 900px) {
+
+    .mobile-header-nav {
+        top: 4%;
+
+        right: 2.5rem;
+        left: auto;
+
+        width: auto;
+
+        margin-right: 0;
+
+        padding-top: 2%;
+
+        height: 35vh;
+    }
+
+    .page-wrapper.expand > .mobile-header-nav {
+        top: 4%;
+
+        right: 2.5rem;
+        left: auto;
+
+        width: auto;
+
+        margin-right: 0;
+
+        padding-top: 2%;
+
+        height: 50vh !important;
+    }
+
+    .mobile-header-nav > ul {
+        gap: .35rem;
+
+        flex-wrap: wrap;
+
+        justify-content: flex-end;
+    }
+
+    .mobile-header-nav > ul > li > a {
+        padding: .7rem .85rem;
+
+        font-size: .66rem;
+    }
+
+    .mobile-header-nav > ul > li:last-child > a {
+        padding-right: .85rem;
+    }
+}
+
+
+/* =========================================================
+   432px+
+   ========================================================= */
+
+@media screen and (min-width: 432px) {
+
+    .page-wrapper.expand > .mobile-header-nav {
+        padding-top: 2%;
+
+        height: 35vh;
+    }
+}
+
+
+/* =========================================================
+   SMALL SCREENS
+   ========================================================= */
+
+@media screen and (max-width: 431px) {
+
+    .mobile-header-nav {
+        width: 75%;
+
+        margin-right: 25%;
+
+        padding-top: 5%;
+
+        height: 50vh;
+    }
+
+    .page-wrapper.expand > .mobile-header-nav {
+        height: 50vh;
+    }
+
+    .mobile-header-nav > ul {
+        padding: 0 .5rem;
+
+        gap: 0;
+    }
+
+    .mobile-header-nav > ul > li > a {
+        padding: .45rem .5rem;
+
+        font-size: .58rem;
+
+        letter-spacing: .06em;
+    }
+
+    .mobile-header-nav
+    > ul
+    > li#medSpaServUL
+    > ul
+    > li
+    > a {
+        min-height: 36px;
+
+        padding: .5rem .6rem;
+
+        font-size: .58rem;
+    }
+
+    .social-media-container-nav {
+        gap: .35rem;
+
+        padding: 0 .5rem;
+    }
+
+    .social-media-container-nav a {
+        width: 25px;
+        height: 25px;
+    }
+
+    .social-media-container-nav svg {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL SCREENS
+   ========================================================= */
+
+@media screen and (max-width: 400px) {
+
+    .mobile-header-nav {
+        height: 50vh;
+    }
+
+    .page-wrapper.expand > .mobile-header-nav {
+        height: 50vh;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .mobile-header-nav,
+    .mobile-header-nav *,
+    .mobile-header-nav *::before,
+    .mobile-header-nav *::after {
+        transition: none !important;
+
+        animation: none !important;
+    }
+}
