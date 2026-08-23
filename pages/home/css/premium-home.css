@@ -203,7 +203,7 @@
 
 .physician-photo {
     aspect-ratio: 4 / 5;
-    max-width: 415px;
+    max-width: 215px;
     background: #d8e0d7;
 }
 
@@ -269,62 +269,9 @@
 
 
 /* @media (max-width: 480px) {
-    .premium-hero {
-        min-height: 640px;
-    }
-
-    .hero-actions {
-        align-items: stretch;
-        flex-direction: column;
-    }
-
-    .button {
-        width: 100%;
-    }
-
-    .button-quiet {
-        width: fit-content;
-    }
-
-    .hero-note {
-        margin-top: 3rem;
-        font-size: .58rem;
-        line-height: 1.6;
-    }
-
-    .section-heading {
-        align-items: start;
-        flex-direction: column;
-    }
-
-    .desktop-link {
-        margin-top: 0;
-    }
-
-    .premium-service-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .premium-service-card {
-        min-height: 220px;
-    }
-
-    .premium-home h2 {
-        font-size: 2.35rem;
-    }
-
-    .home-introduction {
-        padding: 4.5rem 0;
-    }
 } */
 
 /* @media (prefers-reduced-motion: reduce) {
-
-    .premium-home *,
-    .premium-home *::before {
-        transition: none !important;
-        scroll-behavior: auto !important;
-    }
 } */
 
 /* Shared shell refinement: the existing injected-page navigation remains unchanged structurally. */
