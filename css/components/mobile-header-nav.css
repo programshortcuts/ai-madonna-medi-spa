@@ -378,3 +378,38 @@ li#productsNavLi>ul {
         animation: none !important;
     }
 }
+
+/* =========================================================
+   MOBILE PORTRAIT ONLY
+   ---------------------------------------------------------
+   The bottom navigation is only shown on mobile screens
+   that are taller than they are wide.
+
+   Mobile landscape gets NO bottom navigation.
+   ========================================================= */
+
+@media screen and (max-width: 899px) and (orientation: landscape) {
+
+    .mobile-header-nav {
+        display: none !important;
+    }
+
+    /*
+       If the navigation is expanded, allow the expanded
+       dropdown to appear.
+    */
+    .page-wrapper.expand>.mobile-header-nav {
+        display: block !important;
+
+        position: fixed;
+
+        top: 4%;
+        left: 0;
+        right: 0;
+        bottom: auto;
+
+        width: 100vw;
+
+        margin: 0;
+    }
+}
