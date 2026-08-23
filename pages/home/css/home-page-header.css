@@ -29,18 +29,19 @@
 }
 
 .premium-hero #bg1 {
-    background-image: url('../../../imgs/ai-imgs/nature-bg.png');
+    background-image: url('../../../imgs/home-page-header/nature-bg.png');
     background-position: 60% center;
 }
 
 .premium-hero #bg2 {
-    background-image: url('../../../imgs/ai-imgs/woman-man.png');
+    background-image: url('../../../imgs/home-page-header/woman-man.png');
     background-position: center;
 }
 
 .premium-hero #bg3 {
-    background-image: url('../../../imgs/ai-imgs/lady-med-spa.png');
+    background-image: url('../../../imgs/home-page-header/lady-med-spa.png');
     background-position: 68% center;
+    /* background-position-y: ; */
 }
 
 .premium-hero .hero-scrim {
