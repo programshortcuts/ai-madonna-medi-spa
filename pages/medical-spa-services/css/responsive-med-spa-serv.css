@@ -2,13 +2,16 @@
 /* Keep the existing floated-media treatment useful on compact screens. */
 @media (min-width: 731px) {
 .page-container.med-spa-serv-container {
-    margin: 0 5% !important;
+    margin: 0 2% !important;
+    width: 90vw;
 }
 }
 @media (max-width: 730px) {
     .med-spa-serv-container {
         padding: calc(74px + 1.25rem) 0 4rem;
-        padding-top: 16%;
+        padding-top: 20%;
+        margin: 0 2%;
+        width: 95vw;
     }
 
     .med-spa-serv-container .sections-containers {
