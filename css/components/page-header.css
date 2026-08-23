@@ -298,42 +298,20 @@
    ========================================================= */
 
 @media (max-width: 541px) {
-
     .page-header {
         min-height: 64px;
-
         padding: .55rem 1rem;
     }
-
-
-    /* -----------------------------------------------------
-       TITLE CONTAINER
-
-       IMPORTANT:
-       Reserve space for BOTH the silhouette and
-       sideNavBtn.
-
-       The title area cannot grow underneath them.
-       ----------------------------------------------------- */
-
     .page-header>.page-title-container {
-
         display: flex;
         align-items: center;
 
         width: calc(100% - 135px);
         max-width: calc(100% - 135px);
-
         min-width: 0;
-
         margin-left: 10%;
         padding-left: 0;
     }
-
-
-    /* -----------------------------------------------------
-       H1
-       ----------------------------------------------------- */
 
     .page-title-container h1 {
 
@@ -345,37 +323,24 @@
 
         width: 100%;
         max-width: 100%;
-        min-width: 150px;
-
+        min-width: 180px;
+        /* border: 1px solid blue; */
         margin: 0;
 
         line-height: 1;
     }
-    /* -----------------------------------------------------
-       BUSINESS NAME
-       ----------------------------------------------------- */
     .page-title-container h1 .page-title {
-
         display: block;
-
         width: 100%;
         max-width: 100%;
         margin: 0;
         font-size: clamp(.92rem, 4.8vw, 1.15rem);
 
         line-height: 1.05;
-
         white-space: normal;
-
         overflow-wrap: normal;
         word-break: normal;
     }
-
-
-    /* -----------------------------------------------------
-       PHONE
-       ----------------------------------------------------- */
-
     .page-header .tel-num-header {
 
         display: block;
@@ -391,23 +356,15 @@
 
         white-space: nowrap;
     }
-
-
-    /* -----------------------------------------------------
-       ADDRESS
-
-       Keep it beside the title on larger mobile widths,
-       but don't allow it to push the header into the
-       side-navigation area.
-       ----------------------------------------------------- */
-
     .page-title-container>.address-title {
         display: block;
         flex: 0 1 auto;
         width: auto;
         max-width: 115px;
+        /* border: 1px solid blue; */
         min-width: 0;
         padding: 0;
+        margin: 0;
         font-size: .58rem;
 
         line-height: 1.2;
