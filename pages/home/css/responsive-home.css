@@ -77,7 +77,6 @@
 }
 @media (max-width: 530px) {
     .introduction-copy {
-        border: 1px solid blue;
         margin-top: 0 !important;
     }
     .hero-content {
