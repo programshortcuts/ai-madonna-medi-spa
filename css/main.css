@@ -68,16 +68,15 @@
 
 
 /* contact.css */
-/* @import url('../pages/contact/css/new-contact.css'); */
-@import url('../pages/contact/css/forms.css');
-@import url('../pages/contact/css/responsive-contact.css');
-@import url('../pages/contact/css/sizing-contact.css');
-@import url('../pages/contact/css/social-media-container-contact.css');
-@import url('../pages/contact/css/bkgrnd-contact.css');
-/* @import url('../pages/contact/css/colors-contact.css'); */
-@import url('../pages/contact/css/layout-contact.css');
-@import url('../pages/contact/css/spacing-contact.css');
-/* @import url('../pages/contact/css/position-contact.css'); */
+
+@import url('../pages/contact/css/new-contact.css');
+/* @import url('../pages/contact/css/forms.css'); */
+/* @import url('../pages/contact/css/responsive-contact.css'); */
+/* @import url('../pages/contact/css/sizing-contact.css'); */
+/* @import url('../pages/contact/css/social-media-container-contact.css'); */
+/* @import url('../pages/contact/css/bkgrnd-contact.css'); */
+/* @import url('../pages/contact/css/layout-contact.css'); */
+/* @import url('../pages/contact/css/spacing-contact.css'); */
 
 
 

@@ -1,0 +1,601 @@
+/* ============================================================
+   MADONNA MEDICAL SPA
+   CONTACT PAGE — NEW CONTACT STYLES
+   ============================================================
+
+   IMPORTANT:
+   - Contact page only
+   - JavaScript is untouched
+   - Existing HTML structure is preserved
+   - Facebook/Instagram SVGs are untouched
+   - Existing links are untouched
+   - Styles are scoped to .contact-page-container
+   - Existing Contact CSS files can remain disabled temporarily
+
+   ============================================================ */
+
+
+/* ============================================================
+   1. CONTACT PAGE — MAIN LAYOUT
+   ============================================================ */
+
+.page-container.contact-page-container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+
+    padding-top: 5%;
+    padding-right: 0;
+    padding-bottom: 4%;
+    padding-left: 0;
+
+    margin: 0 auto;
+}
+
+
+/* ============================================================
+   2. TOP ADDRESS AREA
+   ============================================================ */
+
+.page-container.contact-page-container>.address-num-container {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+    padding: 0;
+
+    text-align: center;
+}
+
+.page-container.contact-page-container>.address-num-container .address-box {
+    margin: 0;
+}
+
+
+/* ============================================================
+   3. MAIN CONTACT CONTAINER
+   ============================================================ */
+
+.page-container.contact-page-container .contact-container {
+    width: min(92%, 1050px);
+
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 50px;
+
+    margin: 35px auto 0;
+    padding: 45px;
+
+    border: 1px solid rgba(0, 0, 0, 0.15);
+
+    background-image: url('../../../imgs/office-in-photo.png');
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 90%;
+
+    filter: grayscale(60%);
+}
+
+
+/* ============================================================
+   4. FORM CONTAINER
+   ============================================================ */
+
+.page-container.contact-page-container .form-contact-container {
+    width: 100%;
+    max-width: 600px;
+
+    flex: 1 1 550px;
+
+    padding: 40px;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ============================================================
+   5. CONTACT FORM
+   ============================================================ */
+
+.page-container.contact-page-container #contactForm {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 0;
+
+    margin: 0;
+}
+
+
+/* ============================================================
+   6. FORM GROUPS
+   ============================================================ */
+
+.page-container.contact-page-container #contactForm>.form-group {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 0 22px;
+    padding: 0;
+}
+
+
+/* ============================================================
+   7. FORM LABELS
+   ============================================================ */
+
+.page-container.contact-page-container #contactForm .form-group label {
+    display: block;
+
+    margin: 0 0 8px;
+
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: #555;
+
+    cursor: pointer;
+}
+
+
+/* ============================================================
+   8. FORM INPUTS + TEXTAREA
+   ============================================================ */
+
+.page-container.contact-page-container #contactForm .form-group input,
+
+.page-container.contact-page-container #contactForm .form-group textarea {
+    width: 100%;
+
+    padding: 14px 5px;
+
+    border: none;
+    border-bottom: 1px solid #ccc;
+
+    border-radius: 0;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    color: inherit;
+
+    font-family: inherit;
+    font-size: 1rem;
+
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* ============================================================
+   9. TEXTAREA
+   ============================================================ */
+
+.page-container.contact-page-container #contactForm .form-group textarea {
+    min-height: 120px;
+
+    resize: vertical;
+
+    line-height: 1.5;
+}
+
+
+/* ============================================================
+   10. FORM FOCUS
+   ============================================================ */
+
+.page-container.contact-page-container #contactForm .form-group input:focus,
+
+.page-container.contact-page-container #contactForm .form-group textarea:focus {
+    outline: none;
+
+    border-bottom-color: #b18a63;
+
+    background: rgba(255, 255, 255, 0.28);
+
+    box-shadow:
+        0 1px 0 rgba(177, 138, 99, 0.35);
+}
+
+
+/* ============================================================
+   11. SUBMIT BUTTON
+   ============================================================ */
+
+.page-container.contact-page-container #submitBtn {
+    align-self: center;
+
+    margin-top: 8px;
+    padding: 12px 36px;
+
+    border: 1px solid #b18a63;
+    border-radius: 3px;
+
+    background: transparent;
+
+    color: inherit;
+
+    font-family: inherit;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* ============================================================
+   12. SUBMIT BUTTON — HOVER
+   ============================================================ */
+
+.page-container.contact-page-container #submitBtn:hover {
+    background: #b18a63;
+
+    color: #fff;
+
+    transform: translateY(-1px);
+}
+
+
+/* ============================================================
+   13. SUBMIT BUTTON — FOCUS
+   ============================================================ */
+
+.page-container.contact-page-container #submitBtn:focus {
+    outline: 2px solid rgba(177, 138, 99, 0.5);
+    outline-offset: 3px;
+}
+
+
+/* ============================================================
+   14. EMAIL + SOCIAL AREA
+   ============================================================ */
+
+.page-container.contact-page-container .social-media-email-container {
+    width: 100%;
+    max-width: 300px;
+
+    flex: 1 1 260px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+/* ============================================================
+   15. EMAIL
+   ============================================================ */
+
+.page-container.contact-page-container .email-contact {
+    width: 100%;
+
+    margin: 0 0 25px;
+
+    text-align: center;
+}
+
+.page-container.contact-page-container .email-contact p {
+    margin: 0;
+
+    line-height: 1.5;
+}
+
+
+/* ============================================================
+   16. SOCIAL MEDIA CONTAINER
+   ============================================================
+
+   IMPORTANT:
+   The existing Facebook and Instagram SVGs are NOT modified.
+
+   This section only controls their surrounding layout.
+   ============================================================ */
+
+.page-container.contact-page-container .social-media-container {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ============================================================
+   17. SOCIAL MEDIA ITEMS
+   ============================================================ */
+
+.page-container.contact-page-container .social-media-container>.social-media-item {
+    width: 50%;
+
+    flex: 0 0 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ============================================================
+   18. EXISTING SOCIAL LINKS
+   ============================================================
+
+   These rules only establish positioning.
+
+   Existing SVG graphics, colors, dimensions and links remain
+   untouched in the HTML.
+   ============================================================ */
+
+.page-container.contact-page-container .social-media-container>.social-media-item a {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+}
+
+
+/* ============================================================
+   19. BOTTOM CONTACT INFORMATION
+   ============================================================ */
+
+.page-container.contact-page-container .contact-address-num-container {
+    width: min(92%, 900px);
+
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: center;
+
+    gap: 55px;
+
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+
+    padding-top: 40px;
+
+    text-align: center;
+}
+
+
+/* ============================================================
+   20. BOTTOM ADDRESS
+   ============================================================ */
+
+.page-container.contact-page-container .contact-address-num-container .address-box {
+    margin: 0;
+
+    line-height: 1.6;
+}
+
+.page-container.contact-page-container .contact-address-num-container .address-box h2 {
+    margin: 0 0 8px;
+}
+
+
+/* ============================================================
+   21. BOTTOM PHONE
+   ============================================================ */
+
+.page-container.contact-page-container .contact-address-num-container .tel-num-box {
+    margin: 0;
+
+    line-height: 1.6;
+
+    white-space: nowrap;
+}
+
+
+/* ============================================================
+   22. EXISTING ADDRESS-HOME SECTION
+   ============================================================
+
+   This section is preserved rather than removed because the
+   existing HTML/navigation system may depend on it.
+
+   Keep it visually unobtrusive while the final Contact layout
+   uses .contact-address-num-container for the bottom contact
+   information.
+   ============================================================ */
+
+.page-container.contact-page-container .address-contact-home {
+    width: 100%;
+}
+
+
+/* ============================================================
+   23. TABLET
+   ============================================================ */
+
+@media screen and (max-width: 900px) {
+
+    .page-container.contact-page-container {
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    .page-container.contact-page-container .contact-container {
+        width: 94%;
+
+        gap: 35px;
+
+        padding: 35px 25px;
+
+        background-size: cover;
+    }
+
+    .page-container.contact-page-container .form-contact-container {
+        flex: 1 1 100%;
+
+        max-width: 600px;
+    }
+
+    .page-container.contact-page-container .social-media-email-container {
+        flex: 1 1 100%;
+
+        max-width: 400px;
+    }
+}
+
+
+/* ============================================================
+   24. MOBILE
+   ============================================================ */
+
+@media screen and (max-width: 741px) {
+
+    .page-container.contact-page-container {
+        width: 100%;
+
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    .page-container.contact-page-container .contact-container {
+        width: 94%;
+
+        flex-direction: column;
+
+        gap: 30px;
+
+        margin-top: 25px;
+
+        padding: 25px 15px;
+
+        background-size: cover;
+        background-position: center;
+    }
+
+    .page-container.contact-page-container .form-contact-container {
+        width: 100%;
+
+        flex: none;
+
+        padding: 30px 22px;
+
+        border-radius: 20px;
+    }
+
+    .page-container.contact-page-container .social-media-email-container {
+        width: 100%;
+
+        flex: none;
+
+        max-width: 400px;
+    }
+
+    .page-container.contact-page-container .contact-address-num-container {
+        width: 94%;
+
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 15px;
+
+        padding-top: 30px;
+    }
+
+    .page-container.contact-page-container .contact-address-num-container .tel-num-box {
+        white-space: normal;
+    }
+}
+
+
+/* ============================================================
+   25. SMALL MOBILE
+   ============================================================ */
+
+@media screen and (max-width: 480px) {
+
+    .page-container.contact-page-container {
+        padding-top: 4%;
+        padding-bottom: 5%;
+    }
+
+    .page-container.contact-page-container .contact-container {
+        width: 94%;
+
+        padding: 20px 10px;
+
+        margin-top: 20px;
+    }
+
+    .page-container.contact-page-container .form-contact-container {
+        padding: 25px 18px;
+
+        border-radius: 18px;
+    }
+
+    .page-container.contact-page-container #contactForm>.form-group {
+        margin-bottom: 18px;
+    }
+
+    .page-container.contact-page-container #contactForm .form-group input,
+
+    .page-container.contact-page-container #contactForm .form-group textarea {
+        font-size: 16px;
+    }
+
+    .page-container.contact-page-container .email-contact {
+        font-size: 0.95rem;
+    }
+
+    .page-container.contact-page-container .contact-address-num-container {
+        padding-top: 25px;
+
+        font-size: 0.95rem;
+    }
+}
+
+
+/* ============================================================
+   END CONTACT PAGE
+   ============================================================ */
