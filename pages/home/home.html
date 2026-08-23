@@ -1,5 +1,5 @@
 <div class="page-container home-page-container premium-home">
-    <header class="home-page-header premium-hero bg-slider">
+    <header tabindex="0" data-auto-focus class="home-page-header premium-hero bg-slider">
         <div id="bg1" class="bg-slide active" aria-hidden="true"></div>
         <div id="bg2" class="bg-slide" aria-hidden="true"></div>
         <div id="bg3" class="bg-slide" aria-hidden="true"></div>
@@ -47,17 +47,19 @@
             </div>
         </section>
 
-        <section class="physician-section" aria-labelledby="physician-heading">
-            <div>
-                <p tabindex="0" data-nav-target="our-staff" class="eyebrow">Our Staff</p>
-                <h2 id="staff-heading">Care rooted in listening.</h2>
-            </div>
-            <div class="physician-photo"><img src="imgs/staff/drMadonnaPhoto.png" alt="Dr. Madonna Tomani"></div>
-            <div class="physician-content">
-                <p class="eyebrow">Medical expertise, warmly delivered</p>
-                <p>Dr. Tomani began her career as a practicing OBGYN for more than 25 years. Today, she and her staff bring that same patient-first perspective to longevity medicine and personalized wellness care.</p>
-                <p>Every visit starts with the time, attention, and clinical insight needed to understand what matters most to you.</p>
-                <a class="text-link" data-link href="pages/contact/contact.html">Meet our team <span aria-hidden="true">→</span></a>
+        <section class="physician-section" >
+            <p tabindex="0" data-nav-target="our-staff" class="eyebrow">Our Staff</p>
+            <h2 id="staff-heading">Care rooted in listening.</h2>
+            
+            <div class="bio-container">
+
+                <div class="physician-photo"><img src="imgs/staff/drMadonnaPhoto.png" alt="Dr. Madonna Tomani"></div>
+                <div class="physician-content">
+                    <p class="eyebrow">Medical expertise, warmly delivered</p>
+                    <p>Dr. Tomani began her career as a practicing OBGYN for more than 25 years. Today, she and her staff bring that same patient-first perspective to longevity medicine and personalized wellness care.</p>
+                    <p>Every visit starts with the time, attention, and clinical insight needed to understand what matters most to you.</p>
+                    <a data-nav-target="meet-out-team" class="text-link" data-link href="pages/contact/contact.html">Meet our team <span aria-hidden="true">→</span></a>
+                </div>
             </div>
         </section>
 
@@ -72,7 +74,7 @@
     </main>
 
     <footer class="home-footer">
-        <div><span class="footer-mark">M</span><p>Madonna Medical Spa<br><span>Adding years to life and life to years.</span></p></div>
+        <div><p>Madonna Medical Spa</p></div>
         <address><a href="https://www.google.com/search?q=1815+South+Clinton+Avenue%2C+Suite+450+Rochester%2C+NY+-+14618">1815 South Clinton Ave, Suite 450<br>Rochester, NY 14618</a><br><a href="tel:+15856982212">(585) 698-2212</a></address>
     </footer>
 </div>
