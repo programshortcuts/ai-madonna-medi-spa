@@ -1,4 +1,8 @@
 /* layout.css */
+.home-page-header:active,.home-page-header:focus{
+    border: none !important;
+    outline: none !important;
+}
 #navBarBtn:active,#navBarBtn:focus{
     border: 3px solid gold !important;
 }
