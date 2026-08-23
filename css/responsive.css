@@ -1,6 +1,10 @@
+/* responsive.css */
+/* responsive.css */
+
 @media screen and (min-width:1001px) {}
 
 @media screen and (min-width:701px) {
+
     .page-header {
         /* height: 5vh !important; */
     }
@@ -19,6 +23,7 @@
 }
 
 @media screen and (min-width:542px) {
+
     .page-container.home-page-container {
         /* padding-top: 0% !important; */
     }
@@ -35,12 +40,5 @@
     #longevityMedHomePage .title-text {
         margin-top: 6.4% !important;
         padding-left: 6% !important;
-    }
-}
-
-@media screen and (max-width:541px) {
-    #addressLinkHeader>a {
-        width: 100% !important;
-        line-height: 1.2;
     }
 }

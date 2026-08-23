@@ -1,149 +1,544 @@
-/* components/page-header.css */
-/* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
-/* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
-#madonnaShilouetteLogo{
-    position: fixed;
-    z-index: 99999 !important;
-    /* border: 1px solid red; */
-}
+/* =========================================================
+   components/page-header.css
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
 .page-header {
-    z-index: 999;
     position: fixed;
     top: 0;
+    left: 0;
+
+    z-index: 999;
+
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-    /* height: 4vh; */
-    max-height: 15vh ;
+
     width: 100%;
-}
-
-.page-header>.page-title-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    display: flex;
-    padding-left: 5%;
-    margin-left: 6%;
-}
-.page-title-container h1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 66%;
-    justify-content: center;
-    line-height: .8;
-}
-.page-title-container h1 .page-title{
-    display: inline-block;
-    width: 100%;
-    text-decoration: none;
-    letter-spacing: 25%;
-    font-family: cursive;
-    font-size: 1rem;
-    margin-left: 12%;
-    /* padding-top: 2%; */
-}
-.page-title-container>.address-title {
-    flex-shrink: 1;
-    /* margin-left: 10%; */
-    /* border: solid blue 2px;; */
-    width: 44%;
-    margin-top: 2% !important;  ;
-    font-size: .8rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: var(--header-clr);
-    /* flex-basis: 33%; */
-    /* width: ; */
-}
-
-#addressLinkHeader>a:visited,
-.address-title {
-    color: grey ;
-    text-decoration: none;
-}   
-
-
-.page-header .tel-num-header {
-    font-size: .5rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-family: cursive;
-    font-size: .7rem;
-    /* margin-top: -1%; */
-    margin-left: -22%;
-}
-.page-header>img {
-    display: flex;
-    justify-content: space-between;
-}
-#versionTile,
-.page-header  img {
-    height: 10vh !important;
-    position: absolute;;
-    right: 0;
-    z-index: 99;
-}
-#versionTile{
-    display: block;
-    z-index: 100
-    
-}
-
-
-
-#addressLinkHeader > a{
-    text-decoration: none;
-    /* margin-right: 5%; */
-    /* min-width: 20vw; */
-    font-size: .7rem;
-    display: inline-block;
-    text-shadow: none !important;
-    color: black;
-    width: 100%;
-}
-/* ///////////// codex */
-.page-header .tel-num-header {
-    display: inline;
-    margin: 0 0 0 .6rem;
-    color: #527064;
-    font-family: Inter, ui-sans-serif, sans-serif;
-    font-size: .7rem;
-    letter-spacing: .05em;
-}
-
-.page-title-container>.address-title {
-    display: none;
-}
-
-.page-header {
     min-height: 74px;
-    max-height: none;
+
     padding: .65rem 2rem;
+
     background: rgba(250, 248, 244, .96);
+
     border-bottom: 1px solid rgba(24, 58, 55, .1);
+
     box-shadow: 0 3px 18px rgba(26, 44, 38, .05);
+
     backdrop-filter: blur(10px);
+
+    overflow: visible;
 }
 
+
+/* =========================================================
+   TITLE CONTAINER
+   ========================================================= */
+
 .page-header>.page-title-container {
-    display: block;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-width: 0;
+
+    margin-left: 6%;
     padding-left: 0;
 }
 
+
+/* =========================================================
+   H1
+   ========================================================= */
+
 .page-title-container h1 {
-    display: block;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
     width: auto;
+    min-width: 0;
+
     margin: 0;
+
     line-height: 1;
 }
 
+
+/* =========================================================
+   MADONNA MEDICAL SPA
+   ========================================================= */
+
 .page-title-container h1 .page-title {
+    display: block;
+
     width: auto;
+    max-width: 100%;
+
     margin: 0;
+    padding: 0;
+
     color: var(--pine);
+
     font-family: Georgia, "Times New Roman", serif;
+
     font-size: 1.45rem;
     font-weight: 400;
+
+    line-height: 1.05;
+
     letter-spacing: -.04em;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   PHONE
+   Always below business name
+   ========================================================= */
+
+.page-header .tel-num-header {
+    display: block;
+
+    width: max-content;
+
+    margin: .35rem 0 0 0;
+    padding: 0;
+
+    color: #527064;
+
+    font-family: Inter, ui-sans-serif, sans-serif;
+
+    font-size: .7rem;
+    font-weight: 500;
+
+    line-height: 1.1;
+
+    letter-spacing: .05em;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   ADDRESS
+   ========================================================= */
+
+.page-title-container>.address-title {
+    display: block;
+
+    flex-shrink: 1;
+
+    width: auto;
+    min-width: 0;
+
+    margin: 0 0 0 2rem;
+    padding: 0;
+
+    color: grey;
+
+    font-family: Georgia, "Times New Roman", Times, serif;
+
+    font-size: .7rem;
+
+    line-height: 1.25;
+}
+
+
+#addressLinkHeader>a {
+    display: inline-block;
+
+    width: auto;
+    max-width: 260px;
+
+    color: black;
+
+    font-size: .7rem;
+
+    line-height: 1.25;
+
+    text-decoration: none;
+
+    text-shadow: none !important;
+}
+
+
+#addressLinkHeader>a:visited,
+.address-title {
+    color: grey;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   SILHOUETTE
+   ========================================================= */
+
+#madonnaShilouetteLogo {
+    position: absolute;
+
+    /*
+     * Keep the silhouette anchored to the top-right,
+     * but allow the bottom of the image to extend
+     * below the page header like the original site.
+     */
+    top: 0;
+    right: 0;
+
+    
+    display: block;
+    
+    width: auto;
+    
+    height: 74px;
+    max-width: 20px;
+    /* max-height: 74px; */
+    min-height: 100px;
+    transform: translateY(-18px);
+    object-fit: contain;
+    object-position: right center;
+    margin: 0;
+    padding: 0;
+    z-index: 99999 !important;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   VERSION
+   ========================================================= */
+
+#versionTile {
+    display: block;
+    z-index: 100;
+}
+
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+@media (min-width: 701px) {
+
+    .page-header {
+        padding: .65rem 2rem;
+    }
+
+    #madonnaShilouetteLogo {
+        right: 0;
+
+        height: 78px;
+        max-height: 78px;
+        max-width: 160px;
+    }
+
+    .page-title-container>.address-title {
+        margin-left: 2.5rem;
+    }
+    .mobile-header-nav{
+        margin-right: 5%;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (min-width: 542px) and (max-width: 1000px) {
+
+    .page-header {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .page-header>.page-title-container {
+        margin-left: 8%;
+    }
+
+    .page-title-container h1 .page-title {
+        font-size: 1.3rem;
+    }
+
+    .page-header .tel-num-header {
+        font-size: .65rem;
+    }
+
+    .page-title-container>.address-title {
+        margin-left: 1.25rem;
+    }
+
+    #addressLinkHeader>a {
+        max-width: 220px;
+        font-size: .65rem;
+    }
+
+    #madonnaShilouetteLogo {
+        right: 0;
+
+        height: 68px;
+        max-height: 68px;
+        max-width: 135px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 541px) {
+
+    .page-header {
+        min-height: 64px;
+
+        padding: .55rem 1rem;
+    }
+
+
+    /* -----------------------------------------------------
+       TITLE CONTAINER
+
+       IMPORTANT:
+       Reserve space for BOTH the silhouette and
+       sideNavBtn.
+
+       The title area cannot grow underneath them.
+       ----------------------------------------------------- */
+
+    .page-header>.page-title-container {
+
+        display: flex;
+        align-items: center;
+
+        width: calc(100% - 135px);
+        max-width: calc(100% - 135px);
+
+        min-width: 0;
+
+        margin-left: 10%;
+        padding-left: 0;
+    }
+
+
+    /* -----------------------------------------------------
+       H1
+       ----------------------------------------------------- */
+
+    .page-title-container h1 {
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: flex-start;
+        justify-content: center;
+
+        width: 100%;
+        max-width: 100%;
+        min-width: 150px;
+
+        margin: 0;
+
+        line-height: 1;
+    }
+    /* -----------------------------------------------------
+       BUSINESS NAME
+       ----------------------------------------------------- */
+    .page-title-container h1 .page-title {
+
+        display: block;
+
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        font-size: clamp(.92rem, 4.8vw, 1.15rem);
+
+        line-height: 1.05;
+
+        white-space: normal;
+
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+
+    /* -----------------------------------------------------
+       PHONE
+       ----------------------------------------------------- */
+
+    .page-header .tel-num-header {
+
+        display: block;
+
+        width: max-content;
+        max-width: 100%;
+
+        margin: .25rem 0 0 0;
+
+        font-size: clamp(.55rem, 2.6vw, .65rem);
+
+        line-height: 1.1;
+
+        white-space: nowrap;
+    }
+
+
+    /* -----------------------------------------------------
+       ADDRESS
+
+       Keep it beside the title on larger mobile widths,
+       but don't allow it to push the header into the
+       side-navigation area.
+       ----------------------------------------------------- */
+
+    .page-title-container>.address-title {
+        display: block;
+        flex: 0 1 auto;
+        width: auto;
+        max-width: 115px;
+        min-width: 0;
+        padding: 0;
+        font-size: .58rem;
+
+        line-height: 1.2;
+    }
+
+
+    #addressLinkHeader>a {
+
+        display: block;
+        width: 100%;
+        /* max-width: 115px; */
+        min-width: 150px;
+
+        font-size: .58rem;
+
+        line-height: 1.2;
+
+        white-space: normal;
+
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+
+    /* -----------------------------------------------------
+       SILHOUETTE
+       ----------------------------------------------------- */
+
+    #madonnaShilouetteLogo {
+
+        right: 0;
+
+        height: 56px;
+        max-height: 56px;
+
+        max-width: 105px;
+    }
+        #madonnaShilouetteLogo {
+            position: absolute;
+    
+            /*
+         * Keep the silhouette anchored to the top-right,
+         * but allow the bottom of the image to extend
+         * below the page header like the original site.
+         */
+            top: 0;
+            right: 0;
+    
+    
+    
+            width: auto;
+    
+            height: 74px;
+            max-width: 20px;
+            /* max-height: 74px; */
+            min-height: 100px;
+            transform: translateY(-18px);
+            
+        }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .page-header {
+
+        padding-left: .65rem;
+        padding-right: .65rem;
+    }
+
+
+    .page-header>.page-title-container {
+
+        /*
+           Slightly more room is reserved because the
+           silhouette and side navigation occupy more of
+           the available width on very small screens.
+        */
+
+        width: calc(100% - 115px);
+        max-width: calc(100% - 115px);
+    }
+
+
+    .page-title-container h1 .page-title {
+
+        font-size: clamp(.85rem, 4.5vw, 1rem);
+
+        line-height: 1.05;
+    }
+
+
+    .page-header .tel-num-header {
+
+        margin-top: .22rem;
+
+        font-size: .55rem;
+    }
+
+
+    .page-title-container>.address-title {
+
+        /* max-width: 90px; */
+
+        margin-left: .4rem;
+
+        font-size: .5rem;
+    }
+
+
+    #addressLinkHeader>a {
+
+        max-width: 90px;
+
+        font-size: .5rem;
+
+        line-height: 1.15;
+    }
+
+
+    #madonnaShilouetteLogo {
+
+        right: 0;
+
+        height: 50px;
+        max-height: 50px;
+
+        max-width: 90px;
+    }
 }

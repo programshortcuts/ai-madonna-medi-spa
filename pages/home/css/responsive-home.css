@@ -22,20 +22,23 @@
         .section-heading .eyebrow {
             width: 100%;
         }
-    .premium-service-card {
-        min-width: 0;
-        width: 100%;
-        padding: 1.1rem;
-    }
+           .premium-service-card {
+               min-width: 0;
+               width: 100%;
+               padding: 1.1rem;
+           }
     
-    .premium-service-card h3 {
-        min-width: 0;
-        max-width: 100%;
-        overflow-wrap: anywhere;
-        word-break: normal;
-        font-size: clamp(1.15rem, 5vw, 1.55rem);
-        line-height: 1.05;
-    }
+           .premium-service-card h3 {
+               min-width: 0;
+               max-width: 100%;
+               font-size: clamp(1.15rem, 5vw, 1.55rem);
+               line-height: 1.05;
+    
+               /* Keep individual words intact */
+               overflow-wrap: normal;
+               word-break: normal;
+               hyphens: none;
+           }
     .hero-content {
         width: min(100% - 2.25rem, 1140px);
         padding: 8rem 0 4rem;
