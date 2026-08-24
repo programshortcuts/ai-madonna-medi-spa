@@ -7,17 +7,25 @@
             width: 90vw;
         }
 }    
+@media (min-width: 1221px) {
+.section-details .img-wrapper {
+        min-width: 450px !important;
+        border: 1px solid red;
+    }
+}
 @media (max-width: 1220px) {
     .page-container.med-spa-serv-container {
             padding-top: 10% !important;
             width: 90vw;
             margin: 0 2%;
         }
+    
+
 }
 @media (max-width: 730px) {
     .page-container.med-spa-serv-container {
         /* padding: calc(74px + 1.25rem) 0 4rem; */
-        padding-top: 15% !important;
+        padding-top: 21% !important;
         margin: 0 2%;
         width: 95vw;
     }
