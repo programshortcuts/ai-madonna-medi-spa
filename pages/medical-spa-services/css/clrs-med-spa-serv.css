@@ -19,7 +19,8 @@
 }
 
 .med-spa-serv-container .more-info-buttons {
-    background: transparent;
+    /* background: transparent; */
+    /* color: black !important; */
 }
 
 .med-spa-serv-container .service-section .more-info-link,

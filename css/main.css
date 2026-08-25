@@ -6,15 +6,11 @@
 @import url('../pages/home/css/responsive-home.css');
 /* contact.css */
 @import url('../pages/contact/css/new-contact.css');
-
-
 /* visuals */
 /* @import url('./swiper/service-rows.css'); */
 /* @import url('./swiper/service-rows-background.css'); */
-
 /* medical-spa-services */
 /* @import url('../pages/medical-spa-services/css/new-med-spa-serv.css');  */
-
 @import url('../pages/medical-spa-services/css/bkgrnd-med-spa-serv.css'); 
 @import url('../pages/medical-spa-services/css/borders-med-spa-serv.css'); 
 @import url('../pages/medical-spa-services/css/clrs-med-spa-serv.css'); 
@@ -24,7 +20,7 @@
 @import url('../pages/medical-spa-services/css/sizing-med-spa-serv.css');
 @import url('../pages/medical-spa-services/css/spacing-med-spa-serv.css');
 @import url('../pages/medical-spa-services/css/txt-med-spa-serv.css');
- @import url('../pages/medical-spa-services/css/responsive-med-spa-serv.css'); 
+@import url('../pages/medical-spa-services/css/responsive-med-spa-serv.css'); 
 
 /* components */
 @import url('components/mobile-header-nav.css');

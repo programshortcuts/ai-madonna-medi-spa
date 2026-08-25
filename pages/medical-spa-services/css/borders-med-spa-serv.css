@@ -1,5 +1,28 @@
 /* borders-med-spa-serv.css */
-.med-spa-serv-container .service-section { border: 1px solid var(--service-line); border-radius: 4px; }
-.med-spa-serv-container .service-section .section-title { border: 0; border-bottom: 1px solid transparent; }.med-spa-serv-container .service-section .section-title[aria-expanded="true"] { border-bottom-color: var(--service-line); }
-.med-spa-serv-container .service-section .img-wrapper, .med-spa-serv-container #botoxAndFillers .section-preview::before { border-radius: 2px; }
-.med-spa-serv-container .women-men-nav a { border: 1px solid var(--service-line); }.med-spa-serv-container .service-section .more-info-btn { border: 1px solid var(--service-pine); }
+.med-spa-serv-container .service-section {
+    border: 1px solid var(--service-line);
+    border-radius: 4px;
+}
+
+.med-spa-serv-container .service-section .section-title {
+    border: 0;
+    border-bottom: 1px solid transparent;
+}
+
+.med-spa-serv-container .service-section .section-title[aria-expanded="true"] {
+    border-bottom-color: var(--service-line);
+}
+
+.med-spa-serv-container .service-section .img-wrapper,
+.med-spa-serv-container #botoxAndFillers .section-preview::before {
+    border-radius: 2px;
+}
+
+.med-spa-serv-container .women-men-nav a {
+    border: 1px solid var(--service-line);
+}
+
+.med-spa-serv-container .service-section .more-info-btn {
+    /* border: 1px solid var(--service-pine); */
+    border: 1px solid black;
+}
