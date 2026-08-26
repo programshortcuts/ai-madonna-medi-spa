@@ -4,6 +4,7 @@
 /* home */
 @import url('../pages/home/css/home-page-header.css');
 @import url('../pages/home/css/responsive-home.css');
+@import url('../pages/home/css/staff.css');
 /* contact.css */
 @import url('../pages/contact/css/new-contact.css');
 /* visuals */

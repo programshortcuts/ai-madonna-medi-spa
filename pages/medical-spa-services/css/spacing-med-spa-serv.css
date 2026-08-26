@@ -2,33 +2,34 @@
 .med-spa-serv-container {
     /* padding: calc(74px + clamp(2rem, 5vw, 4.5rem)) 0 clamp(3rem, 7vw, 6.5rem); */
     padding-top: 10%;
+    padding-bottom: 20%;
 }
-
 .med-spa-serv-container .service-section {
     margin-bottom: 1.15rem;
 }
-
 .med-spa-serv-container .service-section .section-title {
     padding: 1.2rem clamp(1.15rem, 3vw, 2.25rem);
 }
+.med-spa-serv-container .service-section .section-title::after {
+    line-height: 1;
+    margin-left: 1rem;
+}
 
 .med-spa-serv-container .service-section .content {
-    padding: clamp(1.35rem, 3vw, 2.4rem);
+    /* padding: clamp(1.35rem, 3vw, 2.4rem); */
 }
 
 .med-spa-serv-container .section-preview p,
 .med-spa-serv-container .section-details p {
     max-width: 73ch;
-    margin: 0 0 1.15rem;
-    line-height: 1.75;
+    margin: 0 0 1rem;
+    line-height: 1.65;
 }
 
-.med-spa-serv-container .section-details {
-    padding-top: 1.3rem;
-}
+
 
 .med-spa-serv-container .section-details p+p {
-    margin-top: 1rem;
+    margin-top: .75rem;
 }
 
 .med-spa-serv-container .section-details ul {
@@ -42,15 +43,15 @@
 }
 
 .med-spa-serv-container .section-preview .float-right {
-    margin: .2rem 0 1.15rem clamp(1.25rem, 3vw, 2.25rem);
+    margin: .2rem 0 1rem clamp(1.25rem, 3vw, 2.25rem);
 }
 
 .med-spa-serv-container .section-preview .float-left {
-    margin: .2rem clamp(1.25rem, 3vw, 2.25rem) 1.15rem 0;
+    margin: .2rem clamp(1.25rem, 3vw, 2.25rem) 1rem 0;
 }
 
 .med-spa-serv-container .more-info-buttons {
-    margin-top: 1.4rem;
+    margin-top: 1.15rem;
 }
 
 .med-spa-serv-container .service-section .more-info-btn {
@@ -66,15 +67,10 @@
 
 .med-spa-serv-container .women-men-nav {
     gap: .8rem;
-    margin: 1.5rem 0;
+    gap: 1.5rem;
 }
 
 .med-spa-serv-container .women-men-nav a {
     gap: .75rem;
     padding: .75rem 1rem;
-}
-
-.med-spa-serv-container .women-men-content {
-    gap: 1.5rem;
-    margin-top: 1.5rem;
 }

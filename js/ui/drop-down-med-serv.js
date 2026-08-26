@@ -1,21 +1,16 @@
 // drop-down-med-spa-serv.js
 // Medical Spa Services expandable sections.
 // ------------------------------------------------------------
-
 export function initDropDownMedServ() {
-
     const container = document.querySelector(
         '.page-container.med-spa-serv-container'
     );
-
     if (!container) {
         return;
     }
-
     const sections = container.querySelectorAll(
         '.service-section'
     );
-
     sections.forEach((section) => {
 
         // --------------------------------------------------------
@@ -347,6 +342,24 @@ export function initDropDownMedServ() {
                 toggleSection();
 
                 scrollTitleIntoHeaderClearance();
+            }
+        );
+
+        section.addEventListener(
+            'keydown',
+            (event) => {
+
+                if (
+                    event.target !== section ||
+                    event.key !== 'Enter'
+                ) {
+                    return;
+                }
+
+                event.preventDefault();
+                event.stopPropagation();
+
+                title.click();
             }
         );
 

@@ -2,7 +2,12 @@
 .med-spa-serv-container {
     width: 100%;
 }
-
+.med-spa-serv-container .sections-containers {
+    width: min(var(--service-max-width), calc(100% - 2rem));
+}
+.med-spa-serv-container .service-section .section-title {
+    width: 100%;
+}
 .med-spa-serv-container .section-preview p,
 .med-spa-serv-container .section-details p {
     font-size: clamp(1rem, 1.1vw, 1.08rem);
@@ -17,6 +22,17 @@
     height: auto;
 }
 .section-details .img-wrapper {
-    max-width: 250px;
+    max-width:  250px;
     max-height: 250px;
+}
+.med-spa-serv-container .section-preview .float-right,
+.med-spa-serv-container .section-preview .float-left {
+    width: min(40%, 390px);
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+}
+.med-spa-serv-container .service-section .img-wrapper img,
+.med-spa-serv-container .service-section .img-wrapper video {
+    width: 100%;
+    height: 100%;
 }

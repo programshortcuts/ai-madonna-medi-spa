@@ -1,4 +1,7 @@
 /* clrs-med-spa-serv.css */
+.med-spa-serv-container .service-section {
+    /* background: rgba(255, 255, 255, .68); */
+}
 .med-spa-serv-container .section-title,
 .med-spa-serv-container .section-title .title-text {
     color: var(--service-ink);

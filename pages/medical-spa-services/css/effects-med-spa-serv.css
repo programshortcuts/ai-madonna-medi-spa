@@ -2,7 +2,6 @@
 .med-spa-serv-container .service-section {
     transition: border-color var(--service-transition), box-shadow var(--service-transition);
 }
-
 .med-spa-serv-container .service-section:hover {
     border-color: rgba(74, 65, 65, .3);
     box-shadow: var(--service-shadow);

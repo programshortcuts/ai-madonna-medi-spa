@@ -182,13 +182,13 @@
     background-image: url('../../../imgs/ai-imgs/glp-1-serv-header-wide.png');
 }
 
-.card-aesthetics {
-    background-image: url('../../../pages/home/service-slides/botox-new.png');
+.card-botox{
+    background-image: url('../../../pages/medical-spa-services/services/botox/media/botox-card.png');
     background-position: 50% 35%;
 }
 
 .card-infusion {
-    background-image: url('../../../imgs/ai-imgs/ivInfusion-header-wide.png');
+    background-image: url('../../../pages/medical-spa-services/services/iv-infusions/media/ivInfusion-header-wide.png');
 }
 /* OUR STAFF */
 .physician-section {

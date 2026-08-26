@@ -1,30 +1,22 @@
 /* layout-med-spa-serv.css */
 .med-spa-serv-container .sections-containers {
-    width: min(var(--service-max-width), calc(100% - 2rem));
     margin: 0 auto;
 }
 
 .med-spa-serv-container .service-section {
     overflow: hidden;
-    background: rgba(255, 255, 255, .68);
 }
 
 .med-spa-serv-container .service-section .section-title {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
     text-align: left;
 }
 
 .med-spa-serv-container .service-section .section-title::after {
     content: "+";
     flex: 0 0 auto;
-    margin-left: 1rem;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 2rem;
-    font-weight: 400;
-    line-height: 1;
 }
 
 .med-spa-serv-container .service-section .section-title[aria-expanded="true"]::after {
@@ -44,35 +36,22 @@
 .med-spa-serv-container .service-section .img-wrapper img,
 .med-spa-serv-container .service-section .img-wrapper video {
     display: block;
-    width: 100%;
-    height: 100%;
     object-fit: cover;
 }
-
-.med-spa-serv-container .section-preview .float-right,
-.med-spa-serv-container .section-preview .float-left {
-    width: min(38%, 320px);
-    min-height: 220px;
-}
-
 .med-spa-serv-container .section-preview .float-right {
     float: right;
 }
-
 .med-spa-serv-container .section-preview .float-left {
     float: left;
 }
-
 .med-spa-serv-container .more-info-buttons {
     display: block;
 }
-
 .med-spa-serv-container .service-section .more-info-link,
 .med-spa-serv-container .service-section .more-info-links a {
     display: inline-flex;
     align-items: center;
 }
-
 .med-spa-serv-container .women-men-nav,
 .med-spa-serv-container .women-men-content {
     display: flex;
@@ -81,7 +60,6 @@
 .med-spa-serv-container .women-men-nav {
     justify-content: flex-start;
 }
-
 .med-spa-serv-container .women-men-content .col {
     display: flex;
     flex: 1 1 0;
@@ -90,11 +68,16 @@
 }
 .women-men-nav {
     display:  flex;
-    justify-content: space-between;
-    /* border: 1px solid blue */
+    /* justify-content: space-between; */
 }
-.women-men-nav > a {
+.women-men-nav .wo-men-col{
+    /* border: 1px solid red; */
+
+    display: flex;
+    flex-direction: column;
     flex-basis: 50%;
+    /* justify-content: center; */
+}
+.women-men-nav a {
     display: inline-flex;
-    justify-content: center;
 }

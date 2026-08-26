@@ -429,15 +429,11 @@ export function initInjectContentListeners() {
         if (mobileNavLink) {
 
             /*
-             * Mobile navigation always means:
-             *
-             * "Take me to this page from the top."
+             * Old behavior: keep the mobile menu expanded while the
+             * selected page loads, then let the original outside/scroll
+             * and re-click interactions close it later.
              */
             scrollPageToTop();
-
-            if (pageWrapper?.classList.contains("expand")) {
-                pageWrapper.classList.remove("expand");
-            }
         }
 
         lastClickedLink = link;
