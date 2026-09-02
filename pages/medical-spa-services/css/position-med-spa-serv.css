@@ -4,3 +4,4 @@
 .med-spa-serv-container .section-preview::after,
 .med-spa-serv-container .section-details::after { content: ""; display: block; clear: both; }
 .med-spa-serv-container .more-info-buttons { clear: both; }
+

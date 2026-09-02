@@ -290,7 +290,6 @@
 
     text-align: center;
 
-    margin-bottom: 10px;
 }
 
 .page-container.contact-page-container .email-contact p {
@@ -494,7 +493,7 @@
     .page-container.contact-page-container {
         width: 100%;
 
-        padding-top: 22%;
+        padding-top: 12%;
         padding-bottom: 5%;
     }
 
@@ -548,6 +547,24 @@
     .page-container.contact-page-container .contact-address-num-container .tel-num-box {
         white-space: normal;
     }
+        .page-container.contact-page-container .email-contact {
+            margin: 0 !important;
+            padding: 0 !important;
+            margin-top: -6% !important;
+            font-size: 0.95rem;
+    
+        }
+    
+        .page-container.contact-page-container .social-media-container {
+            display: flex !important;
+            justify-items: flex-end !important;
+         
+        }
+    
+        .page-container.contact-page-container .social-media-container>.social-media-item {
+            flex-basis: 20% ;
+    
+        }
 }
 
 
@@ -567,7 +584,7 @@
 
         padding: 20px 10px;
 
-        margin-top: 20px;
+        margin-top: 10%;
     }
 
     .page-container.contact-page-container .form-contact-container {
@@ -585,21 +602,13 @@
     .page-container.contact-page-container #contactForm .form-group textarea {
         font-size: 16px;
     }
-
-    .page-container.contact-page-container .email-contact {
-        font-size: 0.95rem;
-    }
-
-    .page-container.contact-page-container .contact-address-num-container {
-        padding-top: 25px;
-
-        font-size: 0.95rem;
-    }
+        .page-container.contact-page-container .social-media-container {
+            margin-left: 50%;
+        }
+    
 }
 
 
 /* ============================================================
    END CONTACT PAGE
    ============================================================ */
-
-   

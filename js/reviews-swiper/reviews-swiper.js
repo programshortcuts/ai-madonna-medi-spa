@@ -1,28 +1,40 @@
-// js/visuals/swiper.js
+// js/reviews-swiper/swiper.js
+
 let reviewsSwiper = null;
-let clickedServiceSlide = null
+
 export function initReviewsSwiper() {
     const el = document.querySelector('.reviews-swiper');
+
     if (!el || typeof Swiper === 'undefined') return;
-    
-    if (reviewsSwiper) reviewsSwiper.destroy(true, true);
+
+    const slides = el.querySelectorAll('.swiper-slide');
+
+    // The medical-spa-services page is injected dynamically.
+    // Don't initialize until the review slides actually exist.
+    if (slides.length < 2) {
+        return;
+    }
+
+    if (reviewsSwiper) {
+        reviewsSwiper.destroy(true, true);
+        reviewsSwiper = null;
+    }
 
     reviewsSwiper = new Swiper(el, {
         slidesPerView: 1,
+        slidesPerGroup: 1,
+
         loop: true,
-        speed: 700,
+
+        speed: 1000,
 
         grabCursor: true,
         allowTouchMove: true,
-
         threshold: 10,
 
         autoplay: {
-            delay: 5000,
+            delay: 2200,
             disableOnInteraction: false
         }
     });
-
 }
-// FILE: js/visuals/swiper.js
-

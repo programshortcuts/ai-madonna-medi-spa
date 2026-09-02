@@ -35,7 +35,7 @@ export function initToggleNav() {
         // const mobileHeaderNavUl = document.querySelector('.mobile-header-nav > ul') 
         if(e.target.tagName != 'A'){
 
-            expandToggle()
+            // expandToggle()
         }
 
     });

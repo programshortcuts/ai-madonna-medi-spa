@@ -7,17 +7,18 @@
     box-shadow: var(--service-shadow);
 }
 
-.med-spa-serv-container .service-section .section-title {
+.med-spa-serv-container .service-section .section-title.drop-down {
     cursor: pointer;
     transition: background-color var(--service-transition), color var(--service-transition);
 }
 
-.med-spa-serv-container .service-section .section-title:hover,
-.med-spa-serv-container .service-section .section-title[aria-expanded="true"] {
+.med-spa-serv-container .service-section .section-title.drop-down:hover,
+.med-spa-serv-container .service-section .section-title.drop-down[aria-expanded="true"] {
     background: rgba(217, 200, 195, .22);
 }
 
-.med-spa-serv-container .service-section .section-title:focus-visible,
+.med-spa-serv-container .service-section .section-title.drop-down:focus-visible,
+.med-spa-serv-container .service-section .our-programs-btn:focus-visible,
 .med-spa-serv-container .service-section .more-info-btn:focus-visible,
 .med-spa-serv-container .service-section a:focus-visible {
     outline: 3px solid #a7c8b2 !important;
@@ -35,6 +36,7 @@
     transform: scale(1.025);
 }
 
+.med-spa-serv-container .service-section .our-programs-btn,
 .med-spa-serv-container .service-section .more-info-btn {
     cursor: pointer;
     background: var(--service-pine);
@@ -42,6 +44,7 @@
     transition: background-color var(--service-transition), transform var(--service-transition);
 }
 
+.med-spa-serv-container .service-section .our-programs-btn:hover,
 .med-spa-serv-container .service-section .more-info-btn:hover {
     background: #6a5857;
     transform: translateY(-1px);

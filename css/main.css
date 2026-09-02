@@ -1,4 +1,10 @@
 /* main.css */
+@import url('./components/new-review-swiper.css');
+/* @import url('./components/reviews-swiper.css'); */
+/* @import url('./components/home-reviews-swiper.css'); */
+/* @import url('../pages/medical-spa-services/css/reviews-swiper-med-spa.css');  */
+/* @import url('../pages/home/css/reviews-swiper-home.css');  */
+
 @import url('../pages/home/css/premium-home.css');
 @import url('./responsive.css');
 /* home */
@@ -10,8 +16,10 @@
 /* visuals */
 /* @import url('./swiper/service-rows.css'); */
 /* @import url('./swiper/service-rows-background.css'); */
+
 /* medical-spa-services */
-/* @import url('../pages/medical-spa-services/css/new-med-spa-serv.css');  */
+@import url('../pages/medical-spa-services/css/new-med-spa-serv.css'); 
+
 @import url('../pages/medical-spa-services/css/bkgrnd-med-spa-serv.css'); 
 @import url('../pages/medical-spa-services/css/borders-med-spa-serv.css'); 
 @import url('../pages/medical-spa-services/css/clrs-med-spa-serv.css'); 

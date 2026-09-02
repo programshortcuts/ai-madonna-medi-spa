@@ -8,28 +8,43 @@
             aria-expanded="false" aria-controls="menu-id">
                 <span class="title-text"> Longevity / Functional  Medicine </span>
             </button>
-            <div class="content  show">
-                <div tabindex="0" class="section-preview">
-                    <!-- <div tabindex="0" data-nav-target="long-med-spa-serv-img" class="img-wrapper float-right">
-                        <img class="service-img" src="pages/medical-spa-services/media/longevity-func-slide.png" alt="">
+            <div class="content show">
+                <div  class="section-preview">
+                    <!-- <div tabindex="0" data-nav-target="long-med-spa-serv-img" class="img-wrapper float-right img-wrap-9-16">
+                        <img class="service-img" src="pages/home/service-slides/longevity-med.PNG" alt="">
                     </div> -->
-                    <div class="img-wrapper float-right">
-                        <video preload="metadata" class="service-video" loop controls playsinline
-                            poster="pages/medical-spa-services/media/longevity-med/"
-                            src="pages/medical-spa-services/services/longevity-med/videos/long-med-trim.mp4">
-
-
-                        </video>
+                    <div tabindex="0" data-nav-target="long-med-spa-serv-img" class="img-wrapper float-right img-wrap-16-9">
+                        <img class="service-img" src="pages/medical-spa-services/services/longevity-med/imgs/longevity-func-slide.png" alt="">
                     </div>
-                    <p>
-                         <span id="LongevityMedicineBold">Longevity Medicine</span> is a proactive approach to wellness and healthy aging.
+                    <!-- <div  class="img-wrapper float-right vid-fix">
+                        <video preload="metadata" class="service-video" loop controls playsinline 
+                            poster="./pages/medical-spa-services/services/longevity-med/imgs/longevity-func-slide.png"
+                            src="./pages/medical-spa-services/services/longevity-med/videos/long-med-trim.mp4">
+                        </video>
+                    </div> -->
+                    <!-- <div class="img-wrapper float-right">
+                        <video
+                            data-video-id="longevity-video"
+                            preload="metadata"
+                            poster="pages/medical-spa-services/services/longevity-med/imgs/longevity-func-slide.png"
+                            class="service-video vid-fix"
+                            loop
+                            controls
+                            playsinline
+                            src="pages/medical-spa-services/services/longevity-med/videos/long-med-trim.mp4">
+                        </video>
+                    </div> -->
+                    <p  data-nav-target="long-med-span" data-video-target="longevity-video" tabindex="0">
+                         <span class="bold">Longevity Medicine</span> is a proactive approach to wellness and healthy aging.
                          We strive to optimize and improve how patients feel, function, and age over time.
                     </p>
-                    <div tabindex="0" data-nav-target="long-med-spa-serv-img" class="img-wrapper float-left">
-                        <img class="service-img" src="pages/medical-spa-services/services/longevity-med/media/funct-med.png" alt="">
+                    <div  class="img-wrapper float-left img-wrap-16-9">
+                        <img class="service-img " 
+                        src="pages/medical-spa-services/services/longevity-med/imgs/funct-med.png" alt="">
                     </div>
-                    <p>
-                        &emsp; <span id="FunctionalMedicineBold">Functional&nbsp;Medicine</span> is a personalized, science-based approach to healthcare that focuses on identifying 
+                    <p data-nav-target="functional-med-span" data-video-target="functional-medicine-video" tabindex="0"
+                    class="clear">
+                        &emsp; <span class="bold">Functional&nbsp;Medicine</span> is a personalized, science-based approach to healthcare that focuses on identifying 
                         and addressing the root causes of illness rather than simply treating symptoms.
                     </p>
                     <div class="more-info-buttons">
@@ -37,21 +52,35 @@
                             more-info</button>
                             <!-- <button>bookings</button> -->
                     </div>
+                    
                 </div>
-                <div tabindex="0" class="section-details">    
-                    <p>
+                <div tabindex="0" class="section-details ">    
+                    <p data-nav-target="we-incorporate">
                         We incorporate genetics,
-                        lifestyle, nutrition, and overall health to create individualized treatement plans designed to restore balance, 
+                        lifestyle, nutrition, and overall health to
+    
+                    </p>
+                    <ul>
+                        <!-- <li><img src="pages/medical-spa-services/services/longevity-med/media/dna-tron.png" alt=""></li> -->
+                         <li><img id="dnaImg" src="pages/medical-spa-services/services/longevity-med/imgs/dna-img.png" alt="dna-img"></li>
+                        <li><img src="pages/medical-spa-services/services/longevity-med/imgs/exercise-tron-trans.png" alt=""></li>
+                        <li><img src="pages/medical-spa-services/services/longevity-med/imgs/nutrition-img.png" alt=""></li>
+                    </ul>
+                    <p data-nav-target="create-individualized">
+                         create individualized treatment plans designed to restore balance, 
                         optimize wellness, and support long-term health.
                     </p>
+                    
                     <p>
                         Dr. Tomani and the entire staff work by combining advanced medical therapies 
                         with personalized treatment plans. We help patients maintain their health and
                         vitality to age with confidence.
                     </p>
-                    <a tabindex="0" data-link href="pages/medical-spa-services/services/longevity-med/longevity-med.html"
+                    
+                    <!-- <a tabindex="0" data-link href="pages/medical-spa-services/services/longevity-med/longevity-med.html"
                         data-nav-target="moreInfo-longevityMed" class="more-info-link
-                                        "> more info</a>
+                                        "> more info
+                    </a> -->
                 </div>
             </div>
         </section>
@@ -61,24 +90,25 @@
                 <span class="title-text">Bio-identical Hormone Replacement</span>
                 <!-- <img src="imgs/biote.webp" alt=""> -->
             </button>
-            <div class="content ">
-                <div tabindex="0" class="section-preview">
-                    <p>
+            <div class="content show">
+                <div  tabindex="0" class="section-preview">
+                    <p tabindex="0" data-nav-target="hormones-are-the">
                         Hormones are the signals our bodies send
                         to our organs. As we get older, we make fewer hormones.
                     </p>
                     <div class="img-wrapper float-left">
                         <video preload="metadata" class="service-video" loop controls playsinline
-                            poster="./pages/medical-spa-services/media/bio-horm-replace.png"
-                            src="pages/medical-spa-services/services/bio-hormone-replace/videos/bioHormoneReplace.mp4">
+                            poster="./pages/medical-spa-services/services/bio-hormone-replace/videos/bio-horm-replace.png"
+                            src="pages/medical-spa-services/services/bio-hormone-replace/videos/bio-horm-replace.mp4">
                         </video>
                     </div>
-                    <p>
+                    <p tabindex="0" data-nav-target="with-less-signals">
                         With less signals, our organs slow down, along with our strength, endurance, metabolism, and overall well being,
-                        &emsp;We work with each of our patients on an ongoing basis to analyze symptoms and lab results
+                        We work with each of our patients on an ongoing basis to analyze symptoms and lab results
                         using a specially designed dosing algorithm to develop a unique treatment plan for each individual.
                     </p>
-                    <nav  class="women-men-nav clear">
+                    
+                    <!-- <nav  class="women-men-nav clear">
                         <div class="wo-men-col">
                             <h3>For Men</h3>
                             <a tabindex="0" data-nav-target="for-men-link" data-link
@@ -100,7 +130,7 @@
                                hormones, 
                             </p>
                         </div>
-                    </nav>
+                    </nav> -->
                     <p>
                         <div class="more-info-buttons">
                             <button  tabindex="0" data-nav-target="moreInfo-bioHormReplace" class="more-info-btn ">more-info</button>
@@ -108,18 +138,27 @@
                         </div>
                     </p>
                 </div>
-                <div  class="section-details ">
+                <div class="section-details show">
                     
-                    <h4 tabindex="0">How it works? This is what we do,</h4>
-                    <p>
-                        We draw your blood, rigoursley test youre levels, we inform you if any other concerns arise in blood work,
-                        based on you levels we adminster hormone pellets in the flanks fat along youre sides of your hip, or you glute
-                        buttox muscles. We medically glue it together and bandage it up, patiens are usually sore the first day or few, it is 
-                        felt more so when injected into the glutes,
-                    </p>
-                    <div class="img-wrapper float-right">
+                    <h4  tabindex="0" id="howItWorks-bioHorm" data-nav-target="how-it-works-bio-identical-hormone">How it works? This is what we do,</h4>
+                    <div id="bloodDrawImgContainer"  class="img-wrapper float-right">
                         <img  src="pages/medical-spa-services/services/bio-hormone-replace/imgs/blood-draw.png" alt="">
                     </div>
+                    <p tabindex="0" data-nav-target="we-draw-you-blood">
+                        We draw your blood, rigoursley test your levels, we inform you if any other concerns arise in blood work,
+                        
+                    </p>
+                    <p>based on you levels we administer hormone pellets in the flanks fat along your sides of your hip, or you glute
+                        buttox muscles. 
+                    </p>
+                    <ul class="injection-imgs">
+                        <li><img src="pages/medical-spa-services/services/bio-hormone-replace/imgs/flank-inject.png" alt="flank"></li>
+                        <li><img src="pages/medical-spa-services/services/bio-hormone-replace/imgs/but-inject.png" alt="butt"></li>
+                    </ul>
+                    <p tabindex="0" data-nav-target="we-medically-glue">
+                        We medically glue it together and bandage it up, patients are usually sore the first day or few, it is 
+                        felt more so when injected into the glutes,
+                    </p>
                     <p>
                         These pellots dissovle slowly in your blood stream and restabilizes hormone imbalances that come with age and time,
                         after a week or two, The majority of patients begin to gradually feel more energy, normal aches not as bad, and i don't 
@@ -136,69 +175,65 @@
             </div>
         </section>
         <!-- BOTOX & FILLER -->
-         <section  id="botoxFiller" class="service-section ">
-            <button tabindex="0" data-nav-target="botox-and-filler-btn"  class="section-title drop-down" 
+         <section  id="botoxFillerSection" class="service-section ">
+            <button  tabindex="0" data-nav-target="botox-and-filler-btn"  class="section-title drop-down" 
             aria-expanded="false" aria-controls="menu-id">
                 <span class="title-text"> Botox &amp; Filler </span>
             </button>
             <div class="content  ">
                 <div tabindex="0" class="section-preview">
-                    <div  tabindex="0" data-nav-target="long-med-spa-serv-img" class="img-wrapper float-right">
-                        <img class="service-img" src="pages/medical-spa-services/services/botox/media/botox-card.png" alt="">
+                    <div tabindex="0" data-nav-target="long-med-spa-serv-img" class="img-wrapper float-right img-wrap-9-16">
+                        <img class="service-img img-fix" src="pages/medical-spa-services/services/botox/media/botox-card.png" alt="">
                     </div>
-                    <p>
+                    <p data-nav-target="with-over-decades">
                         With over decades of experience, we have helped thousands achieve the look they wish to have.
                     </p>
-                    <p>
-                        Our philosophy is simple: enhance, never overdo. We use botulinum toxin and dermal fillers to
+                    <p data-nav-target="our-philosophy">
+                        <span class="bold">Our philosophy</span> is simple: enhance, never overdo. We use botulinum toxin and dermal fillers to
                         soften lines, restore youthful volume, and refresh your appearance while perserving your natural facial 
                         expressions and unique features. Our goal is for you to look rested, confident, and be the best version of you.
                     </p>
-                    <div class="more-info-buttons">
-                        <button data-nav-target="moreInfo-longevityMed" class="more-info-btn ">
-                            more info
-                        <!-- <button>bookings</button> -->
+                    <div tabindex="0" id="botoxImg" data-nav-target="botox-img"
+                     class="img-wrapper float-left img-fix">
+                        <img src="pages/medical-spa-services/services/botox/media/botox-img.png" alt="">
                     </div>
-                </div>
-                <div tabindex="0" class="section-details">    
-                    
-                    <p>
+                    <p class="clear">
                         We take meticulous care in not covering your natural looks, by carefully touching up
                         your favorite qualities. 
                     </p>
-                    
-                    <div tabindex="0" data-nav-target="botox-img" class="img-wrapper float-left">
-                        <img  src="pages/medical-spa-services/services/botox/media/botox-img.png" alt="">
-                        
-                    </div>
-                    <h5>Should we add pricing</h5>
-
+                    <!-- <div class="more-info-buttons">
+                        <button data-nav-target="moreInfo-longevityMed" class="more-info-btn ">
+                            more info
+                        <button>bookings</button>
+                    </div> -->
+                </div>
+            <div tabindex="0" class="section-details   ">    
                 </div>
             </div>
         </section>
         
         <!-- GLP-1 -->
         <section id="glp1" class="service-section">
-            <button  data-nav-target="glp1-btn" class="section-title drop-down" aria-expanded="false" aria-controls="menu-id">
+            <button   data-nav-target="glp1-btn" class="section-title drop-down" aria-expanded="false" aria-controls="menu-id">
                 <span class="title-text">GLP Weight Loss Therapy Programs</span>
                 <!-- <img src="imgs/ai-imgs/glp-1-serv-header.png" alt=""> -->
             </button>
-            <div class="content ">
+            <div class="content show">
                 <div  class="section-preview">
-                    <!-- <div class="img-wrapper float-right">
-                        <img src="pages/medical-spa-services/services/glp-1/media/semaglutide-chat.png" alt="">
+                    <sup class="r">bad img</sup>
+                    <div class="img-wrapper float-right ">
+                        <img class="" src="pages/home/service-slides/glp-1-serv-header-wide.png" alt="">
+                    </div>
+                    <!-- <div class="img-wrapper float-right ">
+                        <img class="" src="pages/medical-spa-services/services/glp-1/media/semaglutide-chat.png" alt="">
                     </div> -->
-                    <div data-auto-focus tabindex="0"  class="img-wrapper float-right">
+                    <!-- <div  class="img-wrapper float-right">
                         <video preload="metadata" class="service-video" loop controls playsinline
                             poster="./pages/medical-spa-services/media/bio-horm-replace.png"
                             src="./pages/medical-spa-services/services/glp-1/media/draft.mp4">
                         </video>
-                    </div>
-                    <p>
-                        GLP medications work by mimicking a naturally occuring hormone that helps to regulate 
-                        appetite, blood sugar, and digestion. They promote a feeling of fullness, slow stomach emptying, 
-                        and reduce hunger and food cravings, making it easier to eat less and injest fewer calories.
-                    </p>
+                    </div> -->
+                    
                     <p>
                         Our medically supervised managed program combines GLP therepy with personalized care to help you 
                         achive safe, sustainable results. You'll recieve regular followed-up visits with an experienced
@@ -211,38 +246,39 @@
                         high blood sugar, stubborn weight loss . As we age, are signals slow
                         down, Semaglutides combate that by sending more signals as if we were younger.
                     </p> -->
-                    
-                    <div class="more-info-buttons">
-                        <button data-nav-target="moreInfo-glp-1"
-                            class="more-info-btn ">Our GLP-1 Treatment Programs</button>
-                        <!-- <button>bookings</button> -->
-                    </div>
-                </div>
-                <div  class="section-details  ">
                     <p>
-                        In addition to medical supervision, we provide indiviualized nutrition and lifestyle 
+                        &emsp; In addition to medical supervision, we provide indiviualized nutrition and lifestyle 
                         counseling, education, and ongoing support to help you build healthy habits, overcome challeneges,
                         and maintain long-term success.
                     </p>
                     <p>
-                        Our goal is not just your weight loss, but lasting improvement in your health, confidence and 
+                        &emsp;pOur goal is not just your weight loss, but lasting improvement in your health, confidence and 
                         overall well being
                     </p>
+                    <div class="more-info-buttons more-info-programs-buttons">
+                        <button  data-nav-target="our-treatment-plans-glp1" 
+                            class="more-info-btn our-programs-btn">Our GLP-1 Treatment Programs</button>
+                        <!-- <button>bookings</button> -->
+                    </div>
+                </div>
+                <div  class="section-details  ">
+                    
+                    
                     <p>
                         &emsp; We offer different varities of glp-1 
                         Our GLP therapies are designed to support your weight loss journey with medical guidance and ongoing
                         supoort.
                     </p>
-                    <ul tabindex="0">
-                        <li>
-                            <h3>GLP-S</h3>
+                    <ul tabindex="0" class="our-treatment-plans-list">
+                        <li tabindex="0" data-nav-target="glp-s">
+                            <h3 >GLP-S</h3>
                             <ul>
                                 <li>Supports Appetite Control</li>
                                 <li>Helps Patients with Cravins</li>
                                 <li>Promotes steady, sustainable weight loss</li>
                             </ul>
                         </li>
-                        <li>
+                        <li tabindex="0" data-nav-target="glp-t">
                             <h3>GLP-T</h3>
                             <ul>
                                 <li>Dual-action for greater weight loss support</li>
@@ -250,7 +286,7 @@
                                 <li>Supports lean muscle preservation</li>
                             </ul>
                         </li>
-                        <li>
+                        <li tabindex="0" data-nav-target="glp-r">
                             <h3>GLP-R</h3>
                             <ul>
                                 <li>Triple-action formula </li>
@@ -301,7 +337,7 @@
                     </div>
                     </p>
                 </div>
-                <div tabindex="0" class="section-details downs ">
+                <div tabindex="0" class="section-details  ">
                     <p>
                         Infrared light therapy uses specific wavelengths of light to penetrate the skin and stimulate cellular function.
                         This non-invasive treatment promotes collagen production, reduces inflammation, and enhances circulation,
@@ -310,11 +346,11 @@
                     <p>
                         Depending on the wavelength used, infrared light triggers distinct responses in the body:
                     </p>
-                    <ul tabindex="0">
-                        <li>Near-Infrared (NIR): These shorter, low-energy wavelengths stimulate the mitochondria (the cell’s powerhouse) to produce more energy.
+                    <ul >
+                        <li tabindex="0" data-nav-target="near-infrared"><span class="bold">Near-Infrared (NIR):</span> These shorter, low-energy wavelengths stimulate the mitochondria (the cell’s powerhouse) to produce more energy.
                              This process speeds up skin renewal, tissue growth, and muscle recovery after workouts.
                         </li>
-                        <li>Mid and Far-Infrared (MIR/FIR): These longer wavelengths generate deep heat, raising your core temperature. 
+                        <li tabindex="0" data-nav-target="mid-far-infrared"><span class="bold">Mid and Far-Infrared (MIR/FIR):</span> These longer wavelengths generate deep heat, raising your core temperature. 
                             This deep penetration widens blood vessels (vasodilation) to relieve musculoskeletal pain and induce sweating, which helps the body detoxify.</li>
                     </ul>
                     <p>

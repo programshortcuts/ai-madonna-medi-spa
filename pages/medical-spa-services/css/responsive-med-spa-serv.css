@@ -6,24 +6,56 @@
         width: 90vw;
     }
 }    
-@media (min-width: 1221px) {
+@media (min-width: 1210px) {
     .page-container.med-spa-serv-container {
         padding-top: 6% !important;
         margin: 0 5%;
     }
-    .section-details .img-wrapper {
-        min-width: 450px !important;
+    
+    .med-spa-serv-container .section-details .img-wrapper.float-left,
+    .med-spa-serv-container .section-details .img-wrapper.float-right {
+        width: min(32%, 360px);
+        min-width: 0 !important;
+    }
+    .sections-containers section .content p {
+        font-size: 120% !important;
+    }
+    #longevityMedicine .sections-containers .content > .section-preview p:nth-of-type(1) {
+        font-size: 120% !important;
+        padding-top: 20%;
+        background-color: blue;
     }
 }
-@media (max-width: 1220px) {
+@media (max-width: 1209px) {
     .page-container.med-spa-serv-container {
-        padding-top: 2% ;
+        padding-top: 12% ;
         width: 90vw;
         margin: 0 2%;
     }
 }
-@media (min-width: 731px) {
+@media (min-width: 967px) {
     
+    #bioHormoneReplacement>.content>.section-preview p:nth-of-type(2) {
+        padding: 2.5%;
+        line-height: 2.2;
+        padding-right: 8%;
+    }
+    #bioHormoneReplacement>.content #bloodDrawImgContainer{
+        margin-top: -5%;
+        margin-left: 2%;
+
+    }
+    .sections-containers section .content p {
+        font-size: 110%;
+        
+    }
+    
+
+}
+@media (min-width: 731px) {
+    .page-container.med-spa-serv-container {
+        width: 90vw;
+    }
     .sections-containers section .content{
         padding: 5%;
     }
@@ -31,7 +63,7 @@
 @media (max-width: 730px) {
     .page-container.med-spa-serv-container {
         padding-top: 15% !important;
-        margin: 0 2%;
+        /* margin: 0 2%; */
         width: 95vw;
     }
 
@@ -80,4 +112,31 @@
         aspect-ratio: 4 / 3;
         margin: .2rem 0 .85rem 1rem;
     }
+        .page-container.med-spa-serv-container {
+            padding-top: 12%;
+            width: 90vw !important;
+            margin-left: 2%;
+            margin-right: 1%;
+        }
+        .page-container.med-spa-serv-container .content {
+            margin: 0  ;
+            padding: 0 ;
+        }
+    .page-container.med-spa-serv-container .content {
+        padding: 0 1%;
+        padding-top: 3%;
+    }
+    .img-wrap-9-16{
+        min-height: 409px !important;
+        
+    }
+    .img-wrap-16-9{
+        min-width: 300px !important;
+        
+    }
+    .injection-imgs {
+        /* margin-left: 25%; */
+        /* border: 1px solid blue */
+    }
+            
 }

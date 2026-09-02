@@ -9,7 +9,7 @@
     border-bottom: 1px solid transparent;
 }
 
-.med-spa-serv-container .service-section .section-title[aria-expanded="true"] {
+.med-spa-serv-container .service-section .section-title.drop-down[aria-expanded="true"] {
     border-bottom-color: var(--service-line);
 }
 
@@ -22,6 +22,7 @@
     border: 1px solid var(--service-line);
 }
 
+.med-spa-serv-container .service-section .our-programs-btn
 .med-spa-serv-container .service-section .more-info-btn {
     /* border: 1px solid var(--service-pine); */
     border: 1px solid black;

@@ -9,6 +9,10 @@
 }
 .t {color:tomato !important;}
 .r {color:red !important;}
+.red {
+    color:red !important;
+    font-weight: 999;
+}
 
 h1 a:visited,
 h1 a{

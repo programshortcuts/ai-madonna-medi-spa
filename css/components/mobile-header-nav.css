@@ -284,12 +284,21 @@ li#medSpaServUL {
    page header instead of becoming a bottom navigation.
    ========================================================= */
 
-@media screen and (min-width: 900px) {
 
+@media screen and (min-width: 1000px) {
+    .page-wrapper>.mobile-header-nav {
+        margin-right:5%;
+    }
+
+}
+@media screen and (min-width: 830px) {
+    .page-wrapper>.mobile-header-nav {
+        margin-right: 4%;
+        background-color: rgb(0,0,0,0);
+    }
     .mobile-header-nav,
     .page-wrapper.expand>.mobile-header-nav {
         position: absolute;
-
         top: 0;
         right: 2.5rem;
         bottom: auto;
@@ -297,7 +306,6 @@ li#medSpaServUL {
 
         width: auto;
         height: 74px !important;
-
         margin: 0;
         padding: 0 !important;
 
@@ -352,7 +360,12 @@ li#medSpaServUL {
         padding-right: 0;
     }
 }
+@media screen and (min-width: 701) {
+    .mobile-header-nav {
+        margin-right: 5%;
+    }
 
+}
 
 /* =========================================================
    SMALL MOBILE SCREENS
@@ -404,7 +417,7 @@ li#medSpaServUL {
 @media screen and (max-width: 899px) and (orientation: landscape) {
 
     .page-wrapper:not(.expand)>.mobile-header-nav {
-        display: none !important;
+        /* display: none !important; */
     }
 }
 

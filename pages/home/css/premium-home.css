@@ -168,69 +168,28 @@
 
 .card-longevity {
     background-image: url('../../../pages/home/service-slides/longevity-med.PNG');
+    background-position: 50% 16%;
 }
 
 .card-hormones {
-    background-image: url('../../../imgs/ai-imgs/bio-hormone-header-wide.png');
+    background-image: url('../../../pages/home/service-slides/bio-hormone-header-wide.png');
 }
 
 .card-peptides {
-    background-image: url('../../../imgs/ai-imgs/peptide-header-wide.png');
+    background-image: url('../../../pages/home/service-slides/peptide-header-wide.png');
 }
 
 .card-glp {
-    background-image: url('../../../imgs/ai-imgs/glp-1-serv-header-wide.png');
+    background-image: url('../../../pages/home/service-slides/glp-1-serv-header-wide.png');
 }
 
 .card-botox{
     background-image: url('../../../pages/medical-spa-services/services/botox/media/botox-card.png');
-    background-position: 50% 35%;
+    background-position: 50% 12%;
 }
 
 .card-infusion {
     background-image: url('../../../pages/medical-spa-services/services/iv-infusions/media/ivInfusion-header-wide.png');
-}
-/* OUR STAFF */
-.physician-section {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 2%;
-}
-.physician-section > .eyebrow{
-    font-size: 120%;
-    margin-top: 2%;
-    
-}
-.physician-section >.bio-container {
-    display: flex;
-}
-.physician-content{
-    padding-left: 2%;
-}
-.physician-photo {
-    aspect-ratio: 4 / 5;
-    max-width: 215px;
-    background: #d8e0d7;
-}
-
-.physician-photo img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    /* object-position: center top; */
-    filter: saturate(.78);
-}
-.physician-content {
-    max-width: 560px;
-    font-size: 1.02rem;
-    line-height: 1.75;
-}
-.physician-content h2 {
-    margin-bottom: 1.65rem;
-}
-.physician-content p+p {
-    /* margin-top: 1rem; */
 }
 
 .consultation-section {
@@ -268,8 +227,6 @@
     gap: 2rem;
     color: #486158;
 }
-
-
 
 /* @media (max-width: 480px) {
 } */

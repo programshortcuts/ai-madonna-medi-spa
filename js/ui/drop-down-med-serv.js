@@ -1,23 +1,30 @@
 // drop-down-med-spa-serv.js
 // Medical Spa Services expandable sections.
 // ------------------------------------------------------------
+
 export function initDropDownMedServ() {
+
     const container = document.querySelector(
         '.page-container.med-spa-serv-container'
     );
+
     if (!container) {
         return;
     }
+
     const sections = container.querySelectorAll(
         '.service-section'
     );
+
     sections.forEach((section) => {
 
         // --------------------------------------------------------
         // Prevent duplicate initialization
         // --------------------------------------------------------
 
-        if (section.dataset.sectionToggleReady === 'true') {
+        if (
+            section.dataset.sectionToggleReady === 'true'
+        ) {
             return;
         }
 
@@ -26,7 +33,7 @@ export function initDropDownMedServ() {
         // --------------------------------------------------------
 
         const title = section.querySelector(
-            ':scope > .section-title'
+            ':scope > .section-title.drop-down'
         );
 
         const content = section.querySelector(
@@ -46,18 +53,30 @@ export function initDropDownMedServ() {
         );
 
         // --------------------------------------------------------
+        // SECTION REVEAL STATE
+        //
+        // Tracks whether this specific section has been opened
+        // before during the current page visit.
+        // --------------------------------------------------------
+
+        let hasBeenRevealed =
+            content.classList.contains('show');
+
+        // --------------------------------------------------------
         // Keep activated title below fixed header
         // --------------------------------------------------------
 
         const scrollTitleIntoHeaderClearance = () => {
 
-            const scrollContainer = document.querySelector(
-                '.page-wrapper'
-            );
+            const scrollContainer =
+                document.querySelector(
+                    '.page-wrapper'
+                );
 
-            const pageHeader = document.querySelector(
-                '.page-header'
-            );
+            const pageHeader =
+                document.querySelector(
+                    '.page-header'
+                );
 
             if (!scrollContainer || !pageHeader) {
                 return;
@@ -92,6 +111,7 @@ export function initDropDownMedServ() {
                         ? 'auto'
                         : 'smooth'
                 });
+
             });
         };
 
@@ -100,7 +120,10 @@ export function initDropDownMedServ() {
         // --------------------------------------------------------
 
         const isContentVisible = () => {
-            return content.classList.contains('show');
+
+            return content.classList.contains(
+                'show'
+            );
         };
 
         const setContentVisible = (visible) => {
@@ -131,7 +154,9 @@ export function initDropDownMedServ() {
                 return false;
             }
 
-            return !details.classList.contains('hide');
+            return !details.classList.contains(
+                'hide'
+            );
         };
 
         const setDetailsVisible = (visible) => {
@@ -140,13 +165,46 @@ export function initDropDownMedServ() {
                 return;
             }
 
+            // ----------------------------------------------------
+            // Show / hide section details
+            // ----------------------------------------------------
+
             details.classList.toggle(
                 'hide',
                 !visible
             );
 
-            // More-info button is visible when details are hidden.
+            // ----------------------------------------------------
+            // Handle more-info buttons
+            // ----------------------------------------------------
+
             moreInfoButtons.forEach((button) => {
+
+                // ------------------------------------------------
+                // OUR PROGRAMS BUTTON
+                //
+                // This button NEVER hides.
+                // ------------------------------------------------
+
+                if (
+                    button.classList.contains(
+                        'our-programs-btn'
+                    )
+                ) {
+
+                    button.classList.remove(
+                        'hide'
+                    );
+
+                    return;
+                }
+
+                // ------------------------------------------------
+                // ALL OTHER MORE-INFO BUTTONS
+                //
+                // Details visible  -> button hides
+                // Details hidden   -> button shows
+                // ------------------------------------------------
 
                 button.classList.toggle(
                     'hide',
@@ -188,7 +246,10 @@ export function initDropDownMedServ() {
                         '.more-info-btn'
                     );
 
+                // ------------------------------------------------
                 // Close content
+                // ------------------------------------------------
+
                 if (otherContent) {
 
                     otherContent.classList.remove(
@@ -200,7 +261,10 @@ export function initDropDownMedServ() {
                     );
                 }
 
+                // ------------------------------------------------
                 // Update title
+                // ------------------------------------------------
+
                 if (otherTitle) {
 
                     otherTitle.setAttribute(
@@ -209,7 +273,10 @@ export function initDropDownMedServ() {
                     );
                 }
 
+                // ------------------------------------------------
                 // Hide details
+                // ------------------------------------------------
+
                 if (otherDetails) {
 
                     otherDetails.classList.add(
@@ -217,32 +284,53 @@ export function initDropDownMedServ() {
                     );
                 }
 
+                // ------------------------------------------------
                 // Show more-info buttons
+                //
+                // This restores the normal button when a section
+                // is closed because another section was opened.
+                //
+                // .our-programs-btn is also safe here because
+                // removing "hide" keeps it visible.
+                // ------------------------------------------------
+
                 otherMoreInfoButtons?.forEach(
                     (button) => {
 
                         button.classList.remove(
                             'hide'
                         );
+
                     }
                 );
+
             });
         };
 
         // --------------------------------------------------------
         // TOGGLE WHOLE SECTION
         //
-        // .section-title now does EVERYTHING that the old
-        // .service-section did.
+        // FIRST TIME:
         //
-        // Closed:
-        //     content  -> show
-        //     details  -> show
+        //     section-title clicked
+        //          ↓
+        //     content opens
+        //          ↓
+        //     details stay hidden
+        //          ↓
+        //     more-info stays visible
         //
-        // Open:
-        //     content  -> hide
-        //     details  -> hide
+        // SUBSEQUENT TIMES:
         //
+        //     section-title clicked
+        //          ↓
+        //     content opens
+        //          ↓
+        //     details show
+        //          ↓
+        //     normal more-info hides
+        //
+        // .our-programs-btn ALWAYS stays visible.
         // --------------------------------------------------------
 
         const toggleSection = () => {
@@ -257,6 +345,7 @@ export function initDropDownMedServ() {
                 // ----------------------------------------------
 
                 setContentVisible(false);
+
                 setDetailsVisible(false);
 
             } else {
@@ -268,14 +357,45 @@ export function initDropDownMedServ() {
                 closeOtherSections();
 
                 setContentVisible(true);
-                setDetailsVisible(true);
+
+                if (hasBeenRevealed) {
+
+                    // ------------------------------------------
+                    // SECTION HAS BEEN OPENED BEFORE
+                    //
+                    // Show details.
+                    // Normal more-info buttons hide.
+                    // our-programs-btn stays visible.
+                    // ------------------------------------------
+
+                    setDetailsVisible(true);
+
+                } else {
+
+                    // ------------------------------------------
+                    // FIRST TIME THIS SECTION HAS BEEN OPENED
+                    //
+                    // Keep details hidden.
+                    // Keep normal more-info buttons visible.
+                    // ------------------------------------------
+
+                    setDetailsVisible(false);
+
+                    // Remember that this section has now
+                    // been revealed.
+                    hasBeenRevealed = true;
+                }
             }
         };
 
         // --------------------------------------------------------
-        // MORE INFO
+        // MORE INFO BUTTON TOGGLE
         //
-        // This ONLY controls .section-details.
+        // Clicking a normal .more-info-btn continues to toggle
+        // the section details.
+        //
+        // .our-programs-btn also triggers this behavior, but
+        // remains visible because setDetailsVisible() protects it.
         // --------------------------------------------------------
 
         const toggleDetails = () => {
@@ -297,19 +417,41 @@ export function initDropDownMedServ() {
         // ========================================================
 
         const initialContentVisible =
-            content.classList.contains('show');
+            content.classList.contains(
+                'show'
+            );
+
+        const initialDetailsVisible =
+            details?.classList.contains(
+                'show'
+            ) ?? false;
 
         setContentVisible(
             initialContentVisible
         );
 
-        // Details start hidden.
-        setDetailsVisible(false);
+        // --------------------------------------------------------
+        // If content is initially open, treat it as already
+        // revealed, but keep the details hidden initially.
+        //
+        // This preserves the first-view behavior.
+        // --------------------------------------------------------
+
+        if (initialContentVisible) {
+
+            setDetailsVisible(false);
+
+        } else {
+
+            setDetailsVisible(
+                initialDetailsVisible
+            );
+        }
 
         // ========================================================
         // .section-title
         //
-        // THIS IS NOW THE ONLY SECTION TOGGLE.
+        // THIS IS THE SECTION TOGGLE.
         // ========================================================
 
         title.addEventListener(
@@ -322,6 +464,7 @@ export function initDropDownMedServ() {
                 toggleSection();
 
                 scrollTitleIntoHeaderClearance();
+
             }
         );
 
@@ -342,8 +485,13 @@ export function initDropDownMedServ() {
                 toggleSection();
 
                 scrollTitleIntoHeaderClearance();
+
             }
         );
+
+        // ========================================================
+        // SECTION KEYBOARD TOGGLE
+        // ========================================================
 
         section.addEventListener(
             'keydown',
@@ -360,6 +508,7 @@ export function initDropDownMedServ() {
                 event.stopPropagation();
 
                 title.click();
+
             }
         );
 
@@ -370,6 +519,10 @@ export function initDropDownMedServ() {
         moreInfoButtons.forEach(
             (button) => {
 
+                // ------------------------------------------------
+                // CLICK
+                // ------------------------------------------------
+
                 button.addEventListener(
                     'click',
                     (event) => {
@@ -378,8 +531,13 @@ export function initDropDownMedServ() {
                         event.stopPropagation();
 
                         toggleDetails();
+
                     }
                 );
+
+                // ------------------------------------------------
+                // KEYBOARD
+                // ------------------------------------------------
 
                 button.addEventListener(
                     'keydown',
@@ -396,6 +554,7 @@ export function initDropDownMedServ() {
                         event.stopPropagation();
 
                         toggleDetails();
+
                     }
                 );
 
@@ -406,6 +565,8 @@ export function initDropDownMedServ() {
         // Mark initialized
         // --------------------------------------------------------
 
-        section.dataset.sectionToggleReady = 'true';
+        section.dataset.sectionToggleReady =
+            'true';
+
     });
 }

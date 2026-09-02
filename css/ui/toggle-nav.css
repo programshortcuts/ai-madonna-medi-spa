@@ -1,751 +1,456 @@
 /* =========================================================
    toggle-nav.css
-
    CLOSED STATE
    ---------------------------------------------------------
    .mobile-header-nav.css controls the normal bottom
    navigation. Nothing here changes the closed state.
-
    EXPANDED STATE
    ---------------------------------------------------------
    When .page-wrapper has .expand:
-
    - Navigation becomes a full-width top dropdown
    - Menu falls straight down
    - Top-level items are evenly distributed
    - Medical Spa Services submenu appears underneath
    - Social media icons return
    ========================================================= */
-
-
 /* =========================================================
-   EXPANDED NAVIGATION PANEL
+   EXPANDED NAVIGATION PANEL - FIX SCROLL LANDSCAPE MOBILE !!!!!!!!!!!!
    ========================================================= */
-
 .page-wrapper.expand>.mobile-header-nav {
-
     position: fixed;
-
-    z-index: 9999;
-
+    z-index: 2;
     /*
        Full-width top panel.
     */
     top: 8%;
-
     left: 0;
     right: 0;
-
     bottom: auto;
-
     width: 100vw;
-
     max-width: none;
-
     /*
        Prevent any parent sizing from shrinking it.
     */
     margin: 0;
-
     /*
        Expanded height.
     */
     height: fit-content !important;
-
     padding-top: 5%;
-
     padding-left: 0;
     padding-right: 0;
-
     background:inherit;
-
     border-top: 0;
-
     border-right: 0;
     border-left: 0;
-
     border-bottom: 1px solid whitesmoke;
-
     border-radius: 0;
-
     box-shadow: 0 3px 0 2px grey;
-
     /*
        IMPORTANT:
        Only vertical movement.
-
        No translateX.
        No scaleX.
     */
     transform: translateY(0);
-
     transform-origin: top center;
-
     opacity: 1;
-
     pointer-events: auto;
-
     transition:
         transform 400ms ease,
         opacity 300ms ease;
 }
-
-
 /* =========================================================
    EXPANDED MAIN NAVIGATION LIST
    ========================================================= */
-
 .page-wrapper.expand .mobile-header-nav>ul {
-
     width: 100%;
-
     height: auto;
-
     margin: 0;
-
     padding: 0;
-
     display: flex;
-
     flex-wrap: nowrap;
-
     align-items: flex-start;
-
     /*
        Equal distribution is handled by the children.
     */
     justify-content: stretch;
-
     list-style: none;
 }
-
-
 /* =========================================================
    EXPANDED TOP-LEVEL ITEMS
    ========================================================= */
-
 /*
    Only the three top-level navigation items receive
    equal-width columns.
-
    Home
    Medical Spa Services
    Contact
 */
-
 .page-wrapper.expand .mobile-header-nav>ul>li {
-
     position: relative;
-
     flex: 1 1 0;
-
     width: 33.3333%;
-
     min-width: 0;
-
     height: auto;
-
     margin: 0;
-
     padding: 0;
-
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
-
     justify-content: flex-start;
-
     list-style: none;
-
     /*
        No sideways animation.
     */
     opacity: 1;
-
     transform: none;
-
     animation: none;
 }
-
-
 /* =========================================================
    EXPANDED TOP-LEVEL LINKS
    ========================================================= */
-
 .page-wrapper.expand .mobile-header-nav>ul>li>a {
-
     width: 100%;
-
     height: auto;
-
     min-height: 40px;
-
     margin: 0;
-
     padding: .65rem .5rem;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     color: var(--pine);
-
     font-family:
         Inter,
         ui-sans-serif,
         system-ui,
         sans-serif;
-
     font-size: .65rem;
-
     font-weight: 750;
-
     letter-spacing: .08em;
-
     line-height: 1.2;
-
     text-align: center;
-
     text-decoration: none;
-
     text-transform: uppercase;
-
     white-space: nowrap;
-
     cursor: pointer;
-
     box-sizing: border-box;
 }
-
-
 /* =========================================================
    EXPANDED TOP-LEVEL LINK HOVER / FOCUS
    ========================================================= */
-
 .page-wrapper.expand .mobile-header-nav>ul>li>a:hover,
-
 .page-wrapper.expand .mobile-header-nav>ul>li>a:focus-visible {
-
     background: rgba(74, 65, 65, .08);
-
     color: var(--pine);
 }
-
-
 /* =========================================================
    HIDDEN NAVIGATION ITEMS
    ========================================================= */
-
 .page-wrapper.expand .mobile-header-nav .start-hidden {
-
     display: inherit !important;
 }
-
-
 /* =========================================================
    MEDICAL SPA SERVICES
    ========================================================= */
-
 .page-wrapper.expand .mobile-header-nav>ul>li#medSpaServUL {
-
     position: relative;
-
     /*
        Keep the service column equal width.
     */
     flex: 1 1 0;
-
     width: 33.3333%;
 }
-
-
 /* =========================================================
    MEDICAL SPA SERVICES SUBMENU
    ========================================================= */
-
 /*
    The submenu is placed underneath the Medical Spa Services
    column.
-
    It is NOT a second flex item in the main navigation row.
 */
-
 .page-wrapper.expand .mobile-header-nav>ul>li#medSpaServUL>ul {
-
     position: relative;
-
     top: auto;
-
     right: auto;
-
     bottom: auto;
-
     left: auto;
-
     width: 100%;
-
     min-width: 0;
-
     max-width: none;
-
     height: auto;
-
     margin: 0;
-
     padding: 0;
-
     display: block;
-
     transform: none;
-
     background: transparent;
-
     border: 0;
-
     border-radius: 0;
-
     box-shadow: none;
-
     list-style: none;
-
     overflow: visible;
-
     box-sizing: border-box;
 }
-
-
 /* =========================================================
    SUBMENU ITEMS
    ========================================================= */
-
 .page-wrapper.expand .mobile-header-nav>ul>li#medSpaServUL>ul>li {
-
     width: 100%;
-
     margin: 0;
-
     padding: 0;
-
     display: block;
-
     list-style: none;
-
     opacity: 1;
-
     transform: translateY(0);
-
     animation: dropIn 150ms ease forwards;
 }
-
-
 /* =========================================================
    SUBMENU STAGGER
    ========================================================= */
-
 .page-wrapper.expand .mobile-header-nav>ul>li#medSpaServUL>ul>li:nth-child(1) {
-
     animation-delay: 80ms;
 }
-
 .page-wrapper.expand .mobile-header-nav>ul>li#medSpaServUL>ul>li:nth-child(2) {
-
     animation-delay: 130ms;
 }
-
 .page-wrapper.expand .mobile-header-nav>ul>li#medSpaServUL>ul>li:nth-child(3) {
-
     animation-delay: 180ms;
 }
-
 .page-wrapper.expand .mobile-header-nav>ul>li#medSpaServUL>ul>li:nth-child(4) {
-
     animation-delay: 230ms;
 }
-
 .page-wrapper.expand .mobile-header-nav>ul>li#medSpaServUL>ul>li:nth-child(5) {
-
     animation-delay: 280ms;
 }
-
 .page-wrapper.expand .mobile-header-nav>ul>li#medSpaServUL>ul>li:nth-child(6) {
-
     animation-delay: 330ms;
 }
-
-
 /* =========================================================
    SUBMENU LINKS
    ========================================================= */
-
 .page-wrapper>.mobile-header-nav>ul>li>ul>li>a {
-
     /*
        Keep them hidden while the menu is closed.
     */
     display: none;
 }
-
-
 .page-wrapper.expand>.mobile-header-nav>ul>li>ul>li>a {
-
     display: flex !important;
-
     width: 100%;
-
     min-height: 36px;
-
     margin: 0;
-
     padding: .5rem .6rem;
-
     align-items: center;
-
     justify-content: center;
-
     color: var(--pine);
-
     font-family:
         Inter,
         ui-sans-serif,
         system-ui,
         sans-serif;
-
     font-size: .60rem;
-
     font-weight: 650;
-
     letter-spacing: .035em;
-
     line-height: 1.3;
-
     text-align: center;
-
     text-decoration: none;
-
     white-space: normal;
-
     box-sizing: border-box;
-
     transition:
         background-color .2s ease,
         color .2s ease;
 }
-
-
 /* =========================================================
    SUBMENU HOVER / FOCUS
    ========================================================= */
-
 .page-wrapper.expand .mobile-header-nav>ul>li#medSpaServUL>ul>li>a:hover,
-
 .page-wrapper.expand .mobile-header-nav>ul>li#medSpaServUL>ul>li>a:focus-visible {
-
     background: rgba(74, 65, 65, .08);
-
     color: var(--pine);
 }
-
-
 /* =========================================================
    SOCIAL MEDIA CONTAINER
    ========================================================= */
-
 /*
    The NEW closed navigation hides this container.
-
    When .expand is active, bring the original icons back.
 */
-
 .page-wrapper.expand .mobile-header-nav .social-media-container-nav {
-
     display: flex;
-
-    flex-direction: row;
-
+    flex-direction: column;
     align-items: center;
-
     justify-content: center;
-
     gap: .55rem;
-
     width: 100%;
-
     margin-top: .15rem;
-
     padding: 0;
-
     box-sizing: border-box;
 }
-
-
 /* =========================================================
    SOCIAL LINK CONTAINERS
    ========================================================= */
-
 .page-wrapper.expand .mobile-header-nav .social-media-link-container {
-
     width: auto;
-
     height: auto;
-
     margin: 0;
-
     padding: 0;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
+    /* margin-right: 50%; */
 }
-
-
 /* =========================================================
    SOCIAL LINKS
    ========================================================= */
-
 .page-wrapper.expand .mobile-header-nav .social-media-container-nav a {
-
-    width: 28px;
-
+    width: 10vw;
+    width: fit-content;
+    min-width: 50px;
     height: 28px;
-
-    margin: 0;
-
+    margin-right: 10%;
     padding: 0;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     text-decoration: none;
+    display: block;
+    position: relative;
 }
-
-
 /* =========================================================
    SOCIAL SVG
    ========================================================= */
-
 .page-wrapper.expand .mobile-header-nav .social-media-container-nav svg {
-
+    position: absolute;
+    right: 100%;
     width: 24px;
 
     height: 24px;
-
     display: block;
-
     overflow: visible;
 }
-
-
 /* =========================================================
    CONTACT ITEM
    ========================================================= */
-
 .page-wrapper.expand .mobile-header-nav>ul>li:last-child {
-
     flex: 1 1 0;
-
     width: 33.3333%;
-
     min-width: 0;
-
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
-
     justify-content: flex-start;
 }
-
-
 /* =========================================================
    CONTACT LINK
    ========================================================= */
-
 .page-wrapper.expand .mobile-header-nav>ul>li:last-child>a {
-
     width: 100%;
 }
-
-
 /* =========================================================
    ANIMATION
    ========================================================= */
-
 /*
    Main panel does the actual vertical drop.
-
    The individual menu items DO NOT slide horizontally.
 */
-
 @keyframes dropIn {
-
     from {
-
-        opacity: 0;
-
+        opacity: 1;
         transform: translateY(-8px);
     }
-
     to {
-
         opacity: 1;
-
         transform: translateY(0);
     }
 }
-
-
 /* =========================================================
    432px+
    ========================================================= */
-
-@media screen and (min-width: 432px) {
-
-    .page-wrapper.expand>.mobile-header-nav {
-
-        padding-top: 2%;
-
-        height: 35vh;
-    }
-}
-
 
 /* =========================================================
    900px+
    ========================================================= */
 
-@media screen and (min-width: 900px) {
-
+/* =========================================================
+   933px+
+   ========================================================= */
+@media screen and (min-width: 933px) {
     .page-wrapper.expand>.mobile-header-nav {
-
+        top: 8%;
+        height: 50vh !important;
+    }
+}
+@media screen and (max-width: 932px) {
+    .page-wrapper.expand>.mobile-header-nav {
+        top: 5%;
+        height: 50vh !important;
+    }
+}
+@media screen and (min-width: 900px) {
+    .page-wrapper.expand>.mobile-header-nav {
         height: 50vh !important;
     }
 
     .page-wrapper.expand .mobile-header-nav>ul>li>a {
-
         padding: .7rem .85rem;
-
         font-size: .66rem;
     }
 
     .page-wrapper.expand .mobile-header-nav>ul>li#medSpaServUL>ul>li>a {
-
         font-size: .65rem;
-
         min-height: 40px;
     }
 }
-
-
-/* =========================================================
-   933px+
-   ========================================================= */
-
-@media screen and (min-width: 933px) {
-
-    .page-wrapper.expand>.mobile-header-nav {
-
-        height: 50vh !important;
-    }
-}
-
-
 /* =========================================================
    SMALL SCREENS
    ========================================================= */
-
 @media screen and (max-width: 431px) {
-
     .page-wrapper.expand>.mobile-header-nav {
-
+        top: 5%;
         width: 100vw;
-
         left: 0;
-
         right: 0;
-
         margin: 0;
-
         padding-top: 5%;
-
         height: 50vh;
     }
-
     .page-wrapper.expand .mobile-header-nav>ul>li>a {
-
         min-height: 38px;
-
         padding: .45rem .25rem;
-
         font-size: .58rem;
-
         letter-spacing: .06em;
     }
-
     .page-wrapper.expand .mobile-header-nav>ul>li#medSpaServUL>ul>li>a {
-
         min-height: 34px;
-
         padding: .45rem .3rem;
-
         font-size: .56rem;
     }
-
     .page-wrapper.expand .mobile-header-nav .social-media-container-nav a {
-
         width: 25px;
-
         height: 25px;
     }
-
     .page-wrapper.expand .mobile-header-nav .social-media-container-nav svg {
-
         width: 22px;
-
         height: 22px;
     }
 }
-
-
 /* =========================================================
    VERY SMALL SCREENS
    ========================================================= */
-
 @media screen and (max-width: 400px) {
-
     .page-wrapper.expand>.mobile-header-nav {
-
         height: 50vh;
     }
 }
-
-
 /* =========================================================
    REDUCED MOTION
    ========================================================= */
-
 @media (prefers-reduced-motion: reduce) {
-
     .page-wrapper.expand>.mobile-header-nav,
-
     .page-wrapper.expand .mobile-header-nav *,
-
     .page-wrapper.expand .mobile-header-nav *::before,
-
     .page-wrapper.expand .mobile-header-nav *::after {
-
         transition: none !important;
-
         animation: none !important;
     }
 }
-

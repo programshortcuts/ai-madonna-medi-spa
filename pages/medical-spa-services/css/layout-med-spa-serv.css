@@ -14,12 +14,12 @@
     text-align: left;
 }
 
-.med-spa-serv-container .service-section .section-title::after {
+.med-spa-serv-container .service-section .section-title.drop-down::after {
     content: "+";
     flex: 0 0 auto;
 }
 
-.med-spa-serv-container .service-section .section-title[aria-expanded="true"]::after {
+.med-spa-serv-container .service-section .section-title.drop-down[aria-expanded="true"]::after {
     content: "−";
 }
 
@@ -38,10 +38,10 @@
     display: block;
     object-fit: cover;
 }
-.med-spa-serv-container .section-preview .float-right {
+.med-spa-serv-container .float-right {
     float: right;
 }
-.med-spa-serv-container .section-preview .float-left {
+.med-spa-serv-container .float-left {
     float: left;
 }
 .med-spa-serv-container .more-info-buttons {
@@ -80,4 +80,20 @@
 }
 .women-men-nav a {
     display: inline-flex;
+}
+.med-spa-serv-container .section-details ul:has(> li > img) {
+    display: flex;
+    width: fit-content;
+    max-width: 100%;
+    list-style: none;
+    justify-content: space-around;
+    gap: 2rem;
+}
+.our-treatment-plans-list{
+    max-width: none;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: flex-start;
+    /* justify-content: space-evenly; */
 }

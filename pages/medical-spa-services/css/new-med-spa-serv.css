@@ -1,0 +1,17 @@
+/* new-med-spa-serv.css */
+.med-spa-serv-container .section-preview .img-wrapper:has(.img-fix),
+.med-spa-serv-container .section-preview .img-wrapper:has(.vid-fix) {
+    aspect-ratio: auto;
+    height: auto;
+    
+}
+
+.med-spa-serv-container .section-preview .img-wrapper .img-fix,
+.med-spa-serv-container .section-preview .img-wrapper .vid-fix {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain !important;
+    object-position: center center !important;
+}

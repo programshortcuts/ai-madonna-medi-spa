@@ -1,0 +1,132 @@
+/* reviews-swiper.css */
+/* =========================================
+   REVIEWS / TESTIMONIALS
+   ========================================= */
+
+.med-spa-serv-container .reviews-swiper {
+    width: 100%;
+    max-width: 850px;
+    margin: 2rem auto;
+    padding: 0.75rem 0.5rem 1.25rem;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.med-spa-serv-container .reviews-swiper .swiper-wrapper {
+    align-items: stretch;
+}
+
+.med-spa-serv-container .reviews-swiper .swiper-slide {
+    box-sizing: border-box;
+    height: auto;
+
+    /* Card */
+    padding: 1.5rem 1.75rem;
+    border-radius: 18px;
+
+    /* Keeps long text inside */
+    min-width: 0;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    /* Visual treatment */
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(120, 120, 120, 0.18);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Review text */
+.med-spa-serv-container .reviews-swiper .swiper-slide>p {
+    margin: 0 0 1.25rem;
+    padding: 0;
+
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+
+    overflow-wrap: anywhere;
+}
+
+/* Reviewer / stars row */
+.med-spa-serv-container .reviews-swiper .swiper-slide>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    margin-top: auto;
+    padding-top: 0.75rem;
+
+    border-top: 1px solid rgba(120, 120, 120, 0.15);
+}
+
+/* Name */
+.med-spa-serv-container .reviews-swiper .swiper-slide>div span:first-child {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Stars */
+.med-spa-serv-container .reviews-swiper .swiper-slide>div span:last-child {
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .med-spa-serv-container .reviews-swiper {
+        width: calc(100% - 1rem);
+        margin: 1.5rem auto;
+        padding: 0.5rem 0.25rem 1rem;
+    }
+
+    .med-spa-serv-container .reviews-swiper .swiper-slide {
+        padding: 1.15rem 1.15rem;
+        border-radius: 15px;
+    }
+
+    .med-spa-serv-container .reviews-swiper .swiper-slide>p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .med-spa-serv-container .reviews-swiper .swiper-slide>div {
+        gap: 0.5rem;
+    }
+
+    .med-spa-serv-container .reviews-swiper .swiper-slide>div span:last-child {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+   ========================================= */
+
+@media (max-width: 380px) {
+
+    .med-spa-serv-container .reviews-swiper .swiper-slide {
+        padding: 1rem;
+    }
+
+    .med-spa-serv-container .reviews-swiper .swiper-slide>p {
+        font-size: 0.9rem;
+        line-height: 1.45;
+    }
+
+    .med-spa-serv-container .reviews-swiper .swiper-slide>div span:last-child {
+        font-size: 0.8rem;
+        letter-spacing: 0.04em;
+    }
+}

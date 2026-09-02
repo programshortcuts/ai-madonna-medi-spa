@@ -1,5 +1,57 @@
 /* responsivce-home.css */
 
+@media (min-width: 905px) {    
+/* reviews-swiper.css */
+    .modo{
+        font-size: 4.8rem !important;
+    }
+    .home-page-container .swiper.header-reviews-swiper {
+        height: 12vh;
+
+        position: absolute;
+        z-index: 10;
+        right: 0;
+        top: 80%;
+        right: 2%;
+
+
+        max-width: 40vw;
+        margin: 0 auto;
+        background: whitesmoke;
+        border-radius: 20px;
+        box-shadow: 0 0 5px 5px grey;
+        overflow: hidden;
+        user-select: none;
+        touch-action: pan-y;
+        margin-left: 2%;
+    }
+
+    
+
+    .home-page-container .swiper.header-reviews-swiper>.swiper-wrapper>.swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+        height: fit-content;
+        width: fit-content;
+    }
+
+
+    .reviews-swiper{
+        /* position: absolute !important; */
+        /* top: 50%; */
+        /* top: 50%; */
+
+    }
+}
+@media (max-width: 904px) {
+    .home-page-container .swiper.header-reviews-swiper {
+        display: none
+    }
+}
 @media (max-width: 780px) {
     .section-heading {
             display: block;
@@ -150,6 +202,13 @@
     .hero-actions {
         margin-top: 2%;
         margin-bottom: 2%;
+    }
+    #botoxImg {
+        max-width: 200px !important;
+        max-height: 250px;
+        border-radius: 33px;
+        margin-right: 5%;
+
     }
 
 }

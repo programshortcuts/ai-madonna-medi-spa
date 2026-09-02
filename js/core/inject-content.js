@@ -592,7 +592,7 @@ export async function injectPage(
         {
             ALLOWED_TAGS: [
                 "video",
-
+                "poster",
                 "form",
                 "input",
                 "textarea",
@@ -680,6 +680,8 @@ export async function injectPage(
                 "data-href",
                 "data-auto-focus",
                 "data-nav-target",
+                "data-video-id",
+                "data-video-target",
                 "data-link",
 
                 "aria-expanded",
