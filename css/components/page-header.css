@@ -179,7 +179,7 @@
 
 #madonnaShilouetteLogo {
     position: absolute;
-    z-index: 99999;
+    z-index: 99999 !important;
     /*
      * Keep the silhouette anchored to the top-right,
      * but allow the bottom of the image to extend

@@ -414,10 +414,14 @@ li#medSpaServUL {
    Do NOT change .expand behavior.
    ========================================================= */
 
-@media screen and (max-width: 899px) and (orientation: landscape) {
+@media (hover: none) and (pointer: coarse) and (orientation: landscape) and (max-height: 500px) {
 
     .page-wrapper:not(.expand)>.mobile-header-nav {
-        /* display: none !important; */
+        display: none !important;
+    }
+
+    .page-wrapper>.main-landing-page {
+        padding-bottom: 0 !important;
     }
 }
 
