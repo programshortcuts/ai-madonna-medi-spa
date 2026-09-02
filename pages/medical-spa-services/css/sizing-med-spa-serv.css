@@ -44,7 +44,7 @@
     max-height: 70px;
 }
 .long-imgs-container img {
-    min-height: 200px;
+    min-height: 100px;
 }
 .injection-imgs img {
     min-height: 100px;
