@@ -81,8 +81,11 @@
 .women-men-nav a {
     display: inline-flex;
 }
+.long-imgs-ul-container{
+
+}
 .med-spa-serv-container .section-details ul:has(> li > img) {
-    display: flex;
+    display: inline-flex;
     width: fit-content;
     max-width: 100%;
     list-style: none;

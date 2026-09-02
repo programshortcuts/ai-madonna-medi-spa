@@ -437,16 +437,10 @@ export function initDropDownMedServ() {
         // This preserves the first-view behavior.
         // --------------------------------------------------------
 
-        if (initialContentVisible) {
-
-            setDetailsVisible(false);
-
-        } else {
-
-            setDetailsVisible(
-                initialDetailsVisible
-            );
-        }
+        // Preserve the HTML's initial .show state for section details.
+setDetailsVisible(
+    initialDetailsVisible
+);
 
         // ========================================================
         // .section-title
