@@ -1,8 +1,6 @@
 /* sizing-med-spa-serv.css */
 
-#dnaImg{
-    /* max-height: 100px; */
-}
+
 .med-spa-serv-container {
     width: 100%;
 }
@@ -44,6 +42,9 @@
 .section-details ul li img{
     max-width: 100px;
     max-height: 70px;
+}
+.long-imgs-container img {
+    min-height: 200px;
 }
 .injection-imgs img {
     min-height: 100px;
